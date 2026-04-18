@@ -3,6 +3,22 @@
 > Read this file fully before every session. This is the complete context for this project.
 
 ---
+
+## 🎯 CURRENT PRIORITY — Brand Logo
+
+**Jaime needs a circular brand logo for sticker printing on bread bags.**
+
+- Shape: Circle (sticker format, ~2–3 inch print target)
+- Central image: Simple sourdough loaf illustration with wheat accents
+- Text: "THE HOMEMADE PANTRY" on top arc, "MADE SLOWLY · SHARED WARMLY" on bottom arc
+- Colors: Use brand palette — teal-deep background, cream text, clay accents
+- Format: SVG (scalable, print-sharp) + HTML preview
+- File location: `brand/logo.svg` and `brand/logo-preview.html`
+- Print constraints: Solid colors only — no gradients that won't survive thermal/inkjet printing
+- When making ANY new page, component, or design asset — include or reference the logo
+
+---
+
 ## Business Scope Update
 The experience now includes baking and pastry offerings in addition 
 to the original sourdough, butter, and jam experience.

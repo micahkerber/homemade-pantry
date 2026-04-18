@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Circular text paths -->
+    <path id="topArc" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0" fill="none"/>
+    <path id="bottomArc" d="M 200,200 m -130,0 a 130,130 0 1,0 260,0" fill="none"/>
+  </defs>
+
+  <!-- Outer circle — deep teal fill -->
+  <circle cx="200" cy="200" r="195" fill="#2C6E6A"/>
+
+  <!-- Inner cream ring separator -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#FAF6EF" stroke-width="2"/>
+
+  <!-- Inner background circle -->
+  <circle cx="200" cy="200" r="150" fill="#FAF6EF"/>
+
+  <!-- Clay decorative ring -->
+  <circle cx="200" cy="200" r="148" fill="none" stroke="#B87050" stroke-width="1.5"/>
+
+  <!-- ========== ILLUSTRATION — Sourdough Loaf ========== -->
+
+  <!-- Loaf body -->
+  <ellipse cx="200" cy="218" rx="58" ry="42" fill="#E8C4A8"/>
+  <ellipse cx="200" cy="214" rx="58" ry="40" fill="#D4A882"/>
+  <!-- Loaf top dome -->
+  <ellipse cx="200" cy="200" rx="52" ry="34" fill="#C8956A"/>
+  <!-- Loaf highlight -->
+  <ellipse cx="200" cy="196" rx="46" ry="28" fill="#D4A882"/>
+
+  <!-- Scoring lines — the classic sourdough cross-hatch -->
+  <!-- Main score -->
+  <line x1="175" y1="192" x2="225" y2="192" stroke="#A0714A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Secondary scores -->
+  <line x1="182" y1="183" x2="182" y2="205" stroke="#A0714A" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="200" y1="180" x2="200" y2="206" stroke="#A0714A" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="218" y1="183" x2="218" y2="205" stroke="#A0714A" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Shadow beneath loaf -->
+  <ellipse cx="200" cy="234" rx="52" ry="8" fill="#2C6E6A" opacity="0.12"/>
+
+  <!-- ========== WHEAT STALKS — left side ========== -->
+  <g transform="translate(128, 175) rotate(-22)">
+    <!-- Stem -->
+    <line x1="0" y1="40" x2="0" y2="-20" stroke="#7A9E7E" stroke-width="2" stroke-linecap="round"/>
+    <!-- Grain heads -->
+    <ellipse cx="0" cy="-22" rx="4" ry="9" fill="#B87050"/>
+    <ellipse cx="-5" cy="-14" rx="3.5" ry="7" fill="#C8956A"/>
+    <ellipse cx="5" cy="-14" rx="3.5" ry="7" fill="#C8956A"/>
+    <ellipse cx="-7" cy="-4" rx="3" ry="6" fill="#D4A882"/>
+    <ellipse cx="7" cy="-4" rx="3" ry="6" fill="#D4A882"/>
+  </g>
+  <!-- Second wheat stalk left -->
+  <g transform="translate(118, 185) rotate(-30)">
+    <line x1="0" y1="35" x2="0" y2="-15" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-17" rx="3.5" ry="8" fill="#B87050"/>
+    <ellipse cx="-4" cy="-10" rx="3" ry="6" fill="#C8956A"/>
+    <ellipse cx="4" cy="-10" rx="3" ry="6" fill="#C8956A"/>
+  </g>
+
+  <!-- ========== WHEAT STALKS — right side ========== -->
+  <g transform="translate(272, 175) rotate(22)">
+    <line x1="0" y1="40" x2="0" y2="-20" stroke="#7A9E7E" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-22" rx="4" ry="9" fill="#B87050"/>
+    <ellipse cx="-5" cy="-14" rx="3.5" ry="7" fill="#C8956A"/>
+    <ellipse cx="5" cy="-14" rx="3.5" ry="7" fill="#C8956A"/>
+    <ellipse cx="-7" cy="-4" rx="3" ry="6" fill="#D4A882"/>
+    <ellipse cx="7" cy="-4" rx="3" ry="6" fill="#D4A882"/>
+  </g>
+  <!-- Second wheat stalk right -->
+  <g transform="translate(282, 185) rotate(30)">
+    <line x1="0" y1="35" x2="0" y2="-15" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+    <ellipse cx="0" cy="-17" rx="3.5" ry="8" fill="#B87050"/>
+    <ellipse cx="-4" cy="-10" rx="3" ry="6" fill="#C8956A"/>
+    <ellipse cx="4" cy="-10" rx="3" ry="6" fill="#C8956A"/>
+  </g>
+
+  <!-- ========== CIRCULAR TEXT ========== -->
+
+  <!-- Top arc: THE HOMEMADE PANTRY -->
+  <text font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#FAF6EF" letter-spacing="4" font-weight="700">
+    <textPath href="#topArc" startOffset="8%">THE HOMEMADE PANTRY</textPath>
+  </text>
+
+  <!-- Bottom arc: tagline -->
+  <text font-family="'Jost', Arial, sans-serif" font-size="13" fill="#B87050" letter-spacing="3" font-weight="500">
+    <textPath href="#bottomArc" startOffset="12%">MADE SLOWLY · SHARED WARMLY</textPath>
+  </text>
+
+  <!-- Small clay rule line under the loaf -->
+  <line x1="170" y1="246" x2="230" y2="246" stroke="#B87050" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Outer border ring -->
+  <circle cx="200" cy="200" r="195" fill="none" stroke="#2C6E6A" stroke-width="1"/>
+</svg>
