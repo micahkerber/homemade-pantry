@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Homemade Pantry — Logo System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Playfair+Display:wght@400;500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal-deep:  #2C6E6A;
+      --teal-light: #A8D4D1;
+      --clay:       #B87050;
+      --clay-light: #E8C4A8;
+      --cream:      #FAF6EF;
+      --warm-white: #FDF9F4;
+      --charcoal:   #2A2520;
+      --gray:       #8A847C;
+      --linen:      #EDE5D8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--linen);
+      font-family: 'Jost', sans-serif;
+      padding: 60px 40px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header p {
+      font-size: 10px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--teal-deep);
+    }
+
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .logo-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-label {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    /* ── Shared logo shell ── */
+    .logo-svg {
+      display: block;
+    }
+
+    /* ── Section dividers ── */
+    .section-title {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gray);
+      border-top: 1px solid var(--clay-light);
+      padding-top: 32px;
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    /* ── Usage notes ── */
+    .notes {
+      max-width: 720px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .note {
+      background: var(--warm-white);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .note h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--teal-deep);
+      margin-bottom: 8px;
+    }
+
+    .note p {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .swatch {
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--clay-light);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p>Brand Identity System</p>
+    <h1>The Homemade Pantry — Logo</h1>
+  </header>
+
+  <!-- ── PRIMARY LOGOS ── -->
+  <div class="logo-row">
+
+    <!-- Version 1: On Light / Cream -->
+    <div class="logo-card">
+      <svg class="logo-svg" width="380" height="216" viewBox="0 0 380 216" xmlns="http://www.w3.org/2000/svg">
+        <rect width="380" height="216" fill="#FAF6EF" rx="4"/>
+
+        <!-- "The" italic -->
+        <text
+          x="190" y="50"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-style="italic"
+          font-size="22"
+          fill="#2C6E6A"
+          letter-spacing="1">The</text>
+
+        <!-- Decorative dots flanking "The" -->
+        <circle cx="143" cy="46" r="1.8" fill="#B87050" opacity="0.7"/>
+        <circle cx="237" cy="46" r="1.8" fill="#B87050" opacity="0.7"/>
+
+        <!-- "Homemade" -->
+        <text
+          x="190" y="98"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="48"
+          font-weight="400"
+          fill="#2C6E6A"
+          letter-spacing="1">Homemade</text>
+
+        <!-- "Pantry" -->
+        <text
+          x="190" y="144"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="48"
+          font-weight="400"
+          fill="#2C6E6A"
+          letter-spacing="5">Pantry</text>
+
+        <!-- Clay rule -->
+        <line x1="68" y1="160" x2="312" y2="160" stroke="#B87050" stroke-width="1.2"/>
+
+        <!-- Tagline -->
+        <text
+          x="190" y="181"
+          text-anchor="middle"
+          font-family="'Jost', sans-serif"
+          font-size="9.5"
+          font-weight="300"
+          fill="#8A847C"
+          letter-spacing="3">ARTISAN · GATHERED · INTENTIONAL</text>
+      </svg>
+      <span class="logo-label">On Light</span>
+    </div>
+
+    <!-- Version 2: On Teal -->
+    <div class="logo-card">
+      <svg class="logo-svg" width="380" height="216" viewBox="0 0 380 216" xmlns="http://www.w3.org/2000/svg">
+        <rect width="380" height="216" fill="#2C6E6A" rx="4"/>
+
+        <!-- "The" italic -->
+        <text
+          x="190" y="50"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-style="italic"
+          font-size="22"
+          fill="#FDF9F4"
+          letter-spacing="1">The</text>
+
+        <!-- Decorative dots flanking "The" -->
+        <circle cx="143" cy="46" r="1.8" fill="#B87050" opacity="0.9"/>
+        <circle cx="237" cy="46" r="1.8" fill="#B87050" opacity="0.9"/>
+
+        <!-- "Homemade" -->
+        <text
+          x="190" y="98"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="48"
+          font-weight="400"
+          fill="#FDF9F4"
+          letter-spacing="1">Homemade</text>
+
+        <!-- "Pantry" -->
+        <text
+          x="190" y="144"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="48"
+          font-weight="400"
+          fill="#FDF9F4"
+          letter-spacing="5">Pantry</text>
+
+        <!-- Clay rule -->
+        <line x1="68" y1="160" x2="312" y2="160" stroke="#B87050" stroke-width="1.2"/>
+
+        <!-- Tagline -->
+        <text
+          x="190" y="181"
+          text-anchor="middle"
+          font-family="'Jost', sans-serif"
+          font-size="9.5"
+          font-weight="300"
+          fill="#A8D4D1"
+          letter-spacing="3">ARTISAN · GATHERED · INTENTIONAL</text>
+      </svg>
+      <span class="logo-label">On Teal</span>
+    </div>
+
+    <!-- Version 3: On Dark / Charcoal -->
+    <div class="logo-card">
+      <svg class="logo-svg" width="380" height="216" viewBox="0 0 380 216" xmlns="http://www.w3.org/2000/svg">
+        <rect width="380" height="216" fill="#2A2520" rx="4"/>
+
+        <!-- "The" italic -->
+        <text
+          x="190" y="50"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-style="italic"
+          font-size="22"
+          fill="#FDF9F4"
+          letter-spacing="1">The</text>
+
+        <!-- Decorative dots flanking "The" -->
+        <circle cx="143" cy="46" r="1.8" fill="#B87050" opacity="0.9"/>
+        <circle cx="237" cy="46" r="1.8" fill="#B87050" opacity="0.9"/>
+
+        <!-- "Homemade" -->
+        <text
+          x="190" y="98"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="48"
+          font-weight="400"
+          fill="#FDF9F4"
+          letter-spacing="1">Homemade</text>
+
+        <!-- "Pantry" -->
+        <text
+          x="190" y="144"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="48"
+          font-weight="400"
+          fill="#FDF9F4"
+          letter-spacing="5">Pantry</text>
+
+        <!-- Clay rule -->
+        <line x1="68" y1="160" x2="312" y2="160" stroke="#B87050" stroke-width="1.2"/>
+
+        <!-- Tagline -->
+        <text
+          x="190" y="181"
+          text-anchor="middle"
+          font-family="'Jost', sans-serif"
+          font-size="9.5"
+          font-weight="300"
+          fill="#EDE5D8"
+          letter-spacing="3">ARTISAN · GATHERED · INTENTIONAL</text>
+      </svg>
+      <span class="logo-label">On Dark</span>
+    </div>
+
+  </div>
+
+
+  <!-- ── COMPACT / HORIZONTAL VARIANTS ── -->
+  <p class="section-title">Compact Horizontal Variant</p>
+
+  <div class="logo-row">
+
+    <!-- Compact on Light -->
+    <div class="logo-card">
+      <svg class="logo-svg" width="480" height="100" viewBox="0 0 480 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="480" height="100" fill="#FAF6EF" rx="4"/>
+
+        <!-- Vertical clay rule divider -->
+        <line x1="240" y1="18" x2="240" y2="82" stroke="#B87050" stroke-width="1"/>
+
+        <!-- Left: wordmark -->
+        <text
+          x="118" y="36"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-style="italic"
+          font-size="14"
+          fill="#2C6E6A"
+          letter-spacing="1">The</text>
+        <text
+          x="118" y="60"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="26"
+          font-weight="400"
+          fill="#2C6E6A"
+          letter-spacing="0.5">Homemade</text>
+        <text
+          x="118" y="82"
+          text-anchor="middle"
+          font-family="'Playfair Display', serif"
+          font-size="26"
+          font-weight="400"
+          fill="#2C6E6A"
+          letter-spacing="3">Pantry</text>
+
+        <!-- Right: tagline stacked -->
+        <text x="362" y="42" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#8A847C" letter-spacing="2.5">ARTISAN</text>
+        <text x="362" y="56" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#B87050" letter-spacing="2.5">·</text>
+        <text x="362" y="70" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#8A847C" letter-spacing="2.5">GATHERED</text>
+        <text x="362" y="84" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#8A847C" letter-spacing="2.5">INTENTIONAL</text>
+      </svg>
+      <span class="logo-label">Horizontal — On Light</span>
+    </div>
+
+    <!-- Compact on Teal -->
+    <div class="logo-card">
+      <svg class="logo-svg" width="480" height="100" viewBox="0 0 480 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="480" height="100" fill="#2C6E6A" rx="4"/>
+        <line x1="240" y1="18" x2="240" y2="82" stroke="#B87050" stroke-width="1"/>
+        <text x="118" y="36" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="14" fill="#FDF9F4" letter-spacing="1">The</text>
+        <text x="118" y="60" text-anchor="middle" font-family="'Playfair Display', serif" font-size="26" font-weight="400" fill="#FDF9F4" letter-spacing="0.5">Homemade</text>
+        <text x="118" y="82" text-anchor="middle" font-family="'Playfair Display', serif" font-size="26" font-weight="400" fill="#FDF9F4" letter-spacing="3">Pantry</text>
+        <text x="362" y="42" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#A8D4D1" letter-spacing="2.5">ARTISAN</text>
+        <text x="362" y="56" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#B87050" letter-spacing="2.5">·</text>
+        <text x="362" y="70" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#A8D4D1" letter-spacing="2.5">GATHERED</text>
+        <text x="362" y="84" text-anchor="middle" font-family="'Jost', sans-serif" font-size="8.5" font-weight="300" fill="#A8D4D1" letter-spacing="2.5">INTENTIONAL</text>
+      </svg>
+      <span class="logo-label">Horizontal — On Teal</span>
+    </div>
+
+  </div>
+
+
+  <!-- ── USAGE NOTES ── -->
+  <p class="section-title">When to Use Each Version</p>
+
+  <div class="notes">
+    <div class="note">
+      <div class="swatch" style="background: #FAF6EF; border: 1px solid #EDE5D8;"></div>
+      <h3>On Light</h3>
+      <p>Website headers, printed cards, email headers, light-background social posts, and any white or cream surface.</p>
+    </div>
+    <div class="note">
+      <div class="swatch" style="background: #2C6E6A;"></div>
+      <h3>On Teal</h3>
+      <p>Branded backgrounds, gift cards, packaging, tote bags, dark hero sections, and Instagram profile highlights.</p>
+    </div>
+    <div class="note">
+      <div class="swatch" style="background: #2A2520;"></div>
+      <h3>On Dark</h3>
+      <p>Evening event photography overlays, dark-mode contexts, printed menus on kraft or dark card stock.</p>
+    </div>
+  </div>
+
+
+  <footer>The Homemade Pantry · Brand Identity · 2026</footer>
+
+</body>
+</html>
