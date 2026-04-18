@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Homemade Pantry — Logo C Refined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream:      #FAF6EF;
+      --warm-white: #FDF9F4;
+      --teal-deep:  #2C6E6A;
+      --teal-mid:   #3D8C87;
+      --teal-light: #A8D4D1;
+      --teal-pale:  #E4F4F3;
+      --clay:       #B87050;
+      --clay-light: #E8C4A8;
+      --charcoal:   #2A2520;
+      --gray:       #8A847C;
+      --linen:      #EDE5D8;
+      --sage:       #7A9E7E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--linen);
+      font-family: 'Jost', sans-serif;
+      color: var(--charcoal);
+      padding: 56px 32px 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+    .eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 12px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .rule { width: 48px; height: 2px; background: var(--clay); margin: 0 auto 16px; }
+    header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--gray);
+    }
+
+    .concepts {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .concept-card {
+      background: var(--warm-white);
+      border-radius: 16px;
+      padding: 36px 28px 32px;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      box-shadow: 0 4px 20px rgba(44,37,32,0.07);
+      border: 1px solid var(--linen);
+    }
+    .concept-card svg { width: 260px; height: 260px; display: block; }
+
+    .concept-meta { text-align: center; }
+    .option-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--clay);
+      background: #FDF0E8;
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 10px;
+    }
+    .concept-meta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .concept-meta p { font-size: 0.8rem; color: var(--gray); line-height: 1.7; }
+
+    footer {
+      text-align: center;
+      margin-top: 64px;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--gray);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Option C · Refined</p>
+  <h1>Botanical Wreath</h1>
+  <div class="rule"></div>
+  <p>Center comparison — flame vs. monogram</p>
+</header>
+
+<div class="concepts">
+
+  <!-- ══════════════════════════════════════════
+       C1 — BOTANICAL WREATH + FLAME CENTER
+  ══════════════════════════════════════════ -->
+  <div class="concept-card">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!--
+          Top arc: CW semicircle from left(9 o'clock) over top to right(3 o'clock)
+          Bottom arc: CCW semicircle from left(9 o'clock) under bottom to right(3 o'clock)
+          Both use text-anchor="middle" startOffset="50%" for true centering
+        -->
+        <path id="c1-top" d="M 38,200 A 162,162 0 0,1 362,200"/>
+        <path id="c1-bot" d="M 60,200 A 140,140 0 0,0 340,200"/>
+      </defs>
+
+      <!-- ── OUTER STRUCTURE ── -->
+      <circle cx="200" cy="200" r="195" fill="#2C6E6A"/>
+      <circle cx="200" cy="200" r="175" fill="none" stroke="#FAF6EF" stroke-width="2"/>
+      <circle cx="200" cy="200" r="150" fill="#FAF6EF"/>
+      <circle cx="200" cy="200" r="148" fill="none" stroke="#B87050" stroke-width="1.5"/>
+
+      <!-- ── BOTANICAL WREATH ──
+           The circle of botanicals = the table's edge / centerpiece arrangement
+           Positions slightly irregular (not perfect 45° apart) for organic feel
+           Botanicals: Lavender (top/bot), Sage (diagonals), Rosemary (sides), Wheat (diagonals)
+      ── -->
+
+      <!-- LAVENDER — 0° top (200, 115) -->
+      <g transform="translate(200,115) rotate(0)">
+        <line x1="0" y1="17" x2="0" y2="-5" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-8"  rx="3.5" ry="7"   fill="#A8D4D1"/>
+        <ellipse cx="-4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate(-22,-4.5,-2)"/>
+        <ellipse cx=" 4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate( 22, 4.5,-2)"/>
+        <ellipse cx="-4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate(-18,-4,5)"/>
+        <ellipse cx=" 4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate( 18, 4,5)"/>
+        <ellipse cx="-3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate(-30,-3,12)"/>
+        <ellipse cx=" 3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate( 30, 3,12)"/>
+      </g>
+
+      <!-- SAGE — 48° upper-right (263, 143) -->
+      <g transform="translate(263,143) rotate(48)">
+        <line x1="0" y1="13" x2="0" y2="-12" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="-9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate(-30,-9,-5)"/>
+        <ellipse cx=" 9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate( 30, 9,-5)"/>
+        <ellipse cx="-6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate(-20,-6,-14)"/>
+        <ellipse cx=" 6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate( 20, 6,-14)"/>
+      </g>
+
+      <!-- ROSEMARY — 88° right (285, 197) -->
+      <g transform="translate(285,197) rotate(88)">
+        <line x1="0" y1="19" x2="0" y2="-19" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+
+      <!-- WHEAT — 132° lower-right (263, 257) -->
+      <g transform="translate(263,257) rotate(132)">
+        <line x1="0" y1="16" x2="0" y2="-17" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-19" rx="4.5" ry="9"   fill="#B87050"/>
+        <ellipse cx="-6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx=" 6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx="-6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <ellipse cx=" 6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <line x1="-3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1=" 3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1="0"  y1="-29" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+      </g>
+
+      <!-- LAVENDER — 180° bottom (200, 285) -->
+      <g transform="translate(200,285) rotate(180)">
+        <line x1="0" y1="17" x2="0" y2="-5" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-8"  rx="3.5" ry="7"   fill="#A8D4D1"/>
+        <ellipse cx="-4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate(-22,-4.5,-2)"/>
+        <ellipse cx=" 4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate( 22, 4.5,-2)"/>
+        <ellipse cx="-4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate(-18,-4,5)"/>
+        <ellipse cx=" 4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate( 18, 4,5)"/>
+        <ellipse cx="-3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate(-30,-3,12)"/>
+        <ellipse cx=" 3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate( 30, 3,12)"/>
+      </g>
+
+      <!-- WHEAT — 228° lower-left (137, 257) -->
+      <g transform="translate(137,257) rotate(228)">
+        <line x1="0" y1="16" x2="0" y2="-17" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-19" rx="4.5" ry="9"   fill="#B87050"/>
+        <ellipse cx="-6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx=" 6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx="-6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <ellipse cx=" 6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <line x1="-3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1=" 3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1="0"  y1="-29" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+      </g>
+
+      <!-- ROSEMARY — 272° left (115, 197) -->
+      <g transform="translate(115,197) rotate(272)">
+        <line x1="0" y1="19" x2="0" y2="-19" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+
+      <!-- SAGE — 312° upper-left (137, 143) -->
+      <g transform="translate(137,143) rotate(312)">
+        <line x1="0" y1="13" x2="0" y2="-12" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="-9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate(-30,-9,-5)"/>
+        <ellipse cx=" 9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate( 30, 9,-5)"/>
+        <ellipse cx="-6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate(-20,-6,-14)"/>
+        <ellipse cx=" 6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate( 20, 6,-14)"/>
+      </g>
+
+      <!-- ── CENTER: FLAME (candle on the table) ── -->
+      <!-- Subtle inner table ring -->
+      <circle cx="200" cy="200" r="55" fill="none" stroke="#EDE5D8" stroke-width="1"/>
+
+      <!-- Candle base dish -->
+      <ellipse cx="200" cy="222" rx="16" ry="5" fill="#D4A882" opacity="0.7"/>
+      <!-- Candle body -->
+      <rect x="194" y="198" width="12" height="25" rx="5" fill="#FDF9F4" stroke="#E8C4A8" stroke-width="1.5"/>
+      <!-- Wick -->
+      <line x1="200" y1="197" x2="200" y2="194" stroke="#2A2520" stroke-width="1.5" stroke-linecap="round"/>
+
+      <!-- Flame — outer glow -->
+      <path d="M 200,192
+               C 191,180 189,165 200,154
+               C 211,165 209,180 200,192 Z"
+            fill="#B87050"/>
+      <!-- Flame — mid -->
+      <path d="M 200,190
+               C 193,180 192,168 200,159
+               C 208,168 207,180 200,190 Z"
+            fill="#E8C4A8"/>
+      <!-- Flame — inner bright -->
+      <path d="M 200,187
+               C 196,179 195,171 200,165
+               C 205,171 204,179 200,187 Z"
+            fill="#FAF6EF" opacity="0.75"/>
+
+      <!-- ── CIRCULAR TEXT ── -->
+      <text text-anchor="middle"
+            font-family="'Playfair Display', Georgia, serif"
+            font-size="21" fill="#FAF6EF" letter-spacing="4" font-weight="700">
+        <textPath href="#c1-top" startOffset="50%">THE HOMEMADE PANTRY</textPath>
+      </text>
+      <text text-anchor="middle"
+            font-family="'Jost', Arial, sans-serif"
+            font-size="12" fill="#B87050" letter-spacing="2.5" font-weight="500">
+        <textPath href="#c1-bot" startOffset="50%">MADE SLOWLY · SHARED WARMLY</textPath>
+      </text>
+    </svg>
+
+    <div class="concept-meta">
+      <span class="option-tag">C1 — Flame</span>
+      <h3>The Candle at the Table</h3>
+      <p>The wreath is the table's edge. The flame in the center is the candle — warmth, gathering, the reason everyone came. No food item, all feeling.</p>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       C2 — BOTANICAL WREATH + HP MONOGRAM
+  ══════════════════════════════════════════ -->
+  <div class="concept-card">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="c2-top" d="M 38,200 A 162,162 0 0,1 362,200"/>
+        <path id="c2-bot" d="M 60,200 A 140,140 0 0,0 340,200"/>
+      </defs>
+
+      <!-- ── OUTER STRUCTURE ── -->
+      <circle cx="200" cy="200" r="195" fill="#2C6E6A"/>
+      <circle cx="200" cy="200" r="175" fill="none" stroke="#FAF6EF" stroke-width="2"/>
+      <circle cx="200" cy="200" r="150" fill="#FAF6EF"/>
+      <circle cx="200" cy="200" r="148" fill="none" stroke="#B87050" stroke-width="1.5"/>
+
+      <!-- ── BOTANICAL WREATH (identical to C1) ── -->
+
+      <!-- LAVENDER — 0° top -->
+      <g transform="translate(200,115) rotate(0)">
+        <line x1="0" y1="17" x2="0" y2="-5" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-8"  rx="3.5" ry="7"   fill="#A8D4D1"/>
+        <ellipse cx="-4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate(-22,-4.5,-2)"/>
+        <ellipse cx=" 4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate( 22, 4.5,-2)"/>
+        <ellipse cx="-4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate(-18,-4,5)"/>
+        <ellipse cx=" 4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate( 18, 4,5)"/>
+        <ellipse cx="-3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate(-30,-3,12)"/>
+        <ellipse cx=" 3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate( 30, 3,12)"/>
+      </g>
+
+      <!-- SAGE — 48° upper-right -->
+      <g transform="translate(263,143) rotate(48)">
+        <line x1="0" y1="13" x2="0" y2="-12" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="-9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate(-30,-9,-5)"/>
+        <ellipse cx=" 9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate( 30, 9,-5)"/>
+        <ellipse cx="-6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate(-20,-6,-14)"/>
+        <ellipse cx=" 6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate( 20, 6,-14)"/>
+      </g>
+
+      <!-- ROSEMARY — 88° right -->
+      <g transform="translate(285,197) rotate(88)">
+        <line x1="0" y1="19" x2="0" y2="-19" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+
+      <!-- WHEAT — 132° lower-right -->
+      <g transform="translate(263,257) rotate(132)">
+        <line x1="0" y1="16" x2="0" y2="-17" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-19" rx="4.5" ry="9"   fill="#B87050"/>
+        <ellipse cx="-6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx=" 6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx="-6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <ellipse cx=" 6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <line x1="-3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1=" 3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1="0"  y1="-29" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+      </g>
+
+      <!-- LAVENDER — 180° bottom -->
+      <g transform="translate(200,285) rotate(180)">
+        <line x1="0" y1="17" x2="0" y2="-5" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-8"  rx="3.5" ry="7"   fill="#A8D4D1"/>
+        <ellipse cx="-4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate(-22,-4.5,-2)"/>
+        <ellipse cx=" 4.5" cy="-2"  rx="3"   ry="5.5" fill="#A8D4D1" transform="rotate( 22, 4.5,-2)"/>
+        <ellipse cx="-4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate(-18,-4,5)"/>
+        <ellipse cx=" 4"   cy=" 5"  rx="2.5" ry="4.5" fill="#7A9E7E" transform="rotate( 18, 4,5)"/>
+        <ellipse cx="-3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate(-30,-3,12)"/>
+        <ellipse cx=" 3"   cy=" 12" rx="2"   ry="4"   fill="#7A9E7E" transform="rotate( 30, 3,12)"/>
+      </g>
+
+      <!-- WHEAT — 228° lower-left -->
+      <g transform="translate(137,257) rotate(228)">
+        <line x1="0" y1="16" x2="0" y2="-17" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="0"    cy="-19" rx="4.5" ry="9"   fill="#B87050"/>
+        <ellipse cx="-6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx=" 6"   cy="-11" rx="4"   ry="7"   fill="#C8956A"/>
+        <ellipse cx="-6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <ellipse cx=" 6"   cy="-1"  rx="3.5" ry="6"   fill="#D4A882"/>
+        <line x1="-3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1=" 3" y1="-27" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+        <line x1="0"  y1="-29" x2="0" y2="-24" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+      </g>
+
+      <!-- ROSEMARY — 272° left -->
+      <g transform="translate(115,197) rotate(272)">
+        <line x1="0" y1="19" x2="0" y2="-19" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-15" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-9"  x2="0" y2="-7"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 6" y1="-3"  x2="0" y2="-1"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 4"  x2="0" y2=" 5"  stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="-5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1=" 5" y1=" 11" x2="0" y2=" 12" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+
+      <!-- SAGE — 312° upper-left -->
+      <g transform="translate(137,143) rotate(312)">
+        <line x1="0" y1="13" x2="0" y2="-12" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="-9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate(-30,-9,-5)"/>
+        <ellipse cx=" 9"  cy="-5"  rx="11"  ry="5.5" fill="#7A9E7E"  transform="rotate( 30, 9,-5)"/>
+        <ellipse cx="-6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate(-20,-6,-14)"/>
+        <ellipse cx=" 6"  cy="-14" rx="7.5" ry="4"   fill="#A8D4D1"  transform="rotate( 20, 6,-14)"/>
+      </g>
+
+      <!-- ── CENTER: HP MONOGRAM ── -->
+      <!-- Subtle inner ring (the table surface) -->
+      <circle cx="200" cy="200" r="55" fill="none" stroke="#EDE5D8" stroke-width="1"/>
+
+      <!-- Thin clay rule above monogram -->
+      <line x1="174" y1="180" x2="226" y2="180" stroke="#B87050" stroke-width="1" stroke-linecap="round"/>
+
+      <!-- HP Monogram in Playfair italic -->
+      <text x="200" y="213"
+            text-anchor="middle"
+            font-family="'Playfair Display', Georgia, serif"
+            font-size="40" font-weight="700" font-style="italic"
+            fill="#2C6E6A" letter-spacing="-1">HP</text>
+
+      <!-- Thin clay rule below monogram -->
+      <line x1="174" y1="220" x2="226" y2="220" stroke="#B87050" stroke-width="1" stroke-linecap="round"/>
+
+      <!-- ── CIRCULAR TEXT ── -->
+      <text text-anchor="middle"
+            font-family="'Playfair Display', Georgia, serif"
+            font-size="21" fill="#FAF6EF" letter-spacing="4" font-weight="700">
+        <textPath href="#c2-top" startOffset="50%">THE HOMEMADE PANTRY</textPath>
+      </text>
+      <text text-anchor="middle"
+            font-family="'Jost', Arial, sans-serif"
+            font-size="12" fill="#B87050" letter-spacing="2.5" font-weight="500">
+        <textPath href="#c2-bot" startOffset="50%">MADE SLOWLY · SHARED WARMLY</textPath>
+      </text>
+    </svg>
+
+    <div class="concept-meta">
+      <span class="option-tag">C2 — Monogram</span>
+      <h3>The Monogram Table</h3>
+      <p>The wreath as table edge, the HP monogram as a formal place setting. More heritage and brand-forward — feels like a wax seal or family crest.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>The Homemade Pantry · Logo C Refined · April 2026</footer>
+
+</body>
+</html>
