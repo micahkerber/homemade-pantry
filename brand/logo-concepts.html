@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Homemade Pantry — Logo Concepts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream:       #FAF6EF;
+      --warm-white:  #FDF9F4;
+      --teal-deep:   #2C6E6A;
+      --teal-mid:    #3D8C87;
+      --teal-light:  #A8D4D1;
+      --teal-pale:   #E4F4F3;
+      --clay:        #B87050;
+      --clay-light:  #E8C4A8;
+      --charcoal:    #2A2520;
+      --gray:        #8A847C;
+      --linen:       #EDE5D8;
+      --sage:        #7A9E7E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--linen);
+      font-family: 'Jost', sans-serif;
+      color: var(--charcoal);
+      min-height: 100vh;
+      padding: 56px 32px 72px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--teal-mid);
+      margin-bottom: 12px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .rule {
+      width: 48px;
+      height: 2px;
+      background: var(--clay);
+      margin: 0 auto 16px;
+    }
+    header p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+    }
+
+    .concepts {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 52px;
+    }
+
+    .concept-card {
+      background: var(--warm-white);
+      border-radius: 16px;
+      padding: 36px 28px 32px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      box-shadow: 0 4px 20px rgba(44,37,32,0.07);
+      border: 1px solid var(--linen);
+    }
+
+    .concept-card svg {
+      width: 240px;
+      height: 240px;
+      display: block;
+    }
+
+    .concept-meta {
+      text-align: center;
+      width: 100%;
+    }
+    .option-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--clay);
+      background: #FDF0E8;
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 10px;
+    }
+    .concept-meta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+    .concept-meta p {
+      font-size: 0.8rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 64px;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--gray);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">The Homemade Pantry · Brand Identity</p>
+    <h1>Logo Concepts</h1>
+    <div class="rule"></div>
+    <p>"Made slowly. Shared warmly."</p>
+  </header>
+
+  <div class="concepts">
+
+    <!-- ═══════════════════════════════════════
+         OPTION A — THE GATHERED TABLE
+    ═══════════════════════════════════════ -->
+    <div class="concept-card">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="a-top" d="M 200,200 m -162,0 a 162,162 0 1,1 324,0"/>
+          <path id="a-bot" d="M 200,200 m -132,0 a 132,132 0 1,0 264,0"/>
+        </defs>
+
+        <!-- Outer teal ring -->
+        <circle cx="200" cy="200" r="195" fill="#2C6E6A"/>
+        <!-- Cream separator -->
+        <circle cx="200" cy="200" r="175" fill="none" stroke="#FAF6EF" stroke-width="2"/>
+        <!-- Inner cream field -->
+        <circle cx="200" cy="200" r="150" fill="#FAF6EF"/>
+        <!-- Clay accent ring -->
+        <circle cx="200" cy="200" r="148" fill="none" stroke="#B87050" stroke-width="1.5"/>
+
+        <!-- ── TABLE SURFACE (top-down view) ── -->
+        <circle cx="200" cy="203" r="70" fill="#E4F4F3" stroke="#3D8C87" stroke-width="2.5"/>
+        <circle cx="200" cy="203" r="65" fill="none" stroke="#A8D4D1" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- Three guest seats (small clay dots at table edge) -->
+        <!-- Top (12 o'clock) -->
+        <circle cx="200" cy="128" r="8" fill="#B87050" opacity="0.75"/>
+        <!-- Lower-left (8 o'clock) -->
+        <circle cx="139" cy="238" r="8" fill="#B87050" opacity="0.75"/>
+        <!-- Lower-right (4 o'clock) -->
+        <circle cx="261" cy="238" r="8" fill="#B87050" opacity="0.75"/>
+
+        <!-- Candle on table (warmth / the reason to gather) -->
+        <!-- Candle base dish -->
+        <ellipse cx="200" cy="218" rx="15" ry="5" fill="#D4A882"/>
+        <!-- Candle body -->
+        <rect x="194" y="195" width="12" height="24" rx="5" fill="#FDF9F4" stroke="#E8C4A8" stroke-width="1.5"/>
+        <!-- Wick glow -->
+        <ellipse cx="200" cy="194" rx="4" ry="2" fill="#D4A882" opacity="0.6"/>
+        <!-- Flame outer -->
+        <path d="M 200,186 C 193,176 192,163 200,155 C 208,163 207,176 200,186 Z" fill="#B87050"/>
+        <!-- Flame inner -->
+        <path d="M 200,183 C 196,175 195,167 200,161 C 205,167 204,175 200,183 Z" fill="#E8C4A8"/>
+        <!-- Flame highlight -->
+        <ellipse cx="200" cy="173" rx="2.5" ry="4" fill="#FAF6EF" opacity="0.65"/>
+
+        <!-- Small jar on table (upper-left) — top-down view -->
+        <circle cx="177" cy="187" r="14" fill="#A8D4D1" stroke="#2C6E6A" stroke-width="1.5"/>
+        <circle cx="177" cy="187" r="9"  fill="#FAF6EF" stroke="#3D8C87" stroke-width="1"/>
+        <circle cx="177" cy="187" r="4"  fill="#E4F4F3"/>
+
+        <!-- Small bowl on table (lower-right) — top-down view -->
+        <circle cx="224" cy="219" r="12" fill="#EDE5D8" stroke="#B87050" stroke-width="1.5"/>
+        <circle cx="224" cy="219" r="7"  fill="#FAF6EF"/>
+
+        <!-- ── CIRCULAR TEXT ── -->
+        <text font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#FAF6EF" letter-spacing="4" font-weight="700">
+          <textPath href="#a-top" startOffset="8%">THE HOMEMADE PANTRY</textPath>
+        </text>
+        <text font-family="'Jost', Arial, sans-serif" font-size="13" fill="#B87050" letter-spacing="3" font-weight="500">
+          <textPath href="#a-bot" startOffset="12%">MADE SLOWLY · SHARED WARMLY</textPath>
+        </text>
+      </svg>
+
+      <div class="concept-meta">
+        <span class="option-tag">Option A</span>
+        <h3>The Gathered Table</h3>
+        <p>A candle on a round table, viewed from above — three seats, a jar, a bowl. The table is always the point. Works for any experience.</p>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         OPTION B — THE OFFERING (OPEN HANDS)
+    ═══════════════════════════════════════ -->
+    <div class="concept-card">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="b-top" d="M 200,200 m -162,0 a 162,162 0 1,1 324,0"/>
+          <path id="b-bot" d="M 200,200 m -132,0 a 132,132 0 1,0 264,0"/>
+        </defs>
+
+        <circle cx="200" cy="200" r="195" fill="#2C6E6A"/>
+        <circle cx="200" cy="200" r="175" fill="none" stroke="#FAF6EF" stroke-width="2"/>
+        <circle cx="200" cy="200" r="150" fill="#FAF6EF"/>
+        <circle cx="200" cy="200" r="148" fill="none" stroke="#B87050" stroke-width="1.5"/>
+
+        <!-- ── OPEN HANDS ── -->
+
+        <!-- Left palm — rotated inward toward center -->
+        <rect x="142" y="193" width="52" height="56" rx="26" fill="#E8C4A8" stroke="#B87050" stroke-width="2"
+              transform="rotate(-14, 168, 221)"/>
+        <!-- Left fingers (3 rounded bumps emerging from top of palm) -->
+        <ellipse cx="150" cy="191" rx="7" ry="9" fill="#E8C4A8" stroke="#B87050" stroke-width="1.5"
+                 transform="rotate(-14, 150, 191)"/>
+        <ellipse cx="164" cy="184" rx="7" ry="9" fill="#E8C4A8" stroke="#B87050" stroke-width="1.5"
+                 transform="rotate(-8, 164, 184)"/>
+        <ellipse cx="179" cy="180" rx="7" ry="9" fill="#E8C4A8" stroke="#B87050" stroke-width="1.5"
+                 transform="rotate(-2, 179, 180)"/>
+
+        <!-- Right palm — rotated inward toward center -->
+        <rect x="206" y="193" width="52" height="56" rx="26" fill="#E8C4A8" stroke="#B87050" stroke-width="2"
+              transform="rotate(14, 232, 221)"/>
+        <!-- Right fingers -->
+        <ellipse cx="221" cy="180" rx="7" ry="9" fill="#E8C4A8" stroke="#B87050" stroke-width="1.5"
+                 transform="rotate(2, 221, 180)"/>
+        <ellipse cx="236" cy="184" rx="7" ry="9" fill="#E8C4A8" stroke="#B87050" stroke-width="1.5"
+                 transform="rotate(8, 236, 184)"/>
+        <ellipse cx="250" cy="191" rx="7" ry="9" fill="#E8C4A8" stroke="#B87050" stroke-width="1.5"
+                 transform="rotate(14, 250, 191)"/>
+
+        <!-- Flame rising above the hands -->
+        <!-- Outer flame -->
+        <path d="M 200,152
+                 C 188,164 184,180 190,192
+                 C 193,198 207,198 210,192
+                 C 216,180 212,164 200,152 Z"
+              fill="#B87050"/>
+        <!-- Mid flame -->
+        <path d="M 200,160
+                 C 192,170 190,182 194,189
+                 C 196,193 204,193 206,189
+                 C 210,182 208,170 200,160 Z"
+              fill="#E8C4A8"/>
+        <!-- Inner flame glow -->
+        <path d="M 200,168
+                 C 196,175 195,183 198,187
+                 C 199,189 201,189 202,187
+                 C 205,183 204,175 200,168 Z"
+              fill="#FAF6EF" opacity="0.7"/>
+
+        <!-- ── CIRCULAR TEXT ── -->
+        <text font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#FAF6EF" letter-spacing="4" font-weight="700">
+          <textPath href="#b-top" startOffset="8%">THE HOMEMADE PANTRY</textPath>
+        </text>
+        <text font-family="'Jost', Arial, sans-serif" font-size="13" fill="#B87050" letter-spacing="3" font-weight="500">
+          <textPath href="#b-bot" startOffset="12%">MADE SLOWLY · SHARED WARMLY</textPath>
+        </text>
+      </svg>
+
+      <div class="concept-meta">
+        <span class="option-tag">Option B</span>
+        <h3>The Offering</h3>
+        <p>Two open hands holding a warm flame. "Made by hand, offered with warmth" — universal across sourdough, pastry, or anything they add.</p>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════
+         OPTION C — BOTANICAL WREATH
+    ═══════════════════════════════════════ -->
+    <div class="concept-card">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="c-top" d="M 200,200 m -162,0 a 162,162 0 1,1 324,0"/>
+          <path id="c-bot" d="M 200,200 m -132,0 a 132,132 0 1,0 264,0"/>
+        </defs>
+
+        <circle cx="200" cy="200" r="195" fill="#2C6E6A"/>
+        <circle cx="200" cy="200" r="175" fill="none" stroke="#FAF6EF" stroke-width="2"/>
+        <circle cx="200" cy="200" r="150" fill="#FAF6EF"/>
+        <circle cx="200" cy="200" r="148" fill="none" stroke="#B87050" stroke-width="1.5"/>
+
+        <!-- ── BOTANICAL WREATH ──
+             8 elements at r=85 from center (200,200)
+             Alternating: wheat head (0°,90°,180°,270°) and leaf pair (45°,135°,225°,315°)
+             Each element drawn pointing UP in local coords, then rotated outward
+        ── -->
+
+        <!-- 0° TOP — wheat head -->
+        <g transform="translate(200,115) rotate(0)">
+          <line x1="0" y1="14" x2="0" y2="-14" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="0"    cy="-16" rx="4"   ry="8.5" fill="#B87050"/>
+          <ellipse cx="-5.5" cy="-9"  rx="3.5" ry="6.5" fill="#C8956A"/>
+          <ellipse cx=" 5.5" cy="-9"  rx="3.5" ry="6.5" fill="#C8956A"/>
+          <ellipse cx="-5.5" cy="-1"  rx="3"   ry="5.5" fill="#D4A882"/>
+          <ellipse cx=" 5.5" cy="-1"  rx="3"   ry="5.5" fill="#D4A882"/>
+        </g>
+
+        <!-- 45° UPPER-RIGHT — leaf pair -->
+        <g transform="translate(260,140) rotate(45)">
+          <line x1="0" y1="10" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="-7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate(-35,-7,-5)"/>
+          <ellipse cx=" 7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate( 35, 7,-5)"/>
+        </g>
+
+        <!-- 90° RIGHT — herb sprig -->
+        <g transform="translate(285,200) rotate(90)">
+          <line x1="0" y1="15" x2="0" y2="-12" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="0"  cy="-13" rx="4.5" ry="7"   fill="#7A9E7E"/>
+          <ellipse cx="-5" cy="-7"  rx="4"   ry="6"   fill="#7A9E7E" transform="rotate(-20,-5,-7)"/>
+          <ellipse cx=" 5" cy="-7"  rx="4"   ry="6"   fill="#7A9E7E" transform="rotate( 20, 5,-7)"/>
+          <ellipse cx="-4" cy=" 0"  rx="3.5" ry="5"   fill="#A8D4D1" transform="rotate(-15,-4, 0)"/>
+          <ellipse cx=" 4" cy=" 0"  rx="3.5" ry="5"   fill="#A8D4D1" transform="rotate( 15, 4, 0)"/>
+        </g>
+
+        <!-- 135° LOWER-RIGHT — leaf pair -->
+        <g transform="translate(260,260) rotate(135)">
+          <line x1="0" y1="10" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="-7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate(-35,-7,-5)"/>
+          <ellipse cx=" 7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate( 35, 7,-5)"/>
+        </g>
+
+        <!-- 180° BOTTOM — wheat head -->
+        <g transform="translate(200,285) rotate(180)">
+          <line x1="0" y1="14" x2="0" y2="-14" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="0"    cy="-16" rx="4"   ry="8.5" fill="#B87050"/>
+          <ellipse cx="-5.5" cy="-9"  rx="3.5" ry="6.5" fill="#C8956A"/>
+          <ellipse cx=" 5.5" cy="-9"  rx="3.5" ry="6.5" fill="#C8956A"/>
+          <ellipse cx="-5.5" cy="-1"  rx="3"   ry="5.5" fill="#D4A882"/>
+          <ellipse cx=" 5.5" cy="-1"  rx="3"   ry="5.5" fill="#D4A882"/>
+        </g>
+
+        <!-- 225° LOWER-LEFT — leaf pair -->
+        <g transform="translate(140,260) rotate(225)">
+          <line x1="0" y1="10" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="-7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate(-35,-7,-5)"/>
+          <ellipse cx=" 7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate( 35, 7,-5)"/>
+        </g>
+
+        <!-- 270° LEFT — herb sprig -->
+        <g transform="translate(115,200) rotate(270)">
+          <line x1="0" y1="15" x2="0" y2="-12" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="0"  cy="-13" rx="4.5" ry="7"   fill="#7A9E7E"/>
+          <ellipse cx="-5" cy="-7"  rx="4"   ry="6"   fill="#7A9E7E" transform="rotate(-20,-5,-7)"/>
+          <ellipse cx=" 5" cy="-7"  rx="4"   ry="6"   fill="#7A9E7E" transform="rotate( 20, 5,-7)"/>
+          <ellipse cx="-4" cy=" 0"  rx="3.5" ry="5"   fill="#A8D4D1" transform="rotate(-15,-4, 0)"/>
+          <ellipse cx=" 4" cy=" 0"  rx="3.5" ry="5"   fill="#A8D4D1" transform="rotate( 15, 4, 0)"/>
+        </g>
+
+        <!-- 315° UPPER-LEFT — leaf pair -->
+        <g transform="translate(140,140) rotate(315)">
+          <line x1="0" y1="10" x2="0" y2="-13" stroke="#7A9E7E" stroke-width="1.5" stroke-linecap="round"/>
+          <ellipse cx="-7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate(-35,-7,-5)"/>
+          <ellipse cx=" 7" cy="-5" rx="9" ry="5" fill="#7A9E7E" transform="rotate( 35, 7,-5)"/>
+        </g>
+
+        <!-- Center decoration -->
+        <circle cx="200" cy="200" r="30" fill="none" stroke="#B87050" stroke-width="1" stroke-dasharray="3,2.5"/>
+        <!-- 4-petal flower -->
+        <ellipse cx="200" cy="188" rx="5.5" ry="10" fill="#B87050"/>
+        <ellipse cx="200" cy="212" rx="5.5" ry="10" fill="#B87050"/>
+        <ellipse cx="188" cy="200" rx="10"  ry="5.5" fill="#B87050"/>
+        <ellipse cx="212" cy="200" rx="10"  ry="5.5" fill="#B87050"/>
+        <circle cx="200" cy="200" r="7.5" fill="#FAF6EF"/>
+        <circle cx="200" cy="200" r="3"   fill="#B87050"/>
+
+        <!-- ── CIRCULAR TEXT ── -->
+        <text font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#FAF6EF" letter-spacing="4" font-weight="700">
+          <textPath href="#c-top" startOffset="8%">THE HOMEMADE PANTRY</textPath>
+        </text>
+        <text font-family="'Jost', Arial, sans-serif" font-size="13" fill="#B87050" letter-spacing="3" font-weight="500">
+          <textPath href="#c-bot" startOffset="12%">MADE SLOWLY · SHARED WARMLY</textPath>
+        </text>
+      </svg>
+
+      <div class="concept-meta">
+        <span class="option-tag">Option C</span>
+        <h3>Botanical Wreath</h3>
+        <p>Wheat, herbs, and leaves in a circle — no single food dominant. Timeless artisan feel that works across every offering, every season.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    The Homemade Pantry &nbsp;·&nbsp; Brand Logo Concepts &nbsp;·&nbsp; April 2026
+  </footer>
+
+</body>
+</html>

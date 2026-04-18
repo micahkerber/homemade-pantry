@@ -6,10 +6,10 @@
 
 ## 🎯 CURRENT PRIORITY — Brand Logo
 
-**Jaime needs a circular brand logo for sticker printing on bread bags.**
+**Jaime needs a general circular brand logo for sticker printing (bread bags, packaging, etc.)**
 
 - Shape: Circle (sticker format, ~2–3 inch print target)
-- Central image: Simple sourdough loaf illustration with wheat accents
+- Central image: General / experience-agnostic — NOT sourdough-specific. Must represent "made slowly. shared warmly" across all offerings
 - Text: "THE HOMEMADE PANTRY" on top arc, "MADE SLOWLY · SHARED WARMLY" on bottom arc
 - Colors: Use brand palette — teal-deep background, cream text, clay accents
 - Format: SVG (scalable, print-sharp) + HTML preview
@@ -19,14 +19,33 @@
 
 ---
 
-## Business Scope Update
-The experience now includes baking and pastry offerings in addition 
-to the original sourdough, butter, and jam experience.
+## 🍞 Experiences
+
+The Homemade Pantry is expanding beyond a single offering. All experiences share a common identity:
+**"Made slowly. Shared warmly."** — intimate, handcrafted, in-home gatherings for up to 6 guests.
+
+### The Original Experience (flagship)
+Sourdough bread, hand-churned butter, and small-batch seasonal jam.
+Guests take home: mini sourdough loaf, active starter, flavored butter, jam, recipe card.
+
+### Baking & Pastry Experience
+Led by Brittany Trevett (professionally trained chef and baker).
+Details TBD — will evolve as offerings are finalized.
+
+### Future Experiences (TBD)
+Additional culinary experiences may be added. Each will follow the same format:
+- Intimate group (up to 6)
+- 3–3.5 hours, fully hands-on
+- Guests make and take home everything
+- Priced in line with existing packages
+
+**Brand rule:** No single experience should dominate the brand identity. The logo, website, and all materials should lead with the gathering/shared experience concept, not any specific food item.
+
+---
 
 ## Team
 - Jaime Kerber — Founder, sourdough and preserves
-- Brittany Trevett — Professionally trained chef and baker,
-  leads baking and pastry offerings
+- Brittany Trevett — Professionally trained chef and baker, leads baking and pastry offerings
 ## 👤 Who I Am
 
 I'm building the digital side of my wife's business. I have an MIS (Management Information Systems) degree but haven't actively used it in 29 years — I'm very rusty. I'm using this project as a hands-on way to relearn technology and digital business skills.
@@ -48,7 +67,7 @@ I'm building the digital side of my wife's business. I have an MIS (Management I
 **My role:** Digital infrastructure (essentially CTO for a small business)
 
 **What it is:**
-An intimate, in-home culinary gathering experience for small groups. Guests learn to make sourdough bread, hand-churned butter, and small-batch seasonal jam in a warm, beautifully styled home setting. Think slow living meets artisan craft — not a cooking class, an *evening*.
+An intimate, in-home culinary gathering experience for small groups. Guests craft something by hand — from sourdough and preserves to baked pastries — in a warm, beautifully styled home setting. Think slow living meets artisan craft — not a cooking class, an *evening*. Multiple experiences available; all share the same spirit.
 
 **Location:** 2415 Sweetwood Ct, Brookshire, TX 77423
 **Website:** www.homemadepantry.com
