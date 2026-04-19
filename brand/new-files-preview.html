@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Brand Files — Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #EDE5D8;
+      font-family: 'Jost', sans-serif;
+      padding: 48px 32px 80px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #2A2520;
+      margin-bottom: 6px;
+    }
+    header p { font-size: 0.8rem; color: #8A847C; letter-spacing: 2px; text-transform: uppercase; }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #FDF9F4;
+      border-radius: 12px;
+      padding: 28px 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 3px 16px rgba(44,37,32,0.07);
+      border: 1px solid #EDE5D8;
+      max-width: 320px;
+    }
+    .card img {
+      width: 260px;
+      height: 260px;
+      object-fit: contain;
+    }
+    .card label {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8A847C;
+      text-align: center;
+    }
+    .card .filename {
+      font-size: 0.75rem;
+      color: #B87050;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* Wheat stalk is tall, not square */
+    .card.tall img {
+      width: 120px;
+      height: 260px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>New Brand Files</h1>
+    <p>Preview — all files in brand folder</p>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="THP Brand Logo SVG Curved.svg" alt="THP Brand Logo Curved">
+      <span class="filename">THP Brand Logo SVG Curved.svg</span>
+      <label>Curved text version</label>
+    </div>
+
+    <div class="card">
+      <img src="THP Brand Logo SVG Straight.svg" alt="THP Brand Logo Straight">
+      <span class="filename">THP Brand Logo SVG Straight.svg</span>
+      <label>Straight text version</label>
+    </div>
+
+    <div class="card">
+      <img src="2.svg" alt="2.svg">
+      <span class="filename">2.svg</span>
+      <label>Variant 2</label>
+    </div>
+
+    <div class="card">
+      <img src="3.svg" alt="3.svg">
+      <span class="filename">3.svg</span>
+      <label>Variant 3</label>
+    </div>
+
+    <div class="card tall">
+      <img src="homemade_pantry_wheat_stalk.svg" alt="Wheat Stalk Element">
+      <span class="filename">homemade_pantry_wheat_stalk.svg</span>
+      <label>Wheat stalk element</label>
+    </div>
+
+  </div>
+
+</body>
+</html>
