@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Homemade Pantry — Instagram Setup Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF6EF; --warm-white: #FDF9F4;
+      --teal: #2C6E6A; --teal-mid: #3D8C87; --teal-light: #A8D4D1; --teal-pale: #E4F4F3;
+      --clay: #B87050; --clay-light: #E8C4A8;
+      --charcoal: #2A2520; --gray: #8A847C; --linen: #EDE5D8; --sage: #7A9E7E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--linen); font-family: 'Jost', sans-serif; color: var(--charcoal); padding: 0 0 80px; }
+
+    /* ── HEADER ── */
+    .page-header {
+      background: var(--teal); color: white;
+      padding: 56px 40px 48px; text-align: center;
+    }
+    .page-header .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      color: var(--teal-light); margin-bottom: 12px;
+    }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 10px; }
+    .page-header p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--teal-light); }
+
+    /* ── LAYOUT ── */
+    .page-body { max-width: 860px; margin: 0 auto; padding: 56px 24px 0; }
+
+    /* ── SECTION HEADERS ── */
+    .section-header { margin: 56px 0 28px; }
+    .section-num {
+      display: inline-block; width: 32px; height: 32px; border-radius: 50%;
+      background: var(--teal); color: white; text-align: center; line-height: 32px;
+      font-size: 0.8rem; font-weight: 600; margin-bottom: 10px;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem;
+      color: var(--charcoal); margin-bottom: 6px;
+    }
+    .section-header p { font-size: 0.85rem; color: var(--gray); }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--warm-white); border-radius: 12px;
+      padding: 28px 28px; margin-bottom: 20px;
+      border: 1px solid var(--linen);
+      box-shadow: 0 2px 12px rgba(44,37,32,0.06);
+    }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .checklist li {
+      display: flex; gap: 14px; align-items: flex-start;
+      font-size: 0.9rem; line-height: 1.6;
+    }
+    .checklist li .step-num {
+      flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid var(--teal); color: var(--teal);
+      text-align: center; line-height: 24px; font-size: 0.75rem; font-weight: 600;
+    }
+    .checklist li strong { color: var(--charcoal); }
+    .checklist li span { color: var(--gray); }
+    .note {
+      background: var(--teal-pale); border-left: 3px solid var(--teal);
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      font-size: 0.82rem; color: var(--teal); margin-top: 8px; line-height: 1.6;
+    }
+
+    /* ── PROFILE BIO CARD ── */
+    .bio-display {
+      background: var(--charcoal); color: white; border-radius: 10px;
+      padding: 24px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.88rem; line-height: 1.8; white-space: pre-line;
+      margin-bottom: 16px;
+    }
+    .bio-display .handle { font-weight: 700; font-size: 1rem; margin-bottom: 8px; color: white; }
+    .bio-label {
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gray); margin-bottom: 8px;
+    }
+    .copy-tip {
+      font-size: 0.78rem; color: var(--clay); background: #FDF0E8;
+      padding: 8px 14px; border-radius: 6px; display: inline-block; margin-top: 6px;
+    }
+
+    /* ── PROFILE FIELDS ── */
+    .profile-fields { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+    .field { display: flex; flex-direction: column; gap: 4px; }
+    .field-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); }
+    .field-value {
+      font-size: 0.88rem; background: var(--cream); padding: 10px 14px;
+      border-radius: 6px; color: var(--charcoal); border: 1px solid var(--linen);
+    }
+    .field-note { font-size: 0.75rem; color: var(--gray); font-style: italic; }
+
+    /* ── POST CARDS ── */
+    .post-card {
+      background: var(--warm-white); border-radius: 12px;
+      border: 1px solid var(--linen); overflow: hidden;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 12px rgba(44,37,32,0.06);
+    }
+    .post-header {
+      background: var(--teal); color: white;
+      padding: 14px 22px; display: flex; align-items: center; gap: 14px;
+    }
+    .post-number {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+      text-align: center; line-height: 32px; font-size: 0.8rem; font-weight: 600; flex-shrink: 0;
+    }
+    .post-header-text h3 { font-family: 'Playfair Display', serif; font-size: 1rem; }
+    .post-header-text .post-type { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--teal-light); margin-top: 2px; }
+    .post-body { padding: 22px; }
+    .post-photo {
+      background: var(--teal-pale); border-radius: 8px;
+      padding: 12px 16px; margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .post-photo .photo-icon { font-size: 1.4rem; }
+    .post-photo-text strong { font-size: 0.85rem; color: var(--teal); display: block; }
+    .post-photo-text span { font-size: 0.75rem; color: var(--gray); }
+    .caption-label { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); margin-bottom: 10px; }
+    .caption-box {
+      background: var(--cream); border: 1px solid var(--linen);
+      border-radius: 8px; padding: 16px;
+      font-size: 0.85rem; line-height: 1.9; color: var(--charcoal);
+      white-space: pre-line; margin-bottom: 14px;
+    }
+    .hashtag-box {
+      background: #E4F4F3; border-radius: 8px; padding: 12px 16px;
+      font-size: 0.78rem; color: var(--teal); line-height: 1.8;
+    }
+
+    /* ── HASHTAG BANK ── */
+    .hashtag-section { margin-bottom: 20px; }
+    .hashtag-category {
+      font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--clay); margin-bottom: 8px; font-weight: 600;
+    }
+    .hashtag-group {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+    }
+    .hashtag {
+      background: var(--teal-pale); color: var(--teal);
+      padding: 4px 12px; border-radius: 20px;
+      font-size: 0.78rem; font-family: 'Jost', sans-serif;
+    }
+
+    /* ── DIVIDER ── */
+    hr { border: none; border-top: 1px solid var(--linen); margin: 48px 0; }
+
+    @media (max-width: 600px) {
+      .page-body { padding: 32px 16px 0; }
+      .post-body { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <p class="eyebrow">The Homemade Pantry · Social</p>
+  <h1>Instagram Setup Guide</h1>
+  <p>Everything Jaime needs to launch @thehomemadepantry</p>
+</div>
+
+<div class="page-body">
+
+
+  <!-- ══════════════════════════════
+       SECTION 1: ACCOUNT SETUP
+  ══════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <h2>Create the Account</h2>
+    <p>Do this on Jaime's phone — takes about 5 minutes.</p>
+  </div>
+
+  <div class="card">
+    <ul class="checklist">
+      <li>
+        <div class="step-num">1</div>
+        <div><strong>Download Instagram</strong> from the App Store or Google Play if it's not already installed.</div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div><strong>Tap "Sign up"</strong> → use email: <strong>thehomemadepantryco@gmail.com</strong> → create a strong password and save it somewhere safe.</div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div><strong>Set your username</strong> to <strong>@thehomemadepantry</strong> — check it's available. If taken, try @thehomemadepantryco or @homemadepantry.tx</div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div><strong>Switch to a Professional account:</strong> Go to Settings → Account → Switch to Professional Account → choose <em>Business</em> → Category: <em>Kitchen & Cooking</em> or <em>Local Business</em>.</div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div><strong>Add contact info:</strong> In your profile settings, add email <strong>thehomemadepantryco@gmail.com</strong>. This shows a "Contact" button on your profile.</div>
+      </li>
+      <li>
+        <div class="step-num">6</div>
+        <div><strong>Keep the account private</strong> until all 9 posts are uploaded and the profile is complete. Then flip to public.</div>
+      </li>
+    </ul>
+    <div class="note">💡 A Business account gives you access to Instagram Insights (analytics), the ability to run ads later, and a contact button — all things you'll want as bookings grow.</div>
+  </div>
+
+
+  <!-- ══════════════════════════════
+       SECTION 2: PROFILE SETUP
+  ══════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <h2>Configure Your Profile</h2>
+    <p>Copy and paste these directly into Instagram.</p>
+  </div>
+
+  <div class="card">
+    <div class="bio-label">Profile Bio — copy this exactly</div>
+    <div class="bio-display">
+<span class="handle">@thehomemadepantry</span>Intimate culinary evenings · Up to 6 guests
+Sourdough & Preserves · Baking & Pastry
+Made slowly. Shared warmly. 🫙
+📍 Brookshire, TX
+✨ Book your evening ↓</div>
+    <span class="copy-tip">⚠️ Instagram bio limit is 150 characters — this fits exactly. Don't add extra spaces or it may get cut off.</span>
+  </div>
+
+  <div class="card">
+    <div class="profile-fields">
+      <div class="field">
+        <div class="field-label">Name (display name — searchable)</div>
+        <div class="field-value">The Homemade Pantry</div>
+        <div class="field-note">This is what shows in bold above your bio. Use the full name — it helps people find you by searching.</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Website / Link in Bio</div>
+        <div class="field-value">homemadepantry.com</div>
+        <div class="field-note">Add this once the domain is registered and the site is live. Until then, leave it blank or use the Netlify URL.</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Profile Photo</div>
+        <div class="field-value">Use your finalized logo (once chosen)</div>
+        <div class="field-note">Profile photos appear as a small circle — the logo is ideal. Until the logo is locked, use IMG_0386 (the golden bread loaves) as a temporary placeholder. It's the most striking single image in the set.</div>
+      </div>
+      <div class="field">
+        <div class="field-label">Contact Email</div>
+        <div class="field-value">thehomemadepantryco@gmail.com</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════
+       SECTION 3: THE 9 LAUNCH POSTS
+  ══════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <h2>The First 9 Posts</h2>
+    <p>Upload all 9 before going public — they form your grid and first impression. Post in this order.</p>
+  </div>
+
+  <div class="note" style="margin-bottom: 28px;">📱 Upload Post 9 first, then Post 8, down to Post 1 — Instagram shows newest first, so the grid reads in the right order when viewed on your profile.</div>
+
+
+  <!-- POST 1 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">1</div>
+      <div class="post-header-text">
+        <h3>The Announcement</h3>
+        <div class="post-type">🟧 Experience · Opening Post</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0402.JPEG</strong>
+          <span>Group photo — 8 women in aprons with take-home bags, smiling in the home kitchen</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">This is what an evening at The Homemade Pantry looks like.
+
+Eight women. One kitchen. Three hours of flour, cream, strawberries, and laughter.
+
+They made sourdough bread, hand-churned butter, and small-batch strawberry jam — and they left with all of it.
+
+This was our preview evening. Now we're opening our doors.
+
+Two gatherings. One kitchen. Up to six guests.
+→ Sourdough & Preserves, with Jaime
+→ Baking & Pastry, with Brittany
+
+Link in bio to learn more. We'd love to have you at the table.
+
+Made slowly. Shared warmly. 🫙</div>
+      <div class="hashtag-box">#TheHomemadePantry #CulinaryGathering #DateNight #GirlsNight #BrookshireTexas #HoustonFoodie #MadeByHand #SlowLiving #ArtisanBread #FromScratch #TexasFoodie #CookingClass #IntimateGathering</div>
+    </div>
+  </div>
+
+  <!-- POST 2 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">2</div>
+      <div class="post-header-text">
+        <h3>Before You Arrive</h3>
+        <div class="post-type">🟧 Experience · The Space</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_1694.JPEG</strong>
+          <span>Kitchen island with aprons and notebooks laid out at each spot — clean, anticipatory</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">Before the evening begins.
+
+Six aprons. Six notebooks. Six spots at this table.
+
+This is the moment before the flour hits the counter — everything still clean, everything still quiet. That changes fast.
+
+By the end of the night there will be dough on the counter, butter on everyone's hands, and something warm coming out of the oven.
+
+This is what we set up for you.</div>
+      <div class="hashtag-box">#TheHomemadePantry #BeforeAndAfter #BrookshireTexas #HomeCooking #SlowEvening #MadeByHand #IntentionalLiving #GatheringTable</div>
+    </div>
+  </div>
+
+  <!-- POST 3 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">3</div>
+      <div class="post-header-text">
+        <h3>The Moment the Lid Comes Off</h3>
+        <div class="post-type">🟦 Process · Hero Food Shot</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0386.JPEG</strong>
+          <span>Golden sourdough loaves in dutch ovens — your best food photograph</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">That moment when the lid comes off.
+
+You've been waiting. The kitchen smells incredible. And then — this.
+
+Your loaf. The one you shaped with your hands two hours ago. Golden, blistered, still steaming in the dutch oven.
+
+No one believes they made it until they're holding it.
+
+This is the Sourdough & Preserves evening at The Homemade Pantry. You bake it. You take it home.</div>
+      <div class="hashtag-box">#Sourdough #SourdoughBread #FreshBread #TheHomemadePantry #BreadBaking #ArtisanBread #MadeByHand #BrookshireTexas #HoustonFoodie #FromScratch #DutchOvenBread #BreadLover</div>
+    </div>
+  </div>
+
+  <!-- POST 4 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">4</div>
+      <div class="post-header-text">
+        <h3>Hands in Dough</h3>
+        <div class="post-type">🟦 Process · Sourdough Shaping</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0363.JPEG</strong>
+          <span>Hands shaping dough on a floured counter, flavor bowls visible in background</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">This is the part people are most nervous about.
+
+Shaping dough feels impossible until it suddenly doesn't. There's a moment — usually around minute three — where your hands just know what to do.
+
+Jaime walks every guest through it. The tension, the fold, the tuck. By the time you're done, you feel like you've been doing it for years.
+
+Sourdough & Preserves evenings at The Homemade Pantry. Small groups. Real hands-on craft.</div>
+      <div class="hashtag-box">#SourdoughShaping #BreadBaking #TheHomemadePantry #HandsOnCooking #ArtisanBread #MadeByHand #LearnToCook #BrookshireTexas #SourdoughCommunity #BreadMaking</div>
+    </div>
+  </div>
+
+  <!-- POST 5 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">5</div>
+      <div class="post-header-text">
+        <h3>Seasonal Means Something Here</h3>
+        <div class="post-type">🟩 Educate · Seasonal Ingredient</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0370.JPEG</strong>
+          <span>Fresh strawberries in a container being cut — beautiful red, seasonal</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">Seasonal means something here.
+
+We don't use frozen fruit or store-bought pectin. When strawberries are in season in Texas, we use strawberries. When peaches come in, it'll be peaches.
+
+The jam you make depends on when you come.
+
+That's the whole point.
+
+Fresh fruit → a few minutes with sugar over heat → small-batch jam that tastes like the season it came from.
+
+Come make it with us.</div>
+      <div class="hashtag-box">#SmallBatchJam #SeasonalCooking #FreshStrawberries #HomemadeJam #TheHomemadePantry #FromScratch #PreservingTheSeason #BrookshireTexas #TexasStrawberries #EatSeasonal</div>
+    </div>
+  </div>
+
+  <!-- POST 6 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">6</div>
+      <div class="post-header-text">
+        <h3>You'll Know It's Ready</h3>
+        <div class="post-type">🟦 Process · Jam Making</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0372.JPEG</strong>
+          <span>Jam bubbling in a pot, steam rising — beautiful warm process shot</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">You'll know it's ready when it looks like this.
+
+Not by a timer. Not by a thermometer. By the way it moves in the pot — slower, richer, pulling away from the sides just slightly.
+
+That's the part cookbooks try to describe and can't quite get right. It's the part you have to see in person.
+
+Every guest in our Sourdough & Preserves evening stands at the stove for this moment. Watching. Waiting. Learning something a recipe can't teach you.</div>
+      <div class="hashtag-box">#HomemadeJam #SmallBatchJam #JamMaking #TheHomemadePantry #SeasonalCooking #FromScratch #MadeSlowly #PreservingTheSeason #CanningAndPreserving #SlowFood</div>
+    </div>
+  </div>
+
+  <!-- POST 7 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">7</div>
+      <div class="post-header-text">
+        <h3>Heavy Cream Goes In</h3>
+        <div class="post-type">🟦 Process · Butter Making</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0382.JPEG</strong>
+          <span>Hands pressing fresh butter on the counter, jam jars visible in the background</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">Heavy cream goes in.
+
+Two minutes of mixing. And then — butter.
+
+It separates right in front of you. Buttermilk draining off, golden solids coming together. Guests gasp every single time.
+
+Then we season it. Roasted garlic & thyme. Honey & sea salt. Smoked paprika.
+
+You'll make three flavors. You'll take all of them home.
+
+This is one of the things you'll make during our Sourdough & Preserves evening — and one of the things you'll make again at home on a Tuesday morning, just because you can.</div>
+      <div class="hashtag-box">#HandmadeButter #CulturedButter #TheHomemadePantry #MadeFromScratch #BrookshireTexas #SlowLiving #FromScratch #FlavoredButter #ChurnedButter #HomeCooking</div>
+    </div>
+  </div>
+
+  <!-- POST 8 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">8</div>
+      <div class="post-header-text">
+        <h3>The Care Doesn't Stop</h3>
+        <div class="post-type">🟧 Experience · Artisan Detail</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0395.JPEG</strong>
+          <span>Close-up of hands tying twine around a beautifully wrapped parcel — warm, detail-oriented</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">The care doesn't stop when the cooking does.
+
+Every take-home is wrapped by hand. Every bag is packed intentionally.
+
+Because the evening isn't just the three hours at the table — it's the loaf you slice into the next morning, the jam you open for your kids, the starter you feed on Sunday.
+
+The Homemade Pantry is designed to keep going after you leave.</div>
+      <div class="hashtag-box">#TheHomemadePantry #Handmade #TakeHome #MadeWithCare #SlowLiving #BrookshireTexas #ArtisanGifts #GiftIdeas #HandcraftedWithLove #IntentionalLiving</div>
+    </div>
+  </div>
+
+  <!-- POST 9 -->
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-number">9</div>
+      <div class="post-header-text">
+        <h3>There's a Seat at This Table</h3>
+        <div class="post-type">🟨 Booking · CTA</div>
+      </div>
+    </div>
+    <div class="post-body">
+      <div class="post-photo">
+        <div class="photo-icon">📸</div>
+        <div class="post-photo-text">
+          <strong>IMG_0331.jpeg</strong>
+          <span>Clean mise en place — bowl, flour jar, whisk, bench scraper laid out on the table. Calm and inviting.</span>
+        </div>
+      </div>
+      <div class="caption-label">Caption</div>
+      <div class="caption-box">There's a seat at this table for you.
+
+The Homemade Pantry gathers small groups — up to 6 guests — for intimate culinary evenings in a real home kitchen in Brookshire, TX.
+
+Choose your evening:
+🍞 Sourdough & Preserves with Jaime
+🥐 Baking & Pastry with Brittany
+
+Date nights · Girls nights · Private buyouts · Corporate gifting
+
+Every gathering includes all materials, a charcuterie spread, and take-home goods you made yourself.
+
+$120 per person · $240 for two · $600 full buyout
+
+Gatherings opening soon. Follow along — or send us a DM to get on the list.
+
+Made slowly. Shared warmly. 🫙</div>
+      <div class="hashtag-box">#TheHomemadePantry #BookNow #DateNight #GirlsNight #BrookshireTexas #HoustonFoodie #CulinaryExperience #GirlsNightOut #PrivateEvents #ArtisanBread #HomemadeJam #TexasFoodie</div>
+    </div>
+  </div>
+
+
+  <hr>
+
+
+  <!-- ══════════════════════════════
+       SECTION 4: HASHTAG BANK
+  ══════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <h2>Hashtag Bank</h2>
+    <p>Pull from these for all future posts. Mix broad + local for best reach.</p>
+  </div>
+
+  <div class="card">
+
+    <div class="hashtag-section">
+      <div class="hashtag-category">Brand (always use)</div>
+      <div class="hashtag-group">
+        <span class="hashtag">#TheHomemadePantry</span>
+        <span class="hashtag">#MadeSlowlySharedWarmly</span>
+        <span class="hashtag">#MadeByHand</span>
+        <span class="hashtag">#FromScratch</span>
+        <span class="hashtag">#SlowLiving</span>
+        <span class="hashtag">#MadeSlowly</span>
+      </div>
+    </div>
+
+    <div class="hashtag-section">
+      <div class="hashtag-category">Local (helps people in Houston find you)</div>
+      <div class="hashtag-group">
+        <span class="hashtag">#BrookshireTexas</span>
+        <span class="hashtag">#HoustonFoodie</span>
+        <span class="hashtag">#HoustonFood</span>
+        <span class="hashtag">#TexasFoodie</span>
+        <span class="hashtag">#HoustonEats</span>
+        <span class="hashtag">#HoustonDate</span>
+        <span class="hashtag">#HoustonDateNight</span>
+        <span class="hashtag">#KatyTexas</span>
+        <span class="hashtag">#WestHouston</span>
+      </div>
+    </div>
+
+    <div class="hashtag-section">
+      <div class="hashtag-category">Sourdough & Bread</div>
+      <div class="hashtag-group">
+        <span class="hashtag">#Sourdough</span>
+        <span class="hashtag">#SourdoughBread</span>
+        <span class="hashtag">#SourdoughCommunity</span>
+        <span class="hashtag">#ArtisanBread</span>
+        <span class="hashtag">#BreadBaking</span>
+        <span class="hashtag">#BreadMaking</span>
+        <span class="hashtag">#DutchOvenBread</span>
+        <span class="hashtag">#SourdoughStarter</span>
+        <span class="hashtag">#FreshBread</span>
+      </div>
+    </div>
+
+    <div class="hashtag-section">
+      <div class="hashtag-category">Preserves, Butter & Pastry</div>
+      <div class="hashtag-group">
+        <span class="hashtag">#HomemadeJam</span>
+        <span class="hashtag">#SmallBatchJam</span>
+        <span class="hashtag">#PreservingTheSeason</span>
+        <span class="hashtag">#HandmadeButter</span>
+        <span class="hashtag">#CulturedButter</span>
+        <span class="hashtag">#ArtisanBaking</span>
+        <span class="hashtag">#PastryLife</span>
+        <span class="hashtag">#SeasonalCooking</span>
+      </div>
+    </div>
+
+    <div class="hashtag-section">
+      <div class="hashtag-category">Experience & Gathering</div>
+      <div class="hashtag-group">
+        <span class="hashtag">#CulinaryExperience</span>
+        <span class="hashtag">#DateNight</span>
+        <span class="hashtag">#GirlsNight</span>
+        <span class="hashtag">#GirlsNightOut</span>
+        <span class="hashtag">#IntimateGathering</span>
+        <span class="hashtag">#GatheringTable</span>
+        <span class="hashtag">#PrivateEvents</span>
+        <span class="hashtag">#CorporateGifting</span>
+        <span class="hashtag">#UniqueExperience</span>
+        <span class="hashtag">#HandsOnCooking</span>
+      </div>
+    </div>
+
+    <div class="hashtag-section">
+      <div class="hashtag-category">Lifestyle & Slow Living</div>
+      <div class="hashtag-group">
+        <span class="hashtag">#SlowFood</span>
+        <span class="hashtag">#IntentionalLiving</span>
+        <span class="hashtag">#HomeCooking</span>
+        <span class="hashtag">#CottageCore</span>
+        <span class="hashtag">#MadeWithLove</span>
+        <span class="hashtag">#ArtisanFood</span>
+        <span class="hashtag">#FoodPhotography</span>
+        <span class="hashtag">#FoodLovers</span>
+      </div>
+    </div>
+
+    <div class="note">💡 Use 5–10 hashtags per post — mix 2–3 broad ones (#Sourdough, #DateNight) with 2–3 local ones (#BrookshireTexas, #HoustonFoodie) and 1–2 brand ones (#TheHomemadePantry). Don't use all of them every time.</div>
+  </div>
+
+
+  <hr>
+
+
+  <!-- ══════════════════════════════
+       SECTION 5: AFTER LAUNCH
+  ══════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <h2>After You Go Public</h2>
+    <p>Rules to follow from day one.</p>
+  </div>
+
+  <div class="card">
+    <ul class="checklist">
+      <li>
+        <div class="step-num">✓</div>
+        <div><strong>Reply to every comment</strong> within 30 minutes of posting — especially on the first few posts. The algorithm rewards engagement right after publishing.</div>
+      </li>
+      <li>
+        <div class="step-num">✓</div>
+        <div><strong>Post Stories every day</strong> even on days you don't post to the feed. Behind-the-scenes, a quick thought, a photo of the kitchen — anything.</div>
+      </li>
+      <li>
+        <div class="step-num">✓</div>
+        <div><strong>Post 4–5x per week max.</strong> Consistency beats volume. Missing a day is fine. Going silent for two weeks hurts.</div>
+      </li>
+      <li>
+        <div class="step-num">✓</div>
+        <div><strong>Reels first.</strong> Instagram pushes Reels to people who don't follow you yet. Even a short 15-second clip of bread coming out of the oven will outreach any photo post.</div>
+      </li>
+      <li>
+        <div class="step-num">✓</div>
+        <div><strong>DMs are bookings.</strong> Anyone who comments or DMs "how do I book?" gets a warm, personal response — not a link. Talk to them like a person.</div>
+      </li>
+    </ul>
+  </div>
+
+</div><!-- /page-body -->
+
+</body>
+</html>
