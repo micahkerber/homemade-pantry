@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Homemade Pantry — Google Business Profile Setup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital@1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF6EF; --warm-white: #FDF9F4;
+      --teal: #2C6E6A; --teal-mid: #3D8C87; --teal-light: #A8D4D1; --teal-pale: #E4F4F3;
+      --clay: #B87050; --clay-light: #E8C4A8;
+      --charcoal: #2A2520; --gray: #8A847C; --linen: #EDE5D8; --sage: #7A9E7E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--linen); font-family: 'Jost', sans-serif; color: var(--charcoal); padding: 0 0 80px; }
+
+    /* ── HEADER ── */
+    .page-header {
+      background: var(--teal); color: white;
+      padding: 56px 40px 48px; text-align: center;
+    }
+    .page-header .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      color: var(--teal-light); margin-bottom: 12px;
+    }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 10px; }
+    .rule { width: 48px; height: 2px; background: var(--clay); margin: 16px auto; }
+    .page-header p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--teal-light); }
+
+    /* ── LAYOUT ── */
+    .page-body { max-width: 860px; margin: 0 auto; padding: 56px 24px 0; }
+
+    /* ── SECTION HEADERS ── */
+    .section-header { margin: 56px 0 24px; }
+    .section-num {
+      display: inline-block; width: 32px; height: 32px; border-radius: 50%;
+      background: var(--teal); color: white; text-align: center; line-height: 32px;
+      font-size: 0.8rem; font-weight: 600; margin-bottom: 10px;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem;
+      color: var(--charcoal); margin-bottom: 6px;
+    }
+    .section-header p { font-size: 0.85rem; color: var(--gray); }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--warm-white); border-radius: 12px;
+      padding: 28px; margin-bottom: 20px;
+      border: 1px solid var(--linen);
+      box-shadow: 0 2px 12px rgba(44,37,32,0.06);
+    }
+    .card-title {
+      font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--clay); margin-bottom: 16px; font-weight: 600;
+    }
+
+    /* ── STEP LIST ── */
+    .step-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+    .step-list li {
+      display: flex; gap: 16px; align-items: flex-start;
+      font-size: 0.9rem; line-height: 1.6;
+    }
+    .step-num {
+      flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+      border: 2px solid var(--teal); color: var(--teal);
+      text-align: center; line-height: 26px; font-size: 0.75rem; font-weight: 600;
+    }
+    .step-list li .content strong { color: var(--charcoal); display: block; margin-bottom: 3px; }
+    .step-list li .content span { color: var(--gray); }
+
+    /* ── NOTES / WARNINGS ── */
+    .note {
+      background: var(--teal-pale); border-left: 3px solid var(--teal);
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      font-size: 0.82rem; color: var(--teal); margin-top: 12px; line-height: 1.6;
+    }
+    .warning {
+      background: #FEF3EC; border-left: 3px solid var(--clay);
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      font-size: 0.82rem; color: var(--clay); margin-top: 12px; line-height: 1.6;
+    }
+
+    /* ── COPY BLOCKS ── */
+    .copy-block {
+      background: var(--charcoal); color: #E8E4DE; border-radius: 8px;
+      padding: 20px 22px; font-size: 0.88rem; line-height: 1.9;
+      white-space: pre-line; margin: 12px 0 8px;
+      font-family: 'Jost', sans-serif;
+    }
+    .copy-block .field { color: var(--teal-light); font-weight: 600; }
+    .copy-block .value { color: white; }
+
+    /* ── FIELD TABLE ── */
+    .field-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .field-table tr { border-bottom: 1px solid var(--linen); }
+    .field-table tr:last-child { border-bottom: none; }
+    .field-table td { padding: 12px 8px; vertical-align: top; }
+    .field-table td:first-child { color: var(--gray); width: 38%; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; padding-right: 16px; }
+    .field-table td:last-child { color: var(--charcoal); font-weight: 500; }
+
+    /* ── ADDRESS HIDE CALLOUT ── */
+    .address-callout {
+      background: var(--teal); color: white; border-radius: 12px;
+      padding: 28px; margin-bottom: 20px; text-align: center;
+    }
+    .address-callout .icon { font-size: 2rem; margin-bottom: 12px; }
+    .address-callout h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px; }
+    .address-callout p { font-size: 0.85rem; color: var(--teal-light); line-height: 1.7; max-width: 520px; margin: 0 auto; }
+
+    /* ── VERIFICATION BOX ── */
+    .verify-card {
+      background: var(--clay); color: white; border-radius: 12px;
+      padding: 28px; margin-bottom: 20px;
+    }
+    .verify-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 10px; }
+    .verify-card p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.88); }
+    .verify-card ul { margin-top: 14px; padding-left: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.88); line-height: 2; }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .checklist li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.88rem; line-height: 1.6; color: var(--charcoal);
+    }
+    .check-box {
+      flex-shrink: 0; width: 20px; height: 20px; border-radius: 4px;
+      border: 2px solid var(--teal); margin-top: 1px;
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .divider { border: none; border-top: 1px solid var(--linen); margin: 8px 0 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; margin-top: 64px;
+      font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gray); text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <p class="eyebrow">The Homemade Pantry · Setup Guide</p>
+    <h1>Google Business Profile</h1>
+    <div class="rule"></div>
+    <p>Get found locally — with your home address kept private</p>
+  </header>
+
+  <div class="page-body">
+
+    <!-- BEFORE YOU START -->
+    <div class="section-header">
+      <div class="section-num">0</div>
+      <h2>Before You Start</h2>
+      <p>Have these ready — you'll need them during setup</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">What You'll Need</div>
+      <table class="field-table">
+        <tr>
+          <td>Google Account</td>
+          <td>thehomemadepantryco@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Business Name</td>
+          <td>The Homemade Pantry</td>
+        </tr>
+        <tr>
+          <td>Business Address</td>
+          <td>2415 Sweetwood Court, Brookshire, TX 77423<br><span style="font-size:0.78rem;color:var(--gray);font-weight:400">Used for verification only — not shown publicly</span></td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>832-546-6446</td>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td>www.homemadepantry.com</td>
+        </tr>
+        <tr>
+          <td>Service Area</td>
+          <td>Brookshire, TX (add Houston, TX for broader reach)</td>
+        </tr>
+        <tr>
+          <td>Time Needed</td>
+          <td>~15 minutes to set up · 5–7 days for postcard verification</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="address-callout">
+      <div class="icon">🏠</div>
+      <h3>Your home address stays private</h3>
+      <p>Google requires your address to verify the business is real, but you can hide it from the public listing. Customers will see "Brookshire, TX area" — not your street address.</p>
+    </div>
+
+    <!-- STEP 1 — CREATE THE PROFILE -->
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Create the Profile</h2>
+      <p>Go to business.google.com and sign in</p>
+    </div>
+
+    <div class="card">
+      <ol class="step-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="content">
+            <strong>Go to business.google.com</strong>
+            <span>Sign in with <strong>thehomemadepantryco@gmail.com</strong></span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="content">
+            <strong>Click "Manage now" or "Add your business"</strong>
+            <span>If Google finds an existing listing for your address, claim it instead of creating a new one.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="content">
+            <strong>Enter your business name</strong>
+            <span>Type exactly: <strong>The Homemade Pantry</strong></span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">4</div>
+          <div class="content">
+            <strong>Choose a business category</strong>
+            <span>Search for and select <strong>"Cooking school"</strong> — it's the closest match. You can add more categories after setup.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">5</div>
+          <div class="content">
+            <strong>When asked "Do you want to add a location customers can visit?"</strong>
+            <span>Select <strong>No</strong> — your guests come to you by private invitation, not a storefront.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">6</div>
+          <div class="content">
+            <strong>When asked if you serve customers outside your location</strong>
+            <span>Select <strong>Yes</strong> — this unlocks the service area option and lets you hide your address.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- STEP 2 — SERVICE AREA -->
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Set Your Service Area</h2>
+      <p>This is what shows on your public listing instead of your address</p>
+    </div>
+
+    <div class="card">
+      <ol class="step-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="content">
+            <strong>Add service areas</strong>
+            <span>Type and add these two areas:</span>
+          </div>
+        </li>
+      </ol>
+      <div class="copy-block"><span class="field">Area 1: </span><span class="value">Brookshire, TX</span>
+<span class="field">Area 2: </span><span class="value">Houston, TX</span></div>
+      <div class="note">Adding Houston broadens your search visibility. Guests will travel from the Houston metro for this kind of experience.</div>
+    </div>
+
+    <!-- STEP 3 — HIDE YOUR ADDRESS -->
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Enter &amp; Hide Your Address</h2>
+      <p>Required for verification — but kept off your public listing</p>
+    </div>
+
+    <div class="card">
+      <ol class="step-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="content">
+            <strong>Enter your business address when prompted</strong>
+            <span>This is for Google's verification process — it will NOT appear publicly if you complete the next step.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="content">
+            <strong>Look for the checkbox: "Hide my address"</strong>
+            <span>It may be labeled "I serve customers at their location" or "Don't show my address." Check this box.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="content">
+            <strong>After setup, double-check in Info settings</strong>
+            <span>Go to your profile → <strong>Edit profile → Business location</strong> — confirm "Show address" is toggled OFF.</span>
+          </div>
+        </li>
+      </ol>
+      <div class="warning">⚠️ If you skip hiding the address, your home address will appear on Google Maps. Always verify this setting before finishing setup.</div>
+    </div>
+
+    <!-- STEP 4 — BUSINESS DETAILS -->
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Fill In Business Details</h2>
+      <p>Copy and paste these directly</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ready to Paste</div>
+      <div class="copy-block"><span class="field">Phone:   </span><span class="value">832-546-6446</span>
+<span class="field">Website: </span><span class="value">www.homemadepantry.com</span>
+<span class="field">Email:   </span><span class="value">thehomemadepantryco@gmail.com</span></div>
+
+      <div style="margin-top: 24px;">
+        <div class="card-title">Business Description (copy this)</div>
+        <div class="copy-block">An intimate, in-home culinary gathering experience for small groups in Brookshire, TX. Up to 6 guests craft artisan recipes by hand — sourdough &amp; preserves, baking &amp; pastry, and more. Every gathering is fully hands-on. Guests make and take home everything they create.
+
+Made slowly. Shared warmly.</div>
+        <div class="note">750 character limit on Google — this description is 296 characters, well within the limit.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Hours — Suggested Starting Point</div>
+      <table class="field-table">
+        <tr><td>Monday – Friday</td><td>Closed (or "By appointment")</td></tr>
+        <tr><td>Saturday</td><td>5:00 PM – 9:00 PM</td></tr>
+        <tr><td>Sunday</td><td>2:00 PM – 6:00 PM</td></tr>
+      </table>
+      <div class="note">You can update hours anytime. Google also lets you mark specific dates as closed. Set whatever reflects when Jaime is actually available to host.</div>
+    </div>
+
+    <!-- STEP 5 — PHOTOS -->
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Add Photos</h2>
+      <p>Listings with photos get significantly more clicks — add at least 5 to start</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Photo Recommendations — Use These from the April Preview Party</div>
+      <ul class="checklist">
+        <li><div class="check-box"></div><strong>Cover photo:</strong> IMG_0402 — group with aprons and take-home bags (warm, welcoming first impression)</li>
+        <li><div class="check-box"></div><strong>Logo:</strong> Upload the chosen logo SVG/PNG once Jaime decides (curved or straight)</li>
+        <li><div class="check-box"></div>IMG_0386 — golden bread in dutch ovens (signature food shot)</li>
+        <li><div class="check-box"></div>IMG_0363 — hands shaping dough (hands-on craft)</li>
+        <li><div class="check-box"></div>IMG_0372 — jam bubbling in pot (artisan process)</li>
+        <li><div class="check-box"></div>IMG_0395 — hands tying twine on parcel (artisan detail)</li>
+        <li><div class="check-box"></div>IMG_0331 — mise en place setup (beautiful staging)</li>
+      </ul>
+      <div class="note">Photos live in <code style="font-size:0.8rem;background:var(--teal-pale);padding:2px 6px;border-radius:4px;">images/</code> and <code style="font-size:0.8rem;background:var(--teal-pale);padding:2px 6px;border-radius:4px;">website/images/</code> in the project folder.</div>
+    </div>
+
+    <!-- STEP 6 — VERIFICATION -->
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Verify the Business</h2>
+      <p>Google has to confirm the business is real — this is the waiting step</p>
+    </div>
+
+    <div class="verify-card">
+      <h3>📮 Postcard Verification</h3>
+      <p>Google will mail a postcard to <strong>2415 Sweetwood Court, Brookshire, TX 77423</strong> containing a 5-digit PIN. The postcard is not visible to the public — it's just Google's way of confirming someone real is at that address.</p>
+      <ul>
+        <li>Arrives in 5–7 business days (sometimes up to 14)</li>
+        <li>When it arrives: go to business.google.com → click "Verify" → enter the PIN</li>
+        <li>Your listing goes fully live after PIN entry</li>
+        <li>Do not request a second postcard unless the first one hasn't arrived after 14 days</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">While You Wait for the Postcard</div>
+      <ul class="checklist">
+        <li><div class="check-box"></div>Your listing is live in a limited state — Google just won't rank it prominently yet</li>
+        <li><div class="check-box"></div>Add any missing photos or details now</li>
+        <li><div class="check-box"></div>Set up your Q&amp;A section — add the most common questions yourself (see below)</li>
+        <li><div class="check-box"></div>Link your Instagram @thehomemadepantry in the social profiles section</li>
+      </ul>
+    </div>
+
+    <!-- STEP 7 — Q&A -->
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Seed the Q&amp;A Section</h2>
+      <p>Google lets businesses post and answer their own questions — do this before anyone else does</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Add These Questions (ask &amp; answer them yourself)</div>
+      <ol class="step-list">
+        <li>
+          <div class="step-num">Q</div>
+          <div class="content">
+            <strong>How many people can attend?</strong>
+            <span>Up to 6 guests per evening — the experience is intentionally intimate. Private buyouts for the full group are available.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">Q</div>
+          <div class="content">
+            <strong>What do guests take home?</strong>
+            <span>Everything you make — a mini sourdough loaf, flavored butter, small-batch jam, an active starter in a mason jar, and a printed recipe card.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">Q</div>
+          <div class="content">
+            <strong>Do I need baking experience?</strong>
+            <span>None at all. Everything is hands-on and guided from start to finish. It's an evening, not a class.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">Q</div>
+          <div class="content">
+            <strong>How do I book?</strong>
+            <span>Visit www.homemadepantry.com to submit a booking inquiry. A 50% deposit is required to hold your evening.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">Q</div>
+          <div class="content">
+            <strong>What is your cancellation policy?</strong>
+            <span>Cancellations 7 or more days before the event receive a full deposit refund. Cancellations within 7 days are non-refundable, but we're happy to reschedule.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- AFTER VERIFICATION -->
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>After Verification — Keep It Active</h2>
+      <p>Google rewards profiles that are regularly updated</p>
+    </div>
+
+    <div class="card">
+      <ul class="checklist">
+        <li><div class="check-box"></div><strong>Reply to every review</strong> — especially the first few. Thank guests by name.</li>
+        <li><div class="check-box"></div><strong>Post updates monthly</strong> — new photos, seasonal offerings, upcoming dates. Google Posts appear on your profile.</li>
+        <li><div class="check-box"></div><strong>Ask guests to leave a review</strong> — the day-after thank-you email (via HoneyBook) is the perfect moment to request one.</li>
+        <li><div class="check-box"></div><strong>Update hours</strong> when your availability changes — outdated hours are the #1 reason customers lose trust.</li>
+        <li><div class="check-box"></div><strong>Confirm address stays hidden</strong> — check this every few months. Google occasionally prompts businesses to confirm or update their address, and the setting can accidentally get changed.</li>
+      </ul>
+    </div>
+
+    <footer>The Homemade Pantry · Google Business Profile Setup · April 2026</footer>
+
+  </div><!-- /page-body -->
+
+</body>
+</html>
