@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Homemade Pantry — Logo Finalists</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cormorant+Garamond:ital@1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #EDE5D8;
+      font-family: 'Jost', sans-serif;
+      color: #2A2520;
+      min-height: 100vh;
+      padding: 56px 32px 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: #3D8C87;
+      margin-bottom: 12px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: #2A2520;
+      margin-bottom: 10px;
+    }
+    .rule { width: 48px; height: 2px; background: #B87050; margin: 0 auto 16px; }
+    header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #8A847C;
+    }
+
+    .finalists {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #FDF9F4;
+      border-radius: 16px;
+      padding: 40px 32px 32px;
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      box-shadow: 0 4px 24px rgba(44,37,32,0.08);
+      border: 1px solid #EDE5D8;
+    }
+
+    .card img {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .card-meta { text-align: center; }
+    .finalist-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #B87050;
+      background: #FDF0E8;
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 12px;
+    }
+    .card-meta h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: #2A2520;
+      margin-bottom: 8px;
+    }
+    .card-meta p {
+      font-size: 0.82rem;
+      color: #8A847C;
+      line-height: 1.7;
+    }
+
+    /* Sticker size test row */
+    .sizes {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      padding-top: 48px;
+      border-top: 1px solid #D4C9B8;
+    }
+    .sizes h2 {
+      width: 100%;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #2A2520;
+      margin-bottom: 8px;
+    }
+    .sizes p {
+      width: 100%;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #8A847C;
+      margin-bottom: 24px;
+    }
+    .size-test {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .size-test label {
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8A847C;
+    }
+    .bg-linen { background: #FAF6EF; padding: 16px; border-radius: 8px; }
+
+    footer {
+      text-align: center;
+      margin-top: 64px;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: #8A847C;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">The Homemade Pantry · Logo Decision</p>
+    <h1>Choose Your Logo</h1>
+    <div class="rule"></div>
+    <p>Two finalists — curved text vs. straight text</p>
+  </header>
+
+  <div class="finalists">
+
+    <div class="card">
+      <img src="finalists/THP Brand Logo SVG Curved.svg" alt="THP Logo — Curved Text">
+      <div class="card-meta">
+        <span class="finalist-tag">Option 1</span>
+        <h3>Curved Text</h3>
+        <p>Text follows the circle — feels more like a traditional stamp or wax seal. Very sticker-native. Classic artisan badge energy.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="finalists/THP Brand Logo SVG Straight.svg" alt="THP Logo — Straight Text">
+      <div class="card-meta">
+        <span class="finalist-tag">Option 2</span>
+        <h3>Straight Text</h3>
+        <p>Text sits flat inside the circle — cleaner, more modern. Easier to read at a glance. Works well on screens and print equally.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sticker size test -->
+  <div class="sizes">
+    <h2>Sticker Scale Test</h2>
+    <p>How each logo holds up at actual print sizes</p>
+
+    <div class="size-test">
+      <div class="bg-linen">
+        <img src="finalists/THP Brand Logo SVG Curved.svg" style="width:180px;height:180px;display:block;">
+      </div>
+      <label>Curved · 2"</label>
+    </div>
+    <div class="size-test">
+      <div class="bg-linen">
+        <img src="finalists/THP Brand Logo SVG Curved.svg" style="width:100px;height:100px;display:block;">
+      </div>
+      <label>Curved · 1"</label>
+    </div>
+    <div class="size-test">
+      <div class="bg-linen">
+        <img src="finalists/THP Brand Logo SVG Curved.svg" style="width:60px;height:60px;display:block;">
+      </div>
+      <label>Curved · ½"</label>
+    </div>
+
+    <div style="width:40px"></div>
+
+    <div class="size-test">
+      <div class="bg-linen">
+        <img src="finalists/THP Brand Logo SVG Straight.svg" style="width:180px;height:180px;display:block;">
+      </div>
+      <label>Straight · 2"</label>
+    </div>
+    <div class="size-test">
+      <div class="bg-linen">
+        <img src="finalists/THP Brand Logo SVG Straight.svg" style="width:100px;height:100px;display:block;">
+      </div>
+      <label>Straight · 1"</label>
+    </div>
+    <div class="size-test">
+      <div class="bg-linen">
+        <img src="finalists/THP Brand Logo SVG Straight.svg" style="width:60px;height:60px;display:block;">
+      </div>
+      <label>Straight · ½"</label>
+    </div>
+  </div>
+
+  <footer>The Homemade Pantry · Logo Finalists · April 2026</footer>
+
+</body>
+</html>
