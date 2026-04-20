@@ -329,7 +329,7 @@ nav.scrolled .nav-links a:hover{opacity:1;color:var(--charcoal);}
   max-width:380px;
 }
 .craft-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:32px;
 }
 .craft-card{
   border-radius:6px;overflow:hidden;
@@ -337,6 +337,28 @@ nav.scrolled .nav-links a:hover{opacity:1;color:var(--charcoal);}
   transition:transform .25s,box-shadow .25s;
 }
 .craft-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.12);}
+.pillar-badge{
+  position:absolute;top:20px;left:20px;z-index:2;
+  background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.4);
+  color:#fff;font-family:'Jost',sans-serif;font-size:0.6rem;
+  letter-spacing:0.35em;text-transform:uppercase;padding:5px 14px;border-radius:20px;
+}
+.pillar-host{
+  font-size:0.72rem;letter-spacing:0.1em;color:var(--teal);
+  text-transform:uppercase;margin-bottom:6px;font-weight:500;
+}
+.pillar-makes{
+  margin-top:20px;padding-top:20px;border-top:1px solid var(--linen);
+}
+.pillar-makes-label{
+  font-size:0.62rem;letter-spacing:0.35em;text-transform:uppercase;
+  color:var(--gray);margin-bottom:10px;
+}
+.pillar-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.pillar-tag{
+  font-size:0.75rem;background:var(--teal-pale);color:var(--teal);
+  padding:5px 12px;border-radius:20px;font-family:'Jost',sans-serif;
+}
 .craft-card-top{
   height:180px;display:flex;align-items:center;justify-content:center;
   position:relative;overflow:hidden;
@@ -808,6 +830,7 @@ footer::before{
   .experience,.craft,.about,.pricing,.testimonials,.booking,.faq{padding:80px 24px;}
   .experience-top{grid-template-columns:1fr;gap:40px;}
   .craft-grid{grid-template-columns:1fr;}
+  .pillar-badge{font-size:0.55rem;}
   .pricing-grid{grid-template-columns:1fr;}
   .price-card.featured{transform:none;}
   .test-grid{grid-template-columns:1fr;}
@@ -829,7 +852,7 @@ footer::before{
   </a>
   <div class="nav-links">
     <a href="#experience">The Experience</a>
-    <a href="#craft">What We Make</a>
+    <a href="#craft">Our Pillars</a>
     <a href="#about">Meet the Hosts</a>
     <a href="#pricing">Pricing</a>
     <a href="preview-party.html">A Recent Evening</a>
@@ -844,7 +867,7 @@ footer::before{
 <div class="mobile-nav" id="mobile-nav">
   <span class="mobile-close" onclick="closeMobileNav()">✕</span>
   <a href="#experience" onclick="closeMobileNav()">The Experience</a>
-  <a href="#craft" onclick="closeMobileNav()">What We Make</a>
+  <a href="#craft" onclick="closeMobileNav()">Our Pillars</a>
   <a href="#about" onclick="closeMobileNav()">Meet the Hosts</a>
   <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
   <a href="preview-party.html" onclick="closeMobileNav()">A Recent Evening</a>
@@ -905,10 +928,9 @@ footer::before{
 
 <!-- ── INTRO STRIP ── -->
 <div class="intro-strip">
-  <div class="intro-pill">🍞 Sourdough &amp; Preserves</div>
-  <div class="intro-pill">🥐 Baking &amp; Pastry</div>
-  <div class="intro-pill">🧈 Handmade Butter</div>
-  <div class="intro-pill">🫙 Small-Batch Jam</div>
+  <div class="intro-pill">🍞 Pillar One · Sourdough &amp; Preserves</div>
+  <div class="intro-pill">🥐 Pillar Two · Baking &amp; Pastry</div>
+  <div class="intro-pill">✦ Made slowly. Shared warmly.</div>
   <div class="intro-pill">📍 Brookshire, TX</div>
 </div>
 
@@ -1014,64 +1036,64 @@ footer::before{
   <div class="craft-inner">
     <div class="craft-heading-row reveal">
       <div>
-        <span class="section-eyebrow">The Craft</span>
+        <span class="section-eyebrow">Our Pillars</span>
         <h2 class="serif-heading craft-heading">
-          What we <em>make</em><br>together
+          Two pillars,<br><em>one kitchen</em>
         </h2>
       </div>
       <p class="italic-sub craft-intro">
-        Two experiences, one kitchen. Whether you're making sourdough from a live starter or crafting something from our pastry repertoire, every technique is taught hands-on and designed to take home.
+        Every gathering is built around one of our two pillars — each led by a different host, each designed to teach, connect, and send you home with something real. Same spirit. Different craft.
       </p>
     </div>
     <div class="craft-grid">
+
+      <!-- PILLAR ONE -->
       <div class="craft-card reveal reveal-delay-1">
         <div class="craft-card-top teal">
           <img src="images/IMG_0363.JPEG" alt="Hands shaping sourdough dough on a floured counter">
           <div class="craft-card-top-overlay"></div>
-          <div class="craft-card-icon">🍞</div>
+          <div class="pillar-badge">Pillar One</div>
         </div>
         <div class="craft-card-body">
-          <div class="craft-card-tag">The Foundation</div>
-          <h3 class="craft-card-title">Sourdough from a Live Starter</h3>
-          <p class="craft-card-desc">You'll learn to create and maintain a sourdough starter, shape a loaf, score it, and bake it in a dutch oven. The science, the feel, the intuition — all of it.</p>
+          <div class="pillar-host">With Jaime Kerber · Founder</div>
+          <h3 class="craft-card-title">Sourdough &amp; Preserves</h3>
+          <p class="craft-card-desc">The original Homemade Pantry gathering. From a live sourdough starter to hand-churned butter and small-batch seasonal jam — every step done by hand, every technique yours to take home.</p>
+          <div class="pillar-makes">
+            <div class="pillar-makes-label">You'll make &amp; take home</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">🍞 Mini sourdough loaf</span>
+              <span class="pillar-tag">🧈 Flavored butter</span>
+              <span class="pillar-tag">🫙 Seasonal jam</span>
+              <span class="pillar-tag">🪴 Live starter</span>
+              <span class="pillar-tag">📋 Recipe card</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- PILLAR TWO -->
       <div class="craft-card reveal reveal-delay-2">
         <div class="craft-card-top clay">
-          <img src="images/IMG_0382.JPEG" alt="Hands working fresh butter">
+          <img src="images/IMG_0346.JPEG" alt="Hands working dough in a mixing bowl">
           <div class="craft-card-top-overlay"></div>
-          <div class="craft-card-icon">🧈</div>
+          <div class="pillar-badge">Pillar Two</div>
         </div>
         <div class="craft-card-body">
-          <div class="craft-card-tag">The Indulgence</div>
-          <h3 class="craft-card-title">Handmade &amp; Flavored Butter</h3>
-          <p class="craft-card-desc">Heavy cream into golden butter in minutes. Then you'll season it — roasted garlic & thyme, honey & sea salt, smoked paprika. Guests always gasp at this part.</p>
+          <div class="pillar-host">With Brittany Trevett · Chef &amp; Baker</div>
+          <h3 class="craft-card-title">Baking &amp; Pastry</h3>
+          <p class="craft-card-desc">Brittany brings her professional kitchen training to your hands. Each gathering focuses on a seasonal technique — from laminated doughs to artisan breads to pastry fundamentals. You'll leave knowing how to do it again.</p>
+          <div class="pillar-makes">
+            <div class="pillar-makes-label">You'll make &amp; take home</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">🥐 Seasonal pastry</span>
+              <span class="pillar-tag">🍞 Artisan baking</span>
+              <span class="pillar-tag">📋 Recipes to keep</span>
+              <span class="pillar-tag">✦ Everything you made</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="craft-card reveal reveal-delay-3">
-        <div class="craft-card-top sage">
-          <img src="images/IMG_0372.JPEG" alt="Strawberry jam bubbling in the pot">
-          <div class="craft-card-top-overlay"></div>
-          <div class="craft-card-icon">🫙</div>
-        </div>
-        <div class="craft-card-body">
-          <div class="craft-card-tag">The Preserve</div>
-          <h3 class="craft-card-title">Small-Batch Seasonal Jam</h3>
-          <p class="craft-card-desc">Seasonal fruit, a little sugar, a lot of patience. You'll understand why homemade jam tastes nothing like what's on the grocery shelf — and how to make it yourself.</p>
-        </div>
-      </div>
-      <div class="craft-card reveal reveal-delay-3">
-        <div class="craft-card-top clay">
-          <img src="images/IMG_0346.JPEG" alt="Close-up of dough whisk in a mixing bowl">
-          <div class="craft-card-top-overlay"></div>
-          <div class="craft-card-icon">🥐</div>
-        </div>
-        <div class="craft-card-body">
-          <div class="craft-card-tag">The Craft</div>
-          <h3 class="craft-card-title">Artisan Baking &amp; Pastry</h3>
-          <p class="craft-card-desc">Our pastry experience brings seasonal techniques and artisan baking to your hands — guided step by step so every guest leaves knowing how to do it again at home.</p>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -1114,7 +1136,7 @@ footer::before{
         Brittany, who has years of culinary training, started it because after leaving the bakery to be a full-time mom, she wanted to find that passion again.
       </p>
       <p class="about-body">
-        Together, we offer two distinct experiences rooted in the same belief: that the best things are made slowly, shared warmly, and taken home with you.
+        Together, we offer two distinct pillars rooted in the same belief: that the best things are made slowly, shared warmly, and taken home with you.
       </p>
       <div class="about-values">
         <div class="about-value">

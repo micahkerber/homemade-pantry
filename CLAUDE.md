@@ -19,27 +19,29 @@
 
 ---
 
-## 🍞 Experiences
+## 🍞 Pillars
 
-The Homemade Pantry is expanding beyond a single offering. All experiences share a common identity:
+Jaime uses the word **"Pillars"** for the distinct experience offerings. All Pillars share one identity:
 **"Made slowly. Shared warmly."** — intimate, handcrafted, in-home gatherings for up to 6 guests.
 
-### The Original Experience (flagship)
-Sourdough bread, hand-churned butter, and small-batch seasonal jam.
-Guests take home: mini sourdough loaf, active starter, flavored butter, jam, recipe card.
+### Pillar One — Sourdough & Preserves (flagship)
+Led by Jaime Kerber. The original offering.
+Guests make: sourdough loaf, hand-churned flavored butter, small-batch seasonal jam.
+Take home: mini sourdough loaf, active starter, flavored butter, jam, recipe card.
 
-### Baking & Pastry Experience
+### Pillar Two — Baking & Pastry
 Led by Brittany Trevett (professionally trained chef and baker).
-Details TBD — will evolve as offerings are finalized.
+Guests make: seasonal artisan baking and pastry techniques, hands-on.
+Take home: everything made that evening, recipes to recreate at home.
 
-### Future Experiences (TBD)
-Additional culinary experiences may be added. Each will follow the same format:
+### Future Pillars (TBD)
+Additional Pillars may be added. Each will follow the same format:
 - Intimate group (up to 6)
 - 3–3.5 hours, fully hands-on
 - Guests make and take home everything
 - Priced in line with existing packages
 
-**Brand rule:** No single experience should dominate the brand identity. The logo, website, and all materials should lead with the gathering/shared experience concept, not any specific food item.
+**Brand rule:** No single Pillar should dominate the brand identity. The logo, website, and all materials lead with the gathering/shared concept — not any specific food item.
 
 ---
 
@@ -161,7 +163,7 @@ Artisan · Gathered · Intentional
 ```
 Three versions: on light (teal text), on teal (white text), on dark (white text + clay rule)
 
-### Brand Pillars
+### Brand Values
 1. **Made by Hand** — Everything is handcrafted, never rushed or packaged
 2. **Intentionally Slow** — A counter-cultural offering in a world of speed
 3. **Gathered & Shared** — The table is the point; connection is the product
