@@ -78,13 +78,14 @@ nav.scrolled{
   box-shadow:0 2px 24px rgba(0,0,0,.07);
 }
 .nav-logo{
-  font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;
-  color:#fff;line-height:1.1;
+  display:flex;align-items:center;
 }
-nav.scrolled .nav-logo{color:var(--charcoal);}
-.nav-logo em{font-style:italic;color:var(--teal);}
-.nav-logo span{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.75rem;color:rgba(255,255,255,.5);margin-top:1px;}
-nav.scrolled .nav-logo span{color:var(--gray);}
+.nav-logo img{
+  height:40px;width:40px;object-fit:contain;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));
+  transition:filter .3s ease;
+}
+nav.scrolled .nav-logo img{filter:none;}
 .nav-links{display:flex;align-items:center;gap:36px;}
 .nav-links a{
   font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
@@ -735,8 +736,10 @@ footer::before{
 }
 .footer-brand-col{}
 .footer-logo{
-  font-family:'Playfair Display',serif;font-size:1.4rem;font-style:italic;
-  color:#fff;margin-bottom:14px;
+  margin-bottom:16px;
+}
+.footer-logo img{
+  height:64px;width:64px;object-fit:contain;
 }
 .footer-tagline{
   font-family:'Cormorant Garamond',serif;font-style:italic;
@@ -847,8 +850,7 @@ footer::before{
 <!-- ── NAV ── -->
 <nav id="main-nav">
   <a href="#home" class="nav-logo">
-    <em>The</em> Homemade Pantry
-    <span>Brookshire, Texas</span>
+    <img src="images/logo.svg" alt="The Homemade Pantry">
   </a>
   <div class="nav-links">
     <a href="#experience">The Experience</a>
@@ -1519,7 +1521,7 @@ footer::before{
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand-col">
-        <div class="footer-logo">The Homemade Pantry</div>
+        <div class="footer-logo"><img src="images/logo.svg" alt="The Homemade Pantry"></div>
         <div class="footer-tagline">"Made slowly. Shared warmly."</div>
         <div class="footer-contact">
           <div class="footer-contact-item">📍 Brookshire, TX</div>
