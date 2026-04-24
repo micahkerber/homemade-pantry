@@ -21,7 +21,7 @@
   --gray:        #8A847C;
   --linen:       #EDE5D8;
   --sage:        #7A9E7E;
-  --nav-h:       72px;
+  --nav-h:       82px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;font-size:18px;}
@@ -80,15 +80,15 @@ nav.scrolled{
 .nav-logo{
   display:flex;align-items:center;
 }
-.nav-logo img{
-  height:40px;width:40px;object-fit:contain;
-  filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));
+.nav-logo svg{
+  height:74px;width:auto;display:block;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.3));
   transition:filter .3s ease;
 }
-nav.scrolled .nav-logo img{filter:none;}
-.nav-links{display:flex;align-items:center;gap:36px;}
+nav.scrolled .nav-logo svg{filter:drop-shadow(0 1px 4px rgba(0,0,0,.15));}
+.nav-links{display:flex;align-items:center;gap:28px;}
 .nav-links a{
-  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;
   color:rgba(255,255,255,.7);transition:opacity .2s;
 }
 .nav-links a:hover{color:#fff;}
@@ -133,10 +133,33 @@ nav.scrolled .nav-links a:hover{opacity:1;color:var(--charcoal);}
   font-size:.58rem;letter-spacing:.5em;text-transform:uppercase;
   color:var(--teal-light);opacity:.7;margin-bottom:24px;
 }
-.hero-title{
+.hero-title-row{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  grid-template-areas:"logo above" "below below";
+  column-gap:24px;row-gap:0;
+  margin-bottom:24px;
+}
+.hero-title-logo{
+  grid-area:logo;
+  height:clamp(160px,16vw,240px);width:auto;
+  object-fit:contain;border-radius:50%;align-self:center;
+}
+.hero-title{display:contents;}
+.hero-title-above{
+  grid-area:above;
+  display:flex;flex-direction:column;justify-content:center;
+  align-self:stretch;
   font-family:'Playfair Display',serif;font-weight:400;
-  font-size:clamp(2.8rem,5vw,4.2rem);
-  color:#fff;line-height:1.05;margin-bottom:24px;
+  font-size:clamp(3.4rem,4.9vw,4.1rem);
+  color:#fff;line-height:1.05;
+}
+.hero-title-above em{font-style:italic;color:var(--teal-light);}
+.hero-title-below{
+  grid-area:below;display:block;
+  font-family:'Playfair Display',serif;font-weight:400;
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  color:#fff;line-height:1.05;text-align:center;
 }
 .hero-title em{font-style:italic;color:var(--teal-light);}
 .hero-desc{
@@ -738,8 +761,8 @@ footer::before{
 .footer-logo{
   margin-bottom:16px;
 }
-.footer-logo img{
-  height:64px;width:64px;object-fit:contain;
+.footer-logo svg{
+  height:65px;width:auto;display:block;
 }
 .footer-tagline{
   font-family:'Cormorant Garamond',serif;font-style:italic;
@@ -850,7 +873,28 @@ footer::before{
 <!-- ── NAV ── -->
 <nav id="main-nav">
   <a href="#home" class="nav-logo">
-    <img src="images/logo.svg" alt="The Homemade Pantry">
+    <svg width="311" height="140" viewBox="0 0 480 216" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Homemade Pantry">
+      <rect width="480" height="216" fill="#2C6E6A" rx="4"/>
+      <!-- Wheat stalk — drawn directly in 480×216 space so grains scale correctly -->
+      <path d="M 54,195 C 52,155 50,115 52,75 C 54,48 57,32 57,18" fill="none" stroke="#FDF9F4" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="57" cy="24" rx="10" ry="22" fill="#FDF9F4" opacity="0.95"/>
+      <ellipse cx="40" cy="54" rx="10" ry="22" fill="#FDF9F4" transform="rotate(-22,40,54)" opacity="0.92"/>
+      <ellipse cx="72" cy="54" rx="10" ry="22" fill="#FDF9F4" transform="rotate(22,72,54)" opacity="0.92"/>
+      <ellipse cx="36" cy="90" rx="9" ry="20" fill="#FDF9F4" transform="rotate(-20,36,90)" opacity="0.85"/>
+      <ellipse cx="72" cy="90" rx="9" ry="20" fill="#FDF9F4" transform="rotate(20,72,90)" opacity="0.85"/>
+      <ellipse cx="38" cy="126" rx="8" ry="18" fill="#FDF9F4" transform="rotate(-18,38,126)" opacity="0.72"/>
+      <ellipse cx="70" cy="126" rx="8" ry="18" fill="#FDF9F4" transform="rotate(18,70,126)" opacity="0.72"/>
+      <ellipse cx="40" cy="160" rx="7" ry="16" fill="#FDF9F4" transform="rotate(-15,40,160)" opacity="0.55"/>
+      <ellipse cx="68" cy="160" rx="7" ry="16" fill="#FDF9F4" transform="rotate(15,68,160)" opacity="0.55"/>
+      <line x1="116" y1="20" x2="116" y2="196" stroke="#B87050" stroke-width="1"/>
+      <text x="298" y="52" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-style="italic" font-size="22" fill="#FDF9F4" letter-spacing="1">The</text>
+      <circle cx="251" cy="48" r="1.8" fill="#B87050" opacity="0.9"/>
+      <circle cx="345" cy="48" r="1.8" fill="#B87050" opacity="0.9"/>
+      <text x="298" y="100" text-anchor="middle" font-family="'Playfair Display',serif" font-size="44" font-weight="400" fill="#FDF9F4" letter-spacing="1">Homemade</text>
+      <text x="298" y="146" text-anchor="middle" font-family="'Playfair Display',serif" font-size="44" font-weight="400" fill="#FDF9F4" letter-spacing="5">Pantry</text>
+      <line x1="148" y1="162" x2="448" y2="162" stroke="#B87050" stroke-width="1.2"/>
+      <text x="298" y="183" text-anchor="middle" font-family="'Jost',sans-serif" font-size="9" font-weight="300" fill="#A8D4D1" letter-spacing="2.8">MADE SLOWLY · SHARED WARMLY</text>
+    </svg>
   </a>
   <div class="nav-links">
     <a href="#experience">The Experience</a>
@@ -883,10 +927,13 @@ footer::before{
   <div class="hero-inner">
     <div class="hero-content">
       <p class="hero-eyebrow">Brookshire, Texas · Est. 2025</p>
-      <h1 class="hero-title">
-        <em>Made by hand.</em><br>
-        Shared<br>at the table.
-      </h1>
+      <div class="hero-title-row">
+        <img src="images/logo.svg" alt="The Homemade Pantry" class="hero-title-logo">
+        <h1 class="hero-title">
+          <span class="hero-title-above"><em>Made<br>by hand.</em></span>
+          <span class="hero-title-below">Shared at the table.</span>
+        </h1>
+      </div>
       <p class="hero-desc">
         An intimate, in-home culinary experience for small groups who want to slow down, connect, and make something real together.
       </p>
@@ -1521,7 +1568,9 @@ footer::before{
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand-col">
-        <div class="footer-logo"><img src="images/logo.svg" alt="The Homemade Pantry"></div>
+        <div class="footer-logo">
+          <img src="images/logo.svg" alt="The Homemade Pantry" style="height:160px;width:auto;display:block;">
+        </div>
         <div class="footer-tagline">"Made slowly. Shared warmly."</div>
         <div class="footer-contact">
           <div class="footer-contact-item">📍 Brookshire, TX</div>
