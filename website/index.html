@@ -585,11 +585,12 @@ nav.scrolled .nav-links a:hover{opacity:1;color:var(--charcoal);}
 .testimonials{padding:100px 60px;background:var(--warm-white);}
 .testimonials-inner{max-width:1160px;margin:0 auto;}
 .test-head{text-align:center;margin-bottom:56px;}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.test-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;}
 .test-card{
   background:white;border-radius:6px;padding:36px;
   box-shadow:0 4px 24px rgba(0,0,0,.05);
   position:relative;
+  flex:0 0 calc(33.333% - 16px);min-width:280px;max-width:400px;
 }
 .test-quote-mark{
   font-family:'Playfair Display',serif;font-size:4rem;font-style:italic;
@@ -901,7 +902,7 @@ footer::before{
     <a href="#craft">Our Pillars</a>
     <a href="#about">Meet the Hosts</a>
     <a href="#pricing">Pricing</a>
-    <a href="preview-party.html">A Recent Evening</a>
+    <a href="#evening">A Recent Evening</a>
     <a href="#booking" class="nav-cta">Book Your Evening</a>
   </div>
   <div class="nav-mobile-toggle" onclick="openMobileNav()">
@@ -916,7 +917,7 @@ footer::before{
   <a href="#craft" onclick="closeMobileNav()">Our Pillars</a>
   <a href="#about" onclick="closeMobileNav()">Meet the Hosts</a>
   <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
-  <a href="preview-party.html" onclick="closeMobileNav()">A Recent Evening</a>
+  <a href="#evening" onclick="closeMobileNav()">A Recent Evening</a>
   <a href="#booking" class="btn btn-primary" onclick="closeMobileNav()">Book Your Evening</a>
 </div>
 
@@ -1313,36 +1314,60 @@ footer::before{
     <div class="test-grid">
       <div class="test-card reveal reveal-delay-1">
         <div class="test-quote-mark">"</div>
-        <p class="test-text">I've done cooking classes before, but this was completely different. It felt like being invited into a friend's home — one who just happens to know everything about sourdough. We stayed way longer than planned.</p>
+        <p class="test-text">There is something deeply meditative about working with sourdough and pairing it with vibrant strawberry jam and creamy, fresh-churned butter. You leave not just with new skills and delicious treats, but with a full heart.</p>
         <div class="test-author">
-          <div class="test-avatar">S</div>
+          <div class="test-avatar">C</div>
           <div>
-            <div class="test-name">Sarah M.</div>
-            <div class="test-detail">Girls Night · Group of 4</div>
+            <div class="test-name">Cat Y.</div>
+            <div class="test-detail">Sourdough & Preserves Evening</div>
             <div class="test-stars">★★★★★</div>
           </div>
         </div>
       </div>
       <div class="test-card reveal reveal-delay-2">
         <div class="test-quote-mark">"</div>
-        <p class="test-text">This was my husband's birthday gift and it completely exceeded expectations. We're still using the starter she sent home with us — every Sunday morning. Jaime is such a warm host.</p>
+        <p class="test-text">I had always been intimidated by the idea of making sourdough. After the workshop I made 2 loaves at home on my own! The workshop also taught us steps to make homemade butter and jam. It was a top notch experience. Highly recommend!</p>
         <div class="test-author">
-          <div class="test-avatar">L</div>
+          <div class="test-avatar">V</div>
           <div>
-            <div class="test-name">Lauren K.</div>
-            <div class="test-detail">Date Night · Birthday Celebration</div>
+            <div class="test-name">Valerie J.</div>
+            <div class="test-detail">Sourdough & Preserves Evening</div>
             <div class="test-stars">★★★★★</div>
           </div>
         </div>
       </div>
       <div class="test-card reveal reveal-delay-3">
         <div class="test-quote-mark">"</div>
-        <p class="test-text">The fact that you actually leave with everything you made is so special. My loaf didn't last 24 hours — it was the best bread I've ever tasted. Already booked our next visit for my mom's birthday.</p>
+        <p class="test-text">Jaime and Brittany were amazing! The class was fully hands-on, which I loved. We went step by step, asked lots of questions, and really got a feel for the right textures. The goodie bag at the end was such a sweet surprise!</p>
         <div class="test-author">
-          <div class="test-avatar">A</div>
+          <div class="test-avatar">J</div>
           <div>
-            <div class="test-name">Amanda R.</div>
-            <div class="test-detail">Group Experience · Brookshire, TX</div>
+            <div class="test-name">Johanna A.</div>
+            <div class="test-detail">Girls Night · Sourdough Evening</div>
+            <div class="test-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal reveal-delay-1">
+        <div class="test-quote-mark">"</div>
+        <p class="test-text">You feel like their family the second you walk in. Getting hands-on with them guiding me made the whole process feel completely doable and fun — and I'd never even made sourdough before. It's a meaningful and delicious venture you'll always remember.</p>
+        <div class="test-author">
+          <div class="test-avatar">V</div>
+          <div>
+            <div class="test-name">Vanessa A.</div>
+            <div class="test-detail">Sourdough & Preserves Evening</div>
+            <div class="test-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal reveal-delay-2">
+        <div class="test-quote-mark">"</div>
+        <p class="test-text">From the moment they said there's no "right" way to make sourdough, I felt completely at ease. My family loved everything so much it was gone within days — and my kids keep asking when I'm making more!</p>
+        <div class="test-author">
+          <div class="test-avatar">B</div>
+          <div>
+            <div class="test-name">Blanca R.</div>
+            <div class="test-detail">Sourdough & Preserves Evening</div>
             <div class="test-stars">★★★★★</div>
           </div>
         </div>
@@ -1351,38 +1376,151 @@ footer::before{
   </div>
 </section>
 
-<!-- ── A RECENT EVENING (teaser) ── -->
-<section style="padding:0;overflow:hidden;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:480px;" class="recent-evening-grid">
-    <div style="overflow:hidden;min-height:320px;display:grid;grid-template-rows:1fr 1fr;">
-      <img src="images/IMG_1702.JPEG" alt="Six sourdough loaves baking in the oven"
-        style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
-      <img src="images/IMG_0366.JPEG" alt="Two guests laughing together while adding chocolate chips to their dough"
-        style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+<!-- ── A RECENT EVENING (slider) ── -->
+<section id="evening" style="padding:0;overflow:hidden;position:relative;background:var(--charcoal);">
+
+  <div class="eve-slider" id="eveSlider">
+    <div class="eve-slide active" style="background-image:url('images/IMG_1689.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">From our first gathering · April 2026</span><p>The table set before anyone arrived.</p></div>
     </div>
-    <div style="display:flex;flex-direction:column;justify-content:center;padding:60px 56px;background:var(--charcoal);">
-      <span class="section-eyebrow light">From our first gathering · April 2026</span>
-      <h2 class="serif-heading" style="color:#fff;font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:16px;line-height:1.2;">
-        See what an evening<br><em style="font-style:italic;color:var(--clay-light);">actually looks like.</em>
-      </h2>
-      <div class="rule light" style="margin:20px 0;"></div>
-      <p class="italic-sub" style="color:rgba(255,255,255,0.65);margin-bottom:32px;max-width:420px;font-size:1rem;">
-        Six friends, three hours, and everything made from scratch —
-        sourdough, strawberry jam, hand-churned butter, and six loaves
-        out of one oven. Scroll through the whole evening.
-      </p>
-      <a href="preview-party.html" class="btn btn-light" style="align-self:flex-start;">
-        View the Evening &rarr;
-      </a>
+    <div class="eve-slide" style="background-image:url('images/IMG_1691.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">The space</span><p>A home kitchen turned warm, intentional gathering place.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0338.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">Every detail</span><p>Teal plates, fresh tulips — nothing accidental.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0340.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">Getting started</span><p>Guests gather at the work table.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0345.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">Hands in dough</span><p>The real work — and the real fun — begins.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0366.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">The best part</span><p>Laughter is always part of the recipe.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0370.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">Strawberry jam</span><p>Fresh strawberries, prepped by hand.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0375.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">Into the jars</span><p>Small-batch jam, still warm.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0382.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">Hand-churned butter</span><p>Heavy cream, a little effort, something extraordinary.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_1702.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">The oven moment</span><p>Six loaves, three Dutch ovens, one kitchen.</p></div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0402.JPEG')">
+      <div class="eve-caption"><span class="eve-eyebrow">End of the evening</span><p>Everyone heads home with everything they made.</p></div>
     </div>
   </div>
+
+  <!-- arrows -->
+  <button class="eve-arrow eve-prev" onclick="eveMove(-1)" aria-label="Previous">&#8592;</button>
+  <button class="eve-arrow eve-next" onclick="eveMove(1)" aria-label="Next">&#8594;</button>
+
+  <!-- dots -->
+  <div class="eve-dots" id="eveDots"></div>
+
+  <!-- header overlay -->
+  <div class="eve-header">
+    <h2 class="serif-heading" style="color:#fff;font-size:clamp(1.6rem,2.8vw,2.2rem);margin:0 0 8px;">
+      See what an evening <em style="font-style:italic;color:var(--clay-light);">actually looks like.</em>
+    </h2>
+    <a href="preview-party.html" class="btn btn-light" style="margin-top:12px;display:inline-block;">
+      View the full evening &rarr;
+    </a>
+  </div>
+
 </section>
 <style>
-@media(max-width:700px){
-  .recent-evening-grid{grid-template-columns:1fr!important;}
-  .recent-evening-grid > div:last-child{padding:40px 24px!important;}
+.eve-slider{position:relative;width:100%;height:580px;}
+@media(max-width:700px){.eve-slider{height:420px;}}
+.eve-slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;transition:opacity .8s ease;
 }
+.eve-slide.active{opacity:1;}
+.eve-slide::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.1) 50%, transparent 100%);
+}
+.eve-caption{
+  position:absolute;bottom:80px;left:48px;right:48px;z-index:2;
+}
+@media(max-width:700px){.eve-caption{left:24px;right:24px;bottom:70px;}}
+.eve-eyebrow{
+  font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--clay-light);display:block;margin-bottom:6px;
+}
+.eve-caption p{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(1.1rem,2vw,1.35rem);color:#fff;margin:0;line-height:1.4;
+}
+.eve-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:10;
+  background:rgba(0,0,0,.35);border:none;color:#fff;
+  width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.eve-arrow:hover{background:rgba(0,0,0,.6);}
+.eve-prev{left:20px;}
+.eve-next{right:20px;}
+.eve-dots{
+  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+  display:flex;gap:8px;z-index:10;
+}
+.eve-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:rgba(255,255,255,.4);border:none;cursor:pointer;padding:0;
+  transition:background .3s;
+}
+.eve-dot.active{background:#fff;}
+.eve-header{
+  position:absolute;top:0;left:0;right:0;z-index:10;
+  padding:36px 48px 0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.55) 0%,transparent 100%);
+}
+@media(max-width:700px){.eve-header{padding:28px 24px 0;}}
 </style>
+<script>
+(function(){
+  var slides = document.querySelectorAll('.eve-slide');
+  var dotsEl = document.getElementById('eveDots');
+  var cur = 0, total = slides.length, timer;
+
+  slides.forEach(function(_,i){
+    var d = document.createElement('button');
+    d.className = 'eve-dot' + (i===0?' active':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.addEventListener('click', function(){ goTo(i); resetTimer(); });
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n){
+    slides[cur].classList.remove('active');
+    dotsEl.children[cur].classList.remove('active');
+    cur = (n + total) % total;
+    slides[cur].classList.add('active');
+    dotsEl.children[cur].classList.add('active');
+  }
+
+  function resetTimer(){
+    clearInterval(timer);
+    timer = setInterval(function(){ goTo(cur+1); }, 4500);
+  }
+
+  window.eveMove = function(dir){ goTo(cur+dir); resetTimer(); };
+
+  var slider = document.getElementById('eveSlider');
+  slider.addEventListener('mouseenter', function(){ clearInterval(timer); });
+  slider.addEventListener('mouseleave', function(){ resetTimer(); });
+
+  resetTimer();
+})();
+</script>
 
 <!-- ── BOOKING ── -->
 <section class="booking" id="booking">
@@ -1587,7 +1725,7 @@ footer::before{
           <a href="#about">Meet the Hosts</a>
           <a href="#pricing">Pricing & Packages</a>
           <a href="#faq">FAQs</a>
-          <a href="preview-party.html">A Recent Evening</a>
+          <a href="#evening">A Recent Evening</a>
         </div>
       </div>
       <div>
