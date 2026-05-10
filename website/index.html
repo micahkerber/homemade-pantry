@@ -1815,10 +1815,24 @@ function toggleFaq(el){
 // Form submit
 function handleSubmit(e){
   e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  btn.textContent = '✓ Request Sent — Jaime will be in touch!';
-  btn.style.background = 'var(--sage)';
+  const form = e.target;
+  const btn = form.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
   btn.disabled = true;
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(new FormData(form)).toString()
+  })
+  .then(() => {
+    btn.textContent = '✓ Request Sent — Jaime will be in touch!';
+    btn.style.background = 'var(--sage)';
+  })
+  .catch(() => {
+    btn.textContent = 'Something went wrong — please email us directly';
+    btn.style.background = 'var(--clay)';
+    btn.disabled = false;
+  });
 }
 
 // Smooth scroll for anchor links
