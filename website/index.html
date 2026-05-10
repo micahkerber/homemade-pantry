@@ -1591,29 +1591,31 @@ footer::before{
       <div class="booking-form-card">
         <h3 class="form-title">Request a Booking</h3>
         <p class="form-sub">We'll reply within 24 hours to confirm.</p>
-        <form onsubmit="handleSubmit(event)">
+        <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="form-name" value="booking">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="form-row form-row-half">
             <div class="form-row">
               <label>First Name</label>
-              <input type="text" placeholder="Jaime" required>
+              <input type="text" name="first-name" placeholder="Jaime" required>
             </div>
             <div class="form-row">
               <label>Last Name</label>
-              <input type="text" placeholder="Kerber" required>
+              <input type="text" name="last-name" placeholder="Kerber" required>
             </div>
           </div>
           <div class="form-row">
             <label>Email Address</label>
-            <input type="email" placeholder="you@email.com" required>
+            <input type="email" name="email" placeholder="you@email.com" required>
           </div>
           <div class="form-row">
             <label>Phone Number</label>
-            <input type="tel" placeholder="(832) 000-0000">
+            <input type="tel" name="phone" placeholder="(832) 000-0000">
           </div>
           <div class="form-row form-row-half">
             <div class="form-row">
               <label>Experience Type</label>
-              <select>
+              <select name="experience-type">
                 <option>Date Night (2 guests)</option>
                 <option>Girls Night / Group</option>
                 <option>Birthday Celebration</option>
@@ -1624,7 +1626,7 @@ footer::before{
             </div>
             <div class="form-row">
               <label>Number of Guests</label>
-              <select>
+              <select name="guest-count">
                 <option>2 guests</option>
                 <option>3 guests</option>
                 <option>4 guests</option>
@@ -1635,11 +1637,11 @@ footer::before{
           </div>
           <div class="form-row">
             <label>Preferred Date(s)</label>
-            <input type="text" placeholder="e.g. Any Friday in March, or March 14th">
+            <input type="text" name="preferred-dates" placeholder="e.g. Any Friday in March, or March 14th">
           </div>
           <div class="form-row">
             <label>Anything else we should know?</label>
-            <textarea placeholder="Dietary restrictions, special occasions, questions..."></textarea>
+            <textarea name="notes" placeholder="Dietary restrictions, special occasions, questions..."></textarea>
           </div>
           <button type="submit" class="form-submit">Send My Request →</button>
         </form>
@@ -1777,7 +1779,7 @@ footer::before{
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2025 The Homemade Pantry Co. · All rights reserved · Brookshire, TX</div>
+      <div class="footer-copy">© 2026 The Homemade Pantry Co. · All rights reserved · Brookshire, TX</div>
       <div class="footer-handle">@thehomemadepantry</div>
     </div>
   </div>
