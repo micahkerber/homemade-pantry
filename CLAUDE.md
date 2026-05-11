@@ -72,7 +72,7 @@ I'm building the digital side of my wife's business. I have an MIS (Management I
 An intimate, in-home culinary gathering experience for small groups. Guests craft something by hand — from sourdough and preserves to baked pastries — in a warm, beautifully styled home setting. Think slow living meets artisan craft — not a cooking class, an *evening*. Multiple experiences available; all share the same spirit.
 
 **Location:** 2415 Sweetwood Ct, Brookshire, TX 77423
-**Website:** www.homemadepantry.com
+**Website:** www.thehomemadepantryco.com
 **Instagram:** @thehomemadepantry
 **Email:** jaimekerber@gmail.com
 **Phone:** 832-546-6446
@@ -197,12 +197,13 @@ A complete single-file HTML website has been built (`website/index.html`).
 - Fully mobile responsive
 
 ### Next Steps for Website
-- [ ] Register domain: homemadepantry.com
-- [ ] Replace placeholder testimonials with real guest quotes
+- [x] Register domain: thehomemadepantryco.com (Namecheap, connected to Netlify)
+- [x] Replace placeholder testimonials with real guest quotes
 - [ ] Embed Calendly booking widget
 - [ ] Connect Google Analytics
-- [x] Host on Netlify (website/ folder deployed — includes images)
+- [x] Host on Netlify (auto-deploys from GitHub master branch)
 - [x] Add real photos (40 photos from April 2026 preview party)
+- [x] Booking form connected to Netlify Forms (emails thehomemadepantryco@gmail.com)
 
 ---
 
@@ -304,10 +305,11 @@ Made slowly. Shared warmly.
 | 8 | Review, optimize, scale | Month 2+ |
 
 ### Immediate Next Actions
-- [ ] Host website on Netlify (free, 10 minutes)
-- [ ] Register homemadepantry.com domain
-- [ ] Register LLC with Texas Secretary of State
+- [x] Host website on Netlify (auto-deploys from GitHub)
+- [x] Register thehomemadepantryco.com domain (Namecheap)
+- [x] Register LLC with Texas Secretary of State
 - [ ] Open business bank account
+- [ ] Set up Stripe for deposit payments
 - [ ] Set up Instagram account with 9 posts before going public
 - [ ] Create Google Business Profile
 
