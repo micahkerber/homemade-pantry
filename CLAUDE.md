@@ -90,7 +90,7 @@ An intimate, in-home culinary gathering experience for small groups. Guests craf
 - Small-batch seasonal jam
 - Printed recipe & starter care guide
 
-**Ideal for:** Date nights, girls nights, birthday celebrations, private buyouts, corporate gifting
+**Ideal for:** Girls nights, birthday celebrations, celebrations, corporate gifting
 
 ---
 
@@ -98,11 +98,12 @@ An intimate, in-home culinary gathering experience for small groups. Guests craf
 
 | Package | Price | Details |
 |---|---|---|
-| Date Night | $240 / couple | Private table for two |
-| Group / Girls Night | $120 / person | Up to 6 guests |
-| Full Buyout | $600 / evening | Exclusive use, up to 6 included |
-| Gift Cards | $120 / $240 / $480 | Available for all packages |
+| Sourdough & Preserves | $110 / person | 4–6 guests, led by Jaime |
+| Baking & Pastry | $110 / person | 4–6 guests, led by Brittany |
+| Gift Cards | $440 / $550 / $660 | Groups of 4, 5, or 6 — valid for either Pillar |
 
+- Minimum 4 guests · Maximum 6 guests
+- Upgrades available upon request
 - 50% deposit required at booking
 - Cancellations 7+ days out: full deposit refund
 - Cancellations within 7 days: non-refundable, may reschedule
