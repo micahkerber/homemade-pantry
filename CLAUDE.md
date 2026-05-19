@@ -30,7 +30,7 @@ Guests make: sourdough loaf, hand-churned flavored butter, small-batch seasonal 
 Take home: mini sourdough loaf, active starter, flavored butter, jam, recipe card.
 
 ### Pillar Two — Baking & Pastry
-Led by Brittany Trevett (professionally trained chef and baker).
+Led by Brittany Trevett (Executive Baker).
 Guests make: seasonal artisan baking and pastry techniques, hands-on.
 Take home: everything made that evening, recipes to recreate at home.
 
@@ -47,7 +47,7 @@ Additional Pillars may be added. Each will follow the same format:
 
 ## Team
 - Jaime Kerber — Founder, sourdough and preserves
-- Brittany Trevett — Professionally trained chef and baker, leads baking and pastry offerings
+- Brittany Trevett — Executive Baker, leads baking and pastry offerings
 ## 👤 Who I Am
 
 I'm building the digital side of my wife's business. I have an MIS (Management Information Systems) degree but haven't actively used it in 29 years — I'm very rusty. I'm using this project as a hands-on way to relearn technology and digital business skills.
