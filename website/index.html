@@ -199,21 +199,21 @@ nav.scrolled .nav-links a:hover{opacity:1;color:var(--charcoal);}
   display:block;z-index:0;
 }
 .hero-card-main .hero-card-overlay{
-  position:absolute;inset:0;background:linear-gradient(160deg,rgba(44,110,106,.55) 0%,rgba(42,37,32,.65) 100%);z-index:1;
+  position:absolute;inset:0;background:linear-gradient(160deg,rgba(44,110,106,.72) 0%,rgba(42,37,32,.85) 100%);z-index:1;
 }
 .hero-card-main .hero-card-title,
 .hero-card-main .hero-card-sub,
 .hero-card-main .hero-loaf-icon{position:relative;z-index:2;}
-.hero-card-main .hero-card-title{color:#fff;}
-.hero-card-main .hero-card-sub{color:rgba(232,196,168,.8);}
+.hero-card-main .hero-card-title{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.4);}
+.hero-card-main .hero-card-sub{color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.3);}
 .hero-card-float{
   width:55%;bottom:-24px;right:-24px;
-  background:var(--teal);
+  background:rgba(26,60,58,.97);
   padding:28px 24px;
 }
 .hero-card-float2{
   width:42%;top:24px;left:-24px;
-  background:var(--charcoal);border:1px solid rgba(168,212,209,.15);
+  background:rgba(20,18,16,.95);border:1px solid rgba(168,212,209,.3);
   padding:20px;
 }
 .hero-loaf-icon{
@@ -229,19 +229,19 @@ nav.scrolled .nav-links a:hover{opacity:1;color:var(--charcoal);}
 }
 .float-label{
   font-size:.55rem;letter-spacing:.35em;text-transform:uppercase;
-  color:rgba(168,212,209,.9);margin-bottom:8px;
+  color:#fff;margin-bottom:8px;
 }
 .float-value{
   font-family:'Playfair Display',serif;font-size:1.4rem;font-style:italic;
-  color:#fff;
+  color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.3);
 }
-.float-sub{font-size:.65rem;color:rgba(168,212,209,.85);margin-top:4px;letter-spacing:.1em;}
+.float-sub{font-size:.65rem;color:rgba(255,255,255,.9);margin-top:4px;letter-spacing:.1em;}
 .float2-items{display:flex;flex-direction:column;gap:7px;}
 .float2-item{
-  font-size:.6rem;color:rgba(168,212,209,.65);letter-spacing:.08em;
+  font-size:.6rem;color:#fff;letter-spacing:.08em;
   display:flex;align-items:center;gap:7px;
 }
-.float2-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--teal-mid);flex-shrink:0;}
+.float2-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--teal-light);flex-shrink:0;}
 
 /* ── INTRO STRIP ── */
 .intro-strip{
