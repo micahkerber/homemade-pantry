@@ -96,7 +96,7 @@ www.thehomemadepantryco.com`;
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'The Homemade Pantry <onboarding@resend.dev>',
+        from: 'The Homemade Pantry <hello@thehomemadepantryco.com>',
         to: guestEmail,
         reply_to: 'thehomemadepantryco@gmail.com',
         subject: "We got your request — we'll be in touch shortly",
