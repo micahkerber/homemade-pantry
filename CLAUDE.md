@@ -37,7 +37,7 @@ Take home: everything made that evening, recipes to recreate at home.
 ### Future Pillars (TBD)
 Additional Pillars may be added. Each will follow the same format:
 - Intimate group (up to 6)
-- 3–3.5 hours, fully hands-on
+- ~3 hours, fully hands-on
 - Guests make and take home everything
 - Priced in line with existing packages
 
@@ -79,7 +79,7 @@ An intimate, in-home culinary gathering experience for small groups. Guests craf
 
 **Key facts:**
 - Up to 6 guests per event — intentionally intimate
-- 3–3.5 hour experience
+- ~3 hour experience
 - Guests make everything hands-on (no demonstrations)
 - Every guest takes home everything they made
 
