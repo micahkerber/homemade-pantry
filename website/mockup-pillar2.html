@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup — Pillar Two Photos · The Homemade Pantry</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:       #FAF6EF;
+  --warm-white:  #FDF9F4;
+  --teal:        #2C6E6A;
+  --teal-mid:    #3D8C87;
+  --teal-light:  #A8D4D1;
+  --teal-pale:   #E4F4F3;
+  --clay:        #B87050;
+  --clay-light:  #E8C4A8;
+  --charcoal:    #2A2520;
+  --gray:        #8A847C;
+  --linen:       #EDE5D8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:18px;}
+body{background:var(--cream);font-family:'Jost',sans-serif;color:var(--charcoal);overflow-x:hidden;}
+img{display:block;max-width:100%;}
+
+/* ── MOCKUP BANNER ── */
+.mockup-banner{
+  background:var(--charcoal);color:var(--clay-light);
+  font-family:'Jost',sans-serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  text-align:center;padding:12px 24px;
+  position:sticky;top:0;z-index:200;
+}
+.mockup-banner strong{color:#fff;}
+
+/* ── SECTION DIVIDER LABEL ── */
+.mockup-label{
+  background:var(--teal-pale);border-left:4px solid var(--teal);
+  padding:14px 32px;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--teal);font-family:'Jost',sans-serif;font-weight:600;
+}
+
+/* ── UTILITY ── */
+.section-eyebrow{font-size:.58rem;letter-spacing:.45em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:14px;display:block;}
+.serif-heading{font-family:'Playfair Display',serif;font-weight:400;line-height:1.1;}
+.italic-sub{font-family:'Cormorant Garamond',serif;font-style:italic;line-height:1.6;color:var(--gray);}
+.rule{width:60px;height:1px;background:var(--clay);}
+.btn-light{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Jost',sans-serif;font-weight:500;font-size:.72rem;
+  letter-spacing:.18em;text-transform:uppercase;
+  padding:14px 32px;border-radius:2px;cursor:pointer;
+  background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);
+  transition:background .2s;
+}
+.btn-light:hover{background:rgba(255,255,255,.22);}
+
+/* ── PILLARS SECTION ── */
+.craft{padding:100px 60px;background:var(--cream);}
+@media(max-width:900px){.craft{padding:80px 24px;}}
+.craft-inner{max-width:1160px;margin:0 auto;}
+.craft-heading-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;
+  align-items:start;margin-bottom:60px;
+}
+@media(max-width:800px){.craft-heading-row{grid-template-columns:1fr;gap:24px;}}
+.craft-heading{font-size:clamp(2rem,3.5vw,2.8rem);margin-top:10px;}
+.craft-intro{font-size:clamp(.95rem,1.2vw,1.1rem);margin-top:12px;}
+.craft-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+@media(max-width:800px){.craft-grid{grid-template-columns:1fr;}}
+
+.craft-card{border-radius:6px;overflow:hidden;background:var(--warm-white);box-shadow:0 2px 24px rgba(0,0,0,.07);}
+.craft-card-top{position:relative;height:280px;overflow:hidden;}
+.craft-card-top img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease;}
+.craft-card:hover .craft-card-top img{transform:scale(1.04);}
+.craft-card-top-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.45) 0%, transparent 55%);}
+.craft-card-top.teal .craft-card-top-overlay{background:linear-gradient(to top, rgba(44,110,106,.6) 0%, transparent 55%);}
+.craft-card-top.clay .craft-card-top-overlay{background:linear-gradient(to top, rgba(184,112,80,.6) 0%, transparent 55%);}
+
+.pillar-badge{
+  position:absolute;top:16px;left:16px;
+  background:rgba(255,255,255,.18);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.3);
+  color:#fff;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:5px 12px;border-radius:20px;font-family:'Jost',sans-serif;font-weight:600;
+}
+.craft-card-body{padding:28px 28px 32px;}
+.pillar-host{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--clay);margin-bottom:8px;}
+.craft-card-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;margin-bottom:12px;}
+.craft-card-desc{font-size:.8rem;color:var(--gray);line-height:1.7;margin-bottom:20px;}
+.pillar-makes{border-top:1px solid var(--linen);padding-top:18px;}
+.pillar-makes-label{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray);margin-bottom:10px;}
+.pillar-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.pillar-tag{
+  font-size:.68rem;padding:5px 12px;border-radius:20px;
+  background:var(--teal-pale);color:var(--teal);
+  font-family:'Jost',sans-serif;
+}
+
+/* ── NEW: Pillar Two photo strip ── */
+.pillar2-strip{
+  background:var(--charcoal);padding:0;overflow:hidden;
+}
+.pillar2-strip-inner{
+  display:grid;grid-template-columns:repeat(3,1fr);height:220px;
+}
+.pillar2-strip-photo{overflow:hidden;position:relative;}
+.pillar2-strip-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  transition:transform .5s ease;
+  filter:brightness(.85);
+}
+.pillar2-strip-photo:hover img{transform:scale(1.05);filter:brightness(1);}
+.pillar2-strip-label{
+  position:absolute;inset:0;display:flex;align-items:flex-end;padding:16px;
+  background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 60%);
+}
+.pillar2-strip-label span{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:.9rem;color:rgba(255,255,255,.85);line-height:1.3;
+}
+
+/* ── SLIDER ── */
+.eve-section{padding:0;overflow:hidden;position:relative;background:var(--charcoal);}
+.eve-slider{position:relative;width:100%;height:580px;}
+@media(max-width:700px){.eve-slider{height:420px;}}
+.eve-slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;transition:opacity .8s ease;
+}
+.eve-slide.active{opacity:1;}
+.eve-slide::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.1) 50%, transparent 100%);
+}
+.eve-caption{position:absolute;bottom:80px;left:48px;right:48px;z-index:2;}
+@media(max-width:700px){.eve-caption{left:24px;right:24px;bottom:70px;}}
+.eve-eyebrow{
+  font-family:'Jost',sans-serif;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--clay-light);display:block;margin-bottom:6px;
+}
+.eve-eyebrow.p2{color:var(--teal-light);}
+.eve-caption p{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(1.1rem,2vw,1.35rem);color:#fff;margin:0;line-height:1.4;
+}
+.eve-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:10;
+  background:rgba(0,0,0,.35);border:none;color:#fff;
+  width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:background .2s;
+}
+.eve-arrow:hover{background:rgba(0,0,0,.6);}
+.eve-prev{left:20px;} .eve-next{right:20px;}
+.eve-dots{
+  position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
+  display:flex;gap:8px;z-index:10;
+}
+.eve-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(255,255,255,.35);border:none;cursor:pointer;padding:0;transition:background .2s;
+}
+.eve-dot.active{background:#fff;}
+.eve-header{
+  position:absolute;top:36px;left:0;right:0;text-align:center;z-index:10;pointer-events:none;
+}
+.eve-header a{pointer-events:all;}
+
+/* pillar divider inside slider */
+.eve-pillar-divider{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(42,37,32,.97);z-index:2;
+}
+.eve-pillar-divider-inner{text-align:center;}
+.eve-pillar-divider-badge{
+  display:inline-block;
+  background:rgba(168,212,209,.15);border:1px solid var(--teal-light);
+  color:var(--teal-light);font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;
+  padding:6px 18px;border-radius:20px;margin-bottom:18px;font-family:'Jost',sans-serif;
+}
+.eve-pillar-divider h3{
+  font-family:'Playfair Display',serif;color:#fff;
+  font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;margin:0 0 8px;
+}
+.eve-pillar-divider p{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:rgba(255,255,255,.55);font-size:1rem;
+}
+</style>
+</head>
+<body>
+
+<div class="mockup-banner">
+  <strong>Mockup Preview</strong> — Showing proposed changes to the Pillars section and Evening Slider.
+  Scroll down to see both. <strong>Not live yet</strong> — approve and I'll update the real site.
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 1: OUR PILLARS (with updated Pillar Two photo)  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+
+<div class="mockup-label">↓ Change 1 of 2 — Pillar Two card now shows a real Baking & Pastry photo</div>
+
+<section class="craft" id="craft">
+  <div class="craft-inner">
+    <div class="craft-heading-row">
+      <div>
+        <span class="section-eyebrow">Our Pillars</span>
+        <h2 class="serif-heading craft-heading">
+          Two pillars,<br><em>one kitchen</em>
+        </h2>
+      </div>
+      <p class="italic-sub craft-intro">
+        Every gathering is built around one of our two pillars — each led by a different host, each designed to teach, connect, and send you home with something real. Same spirit. Different craft.
+      </p>
+    </div>
+
+    <div class="craft-grid">
+
+      <!-- PILLAR ONE — unchanged -->
+      <div class="craft-card">
+        <div class="craft-card-top teal">
+          <img src="images/IMG_0363.JPEG" alt="Hands shaping sourdough dough on a floured counter">
+          <div class="craft-card-top-overlay"></div>
+          <div class="pillar-badge">Pillar One</div>
+        </div>
+        <div class="craft-card-body">
+          <div class="pillar-host">With Jaime Kerber · Founder</div>
+          <h3 class="craft-card-title">Sourdough &amp; Preserves</h3>
+          <p class="craft-card-desc">The original Homemade Pantry gathering. From a live sourdough starter to hand-churned butter and small-batch seasonal jam — every step done by hand, every technique yours to take home.</p>
+          <div class="pillar-makes">
+            <div class="pillar-makes-label">You'll make &amp; take home</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">🍞 Mini sourdough loaf</span>
+              <span class="pillar-tag">🧈 Flavored butter</span>
+              <span class="pillar-tag">🫙 Seasonal jam</span>
+              <span class="pillar-tag">🪴 Live starter</span>
+              <span class="pillar-tag">📋 Recipe card</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PILLAR TWO — NEW PHOTO from Laney birthday -->
+      <div class="craft-card">
+        <div class="craft-card-top clay">
+          <!-- CHANGED: was IMG_0346.JPEG (a sourdough hands photo). Now shows real P2 content. -->
+          <img src="images/Laney%20Birthday%204-18/IMG_5649.jpeg"
+               alt="Homemade caramel being poured over a shortbread cookie"
+               style="object-position:center 30%;">
+          <div class="craft-card-top-overlay"></div>
+          <div class="pillar-badge">Pillar Two</div>
+        </div>
+        <div class="craft-card-body">
+          <div class="pillar-host">With Brittany Trevett · Chef &amp; Baker</div>
+          <h3 class="craft-card-title">Baking &amp; Pastry</h3>
+          <p class="craft-card-desc">Brittany brings her professional kitchen training to your hands. Each gathering focuses on a seasonal technique — from laminated doughs to artisan breads to pastry fundamentals. You'll leave knowing how to do it again.</p>
+          <div class="pillar-makes">
+            <div class="pillar-makes-label">You'll make &amp; take home</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">🥐 Seasonal pastry</span>
+              <span class="pillar-tag">🍞 Artisan baking</span>
+              <span class="pillar-tag">📋 Recipes to keep</span>
+              <span class="pillar-tag">✦ Everything you made</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  BONUS: Pillar Two 3-photo strip below the cards         -->
+<!-- ══════════════════════════════════════════════════════════ -->
+
+<div class="pillar2-strip">
+  <div class="pillar2-strip-inner">
+    <div class="pillar2-strip-photo">
+      <img src="images/Laney%20Birthday%204-18/IMG_5656.jpeg" alt="Kitchen torch brûléeing a crème brûlée">
+      <div class="pillar2-strip-label"><span>The brûlée moment</span></div>
+    </div>
+    <div class="pillar2-strip-photo">
+      <img src="images/Laney%20Birthday%204-18/IMG_5655.jpeg" alt="Finished crème brûlée held in two hands" style="object-position:center 20%;">
+      <div class="pillar2-strip-label"><span>Made by your hands</span></div>
+    </div>
+    <div class="pillar2-strip-photo">
+      <img src="images/Laney%20Birthday%204-18/IMG_5662.jpeg" alt="Cookies with Laney written in chocolate">
+      <div class="pillar2-strip-label"><span>Write your name on it</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  SECTION 2: THE SLIDER (Pillar 2 slides added at end)    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+
+<div class="mockup-label">↓ Change 2 of 2 — Slider now includes 4 Pillar Two slides (scroll through with arrows)</div>
+
+<section class="eve-section" id="evening">
+
+  <div class="eve-slider" id="eveSlider">
+
+    <!-- ── PILLAR ONE SLIDES (existing, eyebrow updated) ── -->
+    <div class="eve-slide active" style="background-image:url('images/IMG_1689.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">Pillar One · Sourdough &amp; Preserves · April 2026</span>
+        <p>The table set before anyone arrived.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_1691.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">The space</span>
+        <p>A home kitchen turned warm, intentional gathering place.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0338.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">Every detail</span>
+        <p>Teal plates, fresh tulips — nothing accidental.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0340.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">Getting started</span>
+        <p>Guests gather at the work table.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0345.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">Hands in dough</span>
+        <p>The real work — and the real fun — begins.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0366.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">The best part</span>
+        <p>Laughter is always part of the recipe.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0370.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">Strawberry jam</span>
+        <p>Fresh strawberries, prepped by hand.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0375.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">Into the jars</span>
+        <p>Small-batch jam, still warm.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0382.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">Hand-churned butter</span>
+        <p>Heavy cream, a little effort, something extraordinary.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_1702.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">The oven moment</span>
+        <p>Six loaves, three Dutch ovens, one kitchen.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/IMG_0402.JPEG')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow">End of the evening</span>
+        <p>Everyone heads home with everything they made.</p>
+      </div>
+    </div>
+
+    <!-- ── PILLAR TWO DIVIDER SLIDE ── -->
+    <div class="eve-slide" style="background-image:none;">
+      <div class="eve-pillar-divider">
+        <div class="eve-pillar-divider-inner">
+          <div class="eve-pillar-divider-badge">Pillar Two</div>
+          <h3>Baking &amp; Pastry</h3>
+          <p>With Brittany Trevett · Laney's Birthday Evening · April 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PILLAR TWO SLIDES (new) ── -->
+    <div class="eve-slide" style="background-image:url('images/Laney%20Birthday%204-18/IMG_5656.jpeg')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow p2">Pillar Two · Baking &amp; Pastry · April 2026</span>
+        <p>A kitchen torch, a custard, and a little fire.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/Laney%20Birthday%204-18/IMG_5649.jpeg')">
+      <div class="eve-caption">
+        <span class="eve-eyebrow p2">Made from scratch</span>
+        <p>Homemade caramel, poured by the hands that made it.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/Laney%20Birthday%204-18/IMG_5655.jpeg');background-position:center 20%;">
+      <div class="eve-caption">
+        <span class="eve-eyebrow p2">Take it home</span>
+        <p>Crème brûlée — made from scratch, yours to keep.</p>
+      </div>
+    </div>
+    <div class="eve-slide" style="background-image:url('images/Laney%20Birthday%204-18/IMG_5662.jpeg');background-position:center 30%;">
+      <div class="eve-caption">
+        <span class="eve-eyebrow p2">You made it. Now sign it.</span>
+        <p>Write your name on something you made by hand. That's the whole point.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- arrows -->
+  <button class="eve-arrow eve-prev" onclick="eveMove(-1)" aria-label="Previous">&#8592;</button>
+  <button class="eve-arrow eve-next" onclick="eveMove(1)" aria-label="Next">&#8594;</button>
+
+  <!-- dots -->
+  <div class="eve-dots" id="eveDots"></div>
+
+  <!-- header overlay -->
+  <div class="eve-header">
+    <h2 class="serif-heading" style="color:#fff;font-size:clamp(1.6rem,2.8vw,2.2rem);margin:0 0 8px;">
+      See what an evening <em style="font-style:italic;color:var(--clay-light);">actually looks like.</em>
+    </h2>
+  </div>
+
+</section>
+
+<script>
+var slides = document.querySelectorAll('.eve-slide');
+var dots   = document.getElementById('eveDots');
+var cur    = 0;
+var timer;
+
+slides.forEach(function(_, i){
+  var d = document.createElement('button');
+  d.className = 'eve-dot' + (i===0?' active':'');
+  d.onclick = function(){ goTo(i); resetTimer(); };
+  dots.appendChild(d);
+});
+
+function goTo(n){
+  slides[cur].classList.remove('active');
+  dots.children[cur].classList.remove('active');
+  cur = (n + slides.length) % slides.length;
+  slides[cur].classList.add('active');
+  dots.children[cur].classList.add('active');
+}
+function eveMove(dir){ goTo(cur + dir); resetTimer(); }
+function resetTimer(){
+  clearInterval(timer);
+  timer = setInterval(function(){ goTo(cur+1); }, 4500);
+}
+resetTimer();
+
+var slider = document.getElementById('eveSlider');
+slider.addEventListener('mouseenter', function(){ clearInterval(timer); });
+slider.addEventListener('mouseleave', function(){ resetTimer(); });
+</script>
+
+</body>
+</html>

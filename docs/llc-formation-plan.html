@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Texas LLC Formation Plan — The Homemade Pantry</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital@1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal:    #2C6E6A;
+    --clay:    #B87050;
+    --cream:   #FAF6EF;
+    --charcoal:#2A2520;
+    --gray:    #8A847C;
+    --linen:   #EDE5D8;
+    --teal-pale:#E4F4F3;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 56px;
+  }
+
+  /* Header */
+  .header {
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+
+  .brand-line {
+    font-family: 'Jost', sans-serif;
+    font-size: 8pt;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 10px;
+  }
+
+  .doc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24pt;
+    color: var(--teal);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .doc-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13pt;
+    color: var(--gray);
+  }
+
+  .meta {
+    margin-top: 12px;
+    font-size: 8.5pt;
+    color: var(--gray);
+    letter-spacing: .04em;
+  }
+
+  /* Stage blocks */
+  .stage {
+    margin-bottom: 28px;
+    break-inside: avoid;
+  }
+
+  .stage-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    background: var(--teal);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+  }
+
+  .stage-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 18pt;
+    line-height: 1;
+    opacity: .6;
+  }
+
+  .stage-title {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 10.5pt;
+    letter-spacing: .04em;
+    flex: 1;
+  }
+
+  .stage-meta {
+    font-size: 8pt;
+    opacity: .75;
+    white-space: nowrap;
+  }
+
+  .steps {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .steps li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    font-size: 10.5pt;
+    border-bottom: 1px solid var(--linen);
+  }
+
+  .steps li:last-child { border-bottom: none; }
+
+  .steps li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--clay);
+    font-size: 9pt;
+    top: 7px;
+  }
+
+  .steps li strong { color: var(--teal); }
+
+  .note {
+    background: var(--teal-pale);
+    border-left: 3px solid var(--teal);
+    padding: 10px 14px;
+    margin: 10px 0 4px;
+    font-size: 9.5pt;
+    color: var(--charcoal);
+    border-radius: 0 3px 3px 0;
+    break-inside: avoid;
+  }
+
+  .note strong { color: var(--teal); }
+
+  /* Cost table */
+  .cost-section {
+    break-inside: avoid;
+    margin-bottom: 28px;
+  }
+
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 14pt;
+    color: var(--teal);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--linen);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+  }
+
+  thead tr {
+    background: var(--charcoal);
+    color: white;
+  }
+
+  thead th {
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 9pt;
+    letter-spacing: .05em;
+  }
+
+  tbody tr:nth-child(even) { background: var(--teal-pale); }
+
+  tbody td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--linen);
+  }
+
+  .total-row td {
+    background: var(--teal) !important;
+    color: white;
+    font-weight: 600;
+    border: none;
+  }
+
+  /* Bottom note */
+  .bottom-note {
+    background: var(--charcoal);
+    color: white;
+    padding: 18px 20px;
+    border-radius: 3px;
+    font-size: 9.5pt;
+    line-height: 1.6;
+    break-inside: avoid;
+  }
+
+  .bottom-note strong { color: var(--clay); }
+
+  /* Footer */
+  .footer {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid var(--linen);
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: var(--gray);
+  }
+
+  /* Print styles */
+  @media print {
+    body { background: white; font-size: 10pt; }
+    .page { padding: 32px 40px; max-width: 100%; }
+    .stage { break-inside: avoid; }
+    .cost-section { break-inside: avoid; }
+    .bottom-note { break-inside: avoid; }
+    a { color: var(--teal); text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="brand-line">The Homemade Pantry · Business Formation</div>
+    <h1 class="doc-title">Texas LLC Formation Plan</h1>
+    <div class="doc-subtitle">Eight steps from name confirmation to open bank account.</div>
+    <div class="meta">Prepared April 2026 &nbsp;·&nbsp; Jaime Kerber &nbsp;·&nbsp; Brookshire, TX</div>
+  </div>
+
+  <!-- Stage 1 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">1</span>
+      <span class="stage-title">Confirm the Name</span>
+      <span class="stage-meta">~30 min &nbsp;·&nbsp; ~$1</span>
+    </div>
+    <ul class="steps">
+      <li>Search <strong>Texas SOS SOSDirect</strong> — confirm "The Homemade Pantry LLC" isn't already registered in Texas: <em>direct.sos.state.tx.us</em></li>
+      <li>Search <strong>USPTO Trademark Database</strong> — confirm no federal trademark exists: <em>tmsearch.uspto.gov</em> (search "homemade pantry")</li>
+      <li>If both come back clear, proceed to Stage 2</li>
+    </ul>
+  </div>
+
+  <!-- Stage 2 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">2</span>
+      <span class="stage-title">File the LLC with Texas</span>
+      <span class="stage-meta">1–2 hours &nbsp;·&nbsp; $300</span>
+    </div>
+    <ul class="steps">
+      <li>Go to <em>sos.state.tx.us</em> and file <strong>Form 205 — Certificate of Formation</strong></li>
+      <li>Business name: <strong>The Homemade Pantry LLC</strong></li>
+      <li>Business purpose: <em>"Culinary experience and gathering services"</em></li>
+      <li>Registered office address: 2415 Sweetwood Ct, Brookshire TX 77423</li>
+      <li>Pay the $300 filing fee online</li>
+      <li>Save the stamped <strong>Certificate of Formation</strong> — you'll need it for the bank</li>
+    </ul>
+    <div class="note"><strong>What a registered agent is:</strong> Texas requires every LLC to name a registered agent — a person who officially receives legal paperwork on behalf of the business. Jaime can be her own registered agent using the home address. Simple and free.</div>
+  </div>
+
+  <!-- Stage 3 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">3</span>
+      <span class="stage-title">Get Your Federal Tax ID (EIN)</span>
+      <span class="stage-meta">15 min &nbsp;·&nbsp; Free</span>
+    </div>
+    <ul class="steps">
+      <li>Apply at <em>irs.gov/ein</em> — get it instantly online</li>
+      <li>This is the business equivalent of a Social Security number — required to open a bank account and file taxes</li>
+    </ul>
+  </div>
+
+  <!-- Stage 4 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">4</span>
+      <span class="stage-title">Create an Operating Agreement</span>
+      <span class="stage-meta">1 hour &nbsp;·&nbsp; Free</span>
+    </div>
+    <ul class="steps">
+      <li>Texas doesn't legally require one — but every LLC should have it</li>
+      <li>Defines ownership, profit distribution, and what happens if the business changes</li>
+      <li>Since this is a single-member LLC, a simple template works — available free at <em>legalzoom.com</em> or <em>rocketlawyer.com</em></li>
+      <li>Sign it and keep the copy with your business records — you do <strong>not</strong> file this anywhere</li>
+    </ul>
+  </div>
+
+  <!-- Stage 5 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">5</span>
+      <span class="stage-title">Open a Business Bank Account</span>
+      <span class="stage-meta">1 hour &nbsp;·&nbsp; Free</span>
+    </div>
+    <ul class="steps">
+      <li>Bring your Certificate of Formation + EIN to a bank</li>
+      <li>Recommended: Chase Business Complete, or a local Texas credit union</li>
+      <li><strong>Never mix personal and business money</strong> once the LLC is active — this is what keeps your personal assets protected legally</li>
+    </ul>
+  </div>
+
+  <!-- Stage 6 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">6</span>
+      <span class="stage-title">Business Insurance</span>
+      <span class="stage-meta">1–2 days &nbsp;·&nbsp; ~$500–$1,200/yr</span>
+    </div>
+    <ul class="steps">
+      <li>Get <strong>General Liability Insurance</strong> before hosting any paying guests</li>
+      <li>Look into <strong>FLIP (Food Liability Insurance Program)</strong> — designed for food businesses, starts around $299/year: <em>fliprogram.com</em></li>
+      <li>Ask your homeowner's insurance carrier if your policy covers home-based business activity — most don't, and you'll need a separate rider</li>
+    </ul>
+  </div>
+
+  <!-- Stage 7 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">7</span>
+      <span class="stage-title">Texas Food &amp; Cottage Food Compliance</span>
+      <span class="stage-meta">1–2 hours &nbsp;·&nbsp; ~$10</span>
+    </div>
+    <ul class="steps">
+      <li>Get a <strong>Food Handler Certificate</strong> — required for anyone handling food commercially in Texas: <em>txfoodhandler.com</em> (~$10, ~2 hours online)</li>
+      <li>Review <strong>Texas Cottage Food Law</strong> (Texas Health &amp; Safety Code §437) — allows some home-based food businesses to operate without a commercial kitchen license</li>
+      <li>Call the <strong>Waller County Health Department</strong> to confirm what permits, if any, are required for in-home culinary experiences</li>
+      <li>Check <strong>Waller County / City of Brookshire zoning</strong> for any rules about guests coming to a home-based business</li>
+    </ul>
+  </div>
+
+  <!-- Stage 8 -->
+  <div class="stage">
+    <div class="stage-header">
+      <span class="stage-num">8</span>
+      <span class="stage-title">Annual Obligations (Ongoing)</span>
+      <span class="stage-meta">1 hour/year &nbsp;·&nbsp; Free</span>
+    </div>
+    <ul class="steps">
+      <li>File the <strong>Texas Public Information Report</strong> annually with the Texas Comptroller — due May 15 each year, no fee for most small LLCs</li>
+      <li>Keep all business income and expenses in the business bank account and tracked in QuickBooks</li>
+    </ul>
+  </div>
+
+  <!-- Cost Table -->
+  <div class="cost-section">
+    <h2 class="section-heading">Cost Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Texas LLC filing (Form 205)</td><td>$300</td></tr>
+        <tr><td>EIN (Federal Tax ID)</td><td>Free</td></tr>
+        <tr><td>Operating Agreement (DIY template)</td><td>Free</td></tr>
+        <tr><td>Business bank account</td><td>Free</td></tr>
+        <tr><td>Food Handler Certificate</td><td>~$10</td></tr>
+        <tr><td>General Liability Insurance (annual)</td><td>~$500–$1,200</td></tr>
+        <tr class="total-row"><td><strong>Total to Launch</strong></td><td><strong>~$810–$1,510</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bottom note -->
+  <div class="bottom-note">
+    <strong>Recommended first step:</strong> Do Stage 1 today — it takes 30 minutes and costs about $1. Everything else follows once the name is confirmed clear. The whole process from name check to open bank account can realistically be done in <strong>one week</strong> if you work through it in order.
+  </div>
+
+  <div class="footer">
+    <span>The Homemade Pantry &nbsp;·&nbsp; Jaime Kerber &nbsp;·&nbsp; Brookshire, TX</span>
+    <span>Prepared April 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
