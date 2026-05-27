@@ -203,8 +203,10 @@ A complete single-file HTML website has been built (`website/index.html`).
 - [ ] Embed Calendly booking widget
 - [ ] Connect Google Analytics
 - [x] Host on Netlify (auto-deploys from GitHub master branch)
-- [x] Add real photos (40 photos from April 2026 preview party)
-- [x] Booking form connected to Netlify Forms (emails thehomemadepantryco@gmail.com)
+- [x] Add real photos (preview party + Laney birthday + Kayla birthday events)
+- [x] Booking form connected to Netlify Forms (notifies thehomemadepantryco@gmail.com on each submission)
+- [x] Guest confirmation autoresponder via Netlify Function + Resend (sends from `hello@thehomemadepantryco.com` — see Email Infrastructure section below)
+- [x] Domain verified with Resend (DKIM + SPF + DMARC records live in Netlify DNS)
 
 ---
 
@@ -239,6 +241,27 @@ A complete single-file HTML website has been built (`website/index.html`).
 Date | Guest Name | Group Size | Package | Revenue | Deposit | Balance | Notes
 ```
 Monthly totals: Bookings, Revenue, Avg Group Size, Top Package, Expenses, Net Profit
+
+---
+
+## ✉️ Email Infrastructure (live)
+
+The booking form sends two emails on every submission:
+
+1. **Notification to us** — Netlify Forms native email → `thehomemadepantryco@gmail.com`. Configured in Netlify dashboard. No code.
+
+2. **Confirmation to the guest** — A Netlify Function (`netlify/functions/submission-created.js`) is auto-triggered by Netlify Forms after each booking submission. It reads the guest's email + form fields, then calls the Resend API to send a warm, branded confirmation email from `hello@thehomemadepantryco.com`. Reply-to is set to `thehomemadepantryco@gmail.com` so any guest reply lands in Gmail.
+
+**Key facts:**
+- Resend API key lives in Netlify environment variables as `RESEND_API_KEY` (marked Secret). Never in code.
+- Domain `thehomemadepantryco.com` is verified with Resend. The DKIM, SPF, and DMARC DNS records live in Netlify DNS (since that's where the domain's DNS is managed — Namecheap is just the registrar).
+- The function uses Netlify Functions v2 syntax (`export default async (req)`) and only sends mail for the `booking` form, ignoring any other form submissions.
+- Resend free tier covers 3,000 emails/month — plenty for the foreseeable future.
+
+**Troubleshooting playbook:**
+- "Guest says they didn't get the email" → Check Resend dashboard → Emails for delivery status. Also check Netlify → Logs → Functions → `submission-created` for errors.
+- "Want to rotate the API key" → Resend dashboard → API Keys → revoke old + create new → update `RESEND_API_KEY` in Netlify env vars → trigger redeploy.
+- "Want to change the email template" → Edit `netlify/functions/submission-created.js`, commit, push. Netlify redeploys the function automatically.
 
 ---
 
@@ -281,11 +304,18 @@ Made slowly. Shared warmly.
 |---|---|
 | `website/index.html` | Complete website — all pages, mobile responsive |
 | `website/preview-party.html` | Scrolling story memory page from the April 2026 preview party |
-| `website/images/` | 40 photos from the preview party (copied here for Netlify deployment) |
+| `website/mockup-pillar2.html` | Working mockup for the Pillar Two (Baking & Pastry) section |
+| `website/images/preview-party-04-11/` | Photos from the April 2026 preview party (descriptive `preview-*` filenames) |
+| `website/images/laney-birthday-04-18/` | Photos from Laney's birthday (Pillar Two — Brittany) |
+| `website/images/kayla-birthday-05-16/` | Photos from Kayla's birthday (Pillar Two — Brittany) |
+| `netlify/functions/submission-created.js` | Serverless function that sends guest confirmation emails via Resend |
+| `netlify.toml` | Netlify config (publish directory) |
 | `docs/brand-concept.html` | Full brand identity mockup |
-| `content/instagram-calendar.html` | 30-day content calendar with captions |
+| `docs/llc-formation-plan.html` | LLC formation plan |
 | `docs/launch-plan.docx` | 8-step launch plan + automation stack + 30-day checklist |
-| `images/` | Original 40 photos from the April 2026 preview party |
+| `content/instagram-calendar.html` | 30-day content calendar with captions |
+| `content/instagram-setup.html` | Instagram launch setup playbook |
+| `content/gbp-setup.html` | Google Business Profile setup playbook |
 | `CLAUDE.md` | This file |
 
 ---
@@ -334,20 +364,36 @@ Made slowly. Shared warmly.
 ### Project folder structure (current)
 ```
 homemade-pantry/
-├── CLAUDE.md              ← This file (always read first)
+├── CLAUDE.md                       ← This file (always read first)
+├── netlify.toml                    ← Netlify build config
+├── netlify/
+│   └── functions/
+│       └── submission-created.js   ← Serverless function — guest confirmation emails via Resend
 ├── website/
-│   ├── index.html
-│   ├── preview-party.html ← Scrolling memory page from April 2026 preview party
-│   └── images/            ← Copy of all photos (here for Netlify — deploy this folder)
+│   ├── index.html                  ← Main landing page
+│   ├── preview-party.html          ← Scrolling memory page from April 2026 preview party
+│   ├── mockup-pillar2.html         ← Pillar Two working mockup
+│   └── images/
+│       ├── logo.svg
+│       ├── preview-party-04-11/    ← April 11 preview party photos (descriptive names)
+│       ├── laney-birthday-04-18/   ← Laney's birthday (Pillar Two)
+│       └── kayla-birthday-05-16/   ← Kayla's birthday (Pillar Two)
 ├── content/
-│   └── instagram-calendar.html
+│   ├── instagram-calendar.html     ← 30-day content calendar
+│   ├── instagram-setup.html        ← Launch playbook for IG
+│   └── gbp-setup.html              ← Google Business Profile setup
 ├── docs/
 │   ├── brand-concept.html
+│   ├── llc-formation-plan.html
 │   └── launch-plan.docx
-└── images/                ← Original photos (40 from April 2026 preview party)
+└── brand/                          ← Logo concepts & finalists (mostly archive)
 ```
+
+### Deploy workflow
+
+We work directly on the `master` branch. `git push origin master` triggers Netlify's auto-deploy. Live site is at thehomemadepantryco.com within ~1–2 minutes of every push. No staging branch or PR flow — appropriate scale for a one-person small business site.
 
 ---
 
-*Last updated: April 2026 | Built in collaboration with Claude Code*
+*Last updated: May 2026 | Built in collaboration with Claude Code*
 *Next session: Start by reading this file, then ask what we're working on today.*
