@@ -73,7 +73,7 @@ An intimate, in-home culinary gathering experience for small groups. Guests craf
 
 **Location:** 2415 Sweetwood Ct, Brookshire, TX 77423
 **Website:** www.thehomemadepantryco.com
-**Instagram:** @thehomemadepantry
+**Instagram:** @thehomemadepantryco2026 (https://www.instagram.com/thehomemadepantryco2026/)
 **Email:** jaimekerber@gmail.com
 **Phone:** 832-546-6446
 
@@ -267,7 +267,8 @@ The booking form sends two emails on every submission:
 
 ## 📱 Instagram Strategy
 
-**Handle:** @thehomemadepantry
+**Handle:** @thehomemadepantryco2026 (URL: https://www.instagram.com/thehomemadepantryco2026/)
+*Note: @thehomemadepantry was unavailable at signup, so the final handle includes "co2026".*
 
 **Bio:**
 ```
