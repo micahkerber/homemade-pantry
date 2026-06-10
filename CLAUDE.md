@@ -4,18 +4,15 @@
 
 ---
 
-## 🎯 CURRENT PRIORITY — Brand Logo
+## ✅ Brand Logo — DONE (May 2026)
 
-**Jaime needs a general circular brand logo for sticker printing (bread bags, packaging, etc.)**
+The circular wheat-stalk badge logo is finished and in use site-wide.
 
-- Shape: Circle (sticker format, ~2–3 inch print target)
-- Central image: General / experience-agnostic — NOT sourdough-specific. Must represent "made slowly. shared warmly" across all offerings
-- Text: "THE HOMEMADE PANTRY" on top arc, "MADE SLOWLY · SHARED WARMLY" on bottom arc
-- Colors: Use brand palette — teal-deep background, cream text, clay accents
-- Format: SVG (scalable, print-sharp) + HTML preview
-- File location: `brand/logo.svg` and `brand/logo-preview.html`
-- Print constraints: Solid colors only — no gradients that won't survive thermal/inkjet printing
-- When making ANY new page, component, or design asset — include or reference the logo
+- Final files: `brand/finalists/THP Brand Logo SVG Curved.svg` (chosen) and `THP Brand Logo SVG Straight.svg` (alternate)
+- The website uses `website/images/logo.svg` — a byte-for-byte copy of the Curved finalist
+- Teal badge · cream wheat stalk · circular sticker-print format · experience-agnostic
+- When making ANY new page, component, or design asset — include or reference this logo
+- Leftover concept/comparison files in `brand/concepts/`, `brand/elements/`, `brand/logo-compare.html`, and `docs/logo-preview.html` are cleanup candidates (cleanup deferred 2026-05-19 — ask before deleting)
 
 ---
 
@@ -27,11 +24,12 @@ Jaime uses the word **"Pillars"** for the distinct experience offerings. All Pil
 ### Pillar One — Sourdough & Preserves (flagship)
 Led by Jaime Kerber. The original offering.
 Guests make: sourdough loaf, hand-churned flavored butter, small-batch seasonal jam.
-Take home: mini sourdough loaf, active starter, flavored butter, jam, recipe card.
+Take home: mini sourdough loaf (tasted fresh, taken home), dried starter packet, flavored butter, jam, recipe card.
 
 ### Pillar Two — Baking & Pastry
 Led by Brittany Trevett (Executive Baker).
 Guests make: seasonal artisan baking and pastry techniques, hands-on.
+Dessert offerings include: Mini Tart Trio (lemon, chocolate, seasonal fruit) and Designer Mini Cakes (chocolate & vanilla, homemade buttercream, variety of toppings).
 Take home: everything made that evening, recipes to recreate at home.
 
 ### Future Pillars (TBD)
@@ -83,9 +81,9 @@ An intimate, in-home culinary gathering experience for small groups. Guests craf
 - Guests make everything hands-on (no demonstrations)
 - Every guest takes home everything they made
 
-**What guests take home:**
-- Mini sourdough loaf (baked that evening)
-- Active sourdough starter in mason jar
+**What guests take home (Pillar One):**
+- Mini sourdough loaf (baked that evening — guests taste fresh, then take it home)
+- Dried sourdough starter packet (rehydrate at home — NOT a live starter in a mason jar)
 - Homemade flavored butter
 - Small-batch seasonal jam
 - Printed recipe & starter care guide
@@ -194,14 +192,16 @@ A complete single-file HTML website has been built (`website/index.html`).
 - Scroll-reveal animations
 - Working FAQ accordion
 - Form submission confirmation
+- Booking form requires an active choice on Experience Type, Number of Guests, and Location before sending (added June 2026)
 - Smooth scroll between sections
 - Fully mobile responsive
+- Google Analytics 4 hookup via `website/analytics.js` (loaded by `index.html` and `preview-party.html`)
 
 ### Next Steps for Website
 - [x] Register domain: thehomemadepantryco.com (Namecheap, connected to Netlify)
 - [x] Replace placeholder testimonials with real guest quotes
 - [ ] Embed Calendly booking widget
-- [ ] Connect Google Analytics
+- [~] Connect Google Analytics — code is live (`website/analytics.js`), but **inactive until the GA4 property is created and the real Measurement ID is pasted into `analytics.js`** (instructions are in that file)
 - [x] Host on Netlify (auto-deploys from GitHub master branch)
 - [x] Add real photos (preview party + Laney birthday + Kayla birthday events)
 - [x] Booking form connected to Netlify Forms (notifies thehomemadepantryco@gmail.com on each submission)
@@ -304,6 +304,7 @@ Made slowly. Shared warmly.
 | File | Description |
 |---|---|
 | `website/index.html` | Complete website — all pages, mobile responsive |
+| `website/analytics.js` | Google Analytics 4 loader (no-op until Measurement ID is pasted in) |
 | `website/preview-party.html` | Scrolling story memory page from the April 2026 preview party |
 | `website/mockup-pillar2.html` | Working mockup for the Pillar Two (Baking & Pastry) section |
 | `website/images/preview-party-04-11/` | Photos from the April 2026 preview party (descriptive `preview-*` filenames) |
@@ -313,7 +314,9 @@ Made slowly. Shared warmly.
 | `netlify.toml` | Netlify config (publish directory) |
 | `docs/brand-concept.html` | Full brand identity mockup |
 | `docs/llc-formation-plan.html` | LLC formation plan |
+| `docs/operating-agreement.docx` | LLC operating agreement |
 | `docs/launch-plan.docx` | 8-step launch plan + automation stack + 30-day checklist |
+| `brand/finalists/` | Final logo SVGs (Curved = chosen, Straight = alternate) |
 | `content/instagram-calendar.html` | 30-day content calendar with captions |
 | `content/instagram-setup.html` | Instagram launch setup playbook |
 | `content/gbp-setup.html` | Google Business Profile setup playbook |
@@ -372,6 +375,7 @@ homemade-pantry/
 │       └── submission-created.js   ← Serverless function — guest confirmation emails via Resend
 ├── website/
 │   ├── index.html                  ← Main landing page
+│   ├── analytics.js                ← GA4 loader (paste Measurement ID here to activate)
 │   ├── preview-party.html          ← Scrolling memory page from April 2026 preview party
 │   ├── mockup-pillar2.html         ← Pillar Two working mockup
 │   └── images/
@@ -386,8 +390,12 @@ homemade-pantry/
 ├── docs/
 │   ├── brand-concept.html
 │   ├── llc-formation-plan.html
+│   ├── operating-agreement.docx
 │   └── launch-plan.docx
-└── brand/                          ← Logo concepts & finalists (mostly archive)
+└── brand/
+    ├── finalists/                  ← Final logo SVGs (Curved = chosen)
+    ├── concepts/                   ← Archive — cleanup candidates
+    └── elements/                   ← Source SVGs/zip — cleanup candidates
 ```
 
 ### Deploy workflow
@@ -396,5 +404,5 @@ We work directly on the `master` branch. `git push origin master` triggers Netli
 
 ---
 
-*Last updated: May 2026 | Built in collaboration with Claude Code*
+*Last updated: June 10, 2026 | Built in collaboration with Claude Code*
 *Next session: Start by reading this file, then ask what we're working on today.*

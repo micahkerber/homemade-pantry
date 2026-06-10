@@ -6,6 +6,7 @@
 <title>The Homemade Pantry — Artisan Culinary Gatherings · Brookshire, TX</title>
 <meta name="description" content="Intimate culinary evenings for small groups — hosted in our home kitchen in Brookshire, Texas, or in yours. Sourdough & preserves with Jaime, baking & pastry with Brittany. Up to 6 guests.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="analytics.js"></script>
 <style>
 /* ── RESET & TOKENS ── */
 :root {
@@ -693,6 +694,9 @@ nav.scrolled .nav-links a:hover{opacity:1;color:var(--charcoal);}
 .form-row select:focus,
 .form-row textarea:focus{border-color:var(--teal);}
 .form-row textarea{resize:vertical;min-height:80px;}
+/* Required selects show gray placeholder text until the guest makes a choice */
+.form-row select:invalid{color:var(--gray);}
+.form-row select option{color:var(--charcoal);}
 .form-row-half{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-submit{
   width:100%;padding:16px;
@@ -1714,7 +1718,8 @@ footer::before{
           <div class="form-row form-row-half">
             <div class="form-row">
               <label>Experience Type</label>
-              <select name="experience-type">
+              <select name="experience-type" required>
+                <option value="" disabled selected>Choose an experience…</option>
                 <option>Sourdough &amp; Preserves Evening</option>
                 <option>Baking &amp; Pastry Evening</option>
                 <option>Gift Card Inquiry</option>
@@ -1722,7 +1727,8 @@ footer::before{
             </div>
             <div class="form-row">
               <label>Number of Guests</label>
-              <select name="guest-count">
+              <select name="guest-count" required>
+                <option value="" disabled selected>How many guests?</option>
                 <option>4 guests</option>
                 <option>5 guests</option>
                 <option>6 guests</option>
@@ -1731,7 +1737,8 @@ footer::before{
           </div>
           <div class="form-row">
             <label>Where would you like to gather?</label>
-            <select name="location-preference">
+            <select name="location-preference" required>
+              <option value="" disabled selected>Choose a location…</option>
               <option>At The Homemade Pantry — Brookshire, TX</option>
               <option>At my home — within 15 mi of Brookshire (travel fees may apply)</option>
               <option>Not sure yet — let's discuss</option>
@@ -1925,6 +1932,11 @@ function handleSubmit(e){
   .then(() => {
     btn.textContent = '✓ Request Sent — your host will be in touch shortly!';
     btn.style.background = 'var(--sage)';
+    // Record the booking request as a lead in Google Analytics (no-op until GA is activated)
+    if (window.gtag) gtag('event', 'generate_lead', {
+      experience: form['experience-type'].value,
+      guests: form['guest-count'].value
+    });
   })
   .catch(() => {
     btn.textContent = 'Something went wrong — please email us directly';
