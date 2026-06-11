@@ -207,6 +207,7 @@ A complete single-file HTML website has been built (`website/index.html`).
 - [x] Booking form connected to Netlify Forms (notifies thehomemadepantryco@gmail.com on each submission)
 - [x] Guest confirmation autoresponder via Netlify Function + Resend (sends from `hello@thehomemadepantryco.com` — see Email Infrastructure section below)
 - [x] Domain verified with Resend (DKIM + SPF + DMARC records live in Netlify DNS)
+- [x] Photos compressed for web (June 2026 — 76MB → 11MB, max 1600px, JPEG q80, EXIF/GPS stripped; originals recoverable from git history before commit `99b811c`'s successor)
 
 ---
 
