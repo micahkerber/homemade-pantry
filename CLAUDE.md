@@ -324,6 +324,7 @@ Made slowly. Shared warmly.
 | `content/instagram-calendar.html` | 30-day content calendar with captions |
 | `content/instagram-setup.html` | Instagram launch setup playbook |
 | `content/gbp-setup.html` | Google Business Profile setup playbook |
+| `CHANGELOG.md` | Plain-language living record of every meaningful change (update with each shipped change) |
 | `CLAUDE.md` | This file |
 
 ---
@@ -405,6 +406,10 @@ homemade-pantry/
 ### Deploy workflow
 
 We work directly on the `master` branch. `git push origin master` triggers Netlify's auto-deploy. Live site is at thehomemadepantryco.com within ~1–2 minutes of every push. No staging branch or PR flow — appropriate scale for a one-person small business site.
+
+### Change log (required)
+
+`CHANGELOG.md` at the repo root is the plain-language living record of what changed and why it matters — written so Jaime could read it. **Whenever meaningful work ships (anything user-visible, or new infrastructure), add an entry at the top of CHANGELOG.md in the same commit or session.** Group by date, lead with the business impact, keep technical detail to one parenthetical. Trivial doc tweaks don't need entries.
 
 ---
 
