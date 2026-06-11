@@ -201,7 +201,7 @@ A complete single-file HTML website has been built (`website/index.html`).
 - [x] Register domain: thehomemadepantryco.com (Namecheap, connected to Netlify)
 - [x] Replace placeholder testimonials with real guest quotes
 - [ ] Embed Calendly booking widget
-- [x] Google Analytics connected and live (June 2026 — GA4 property under thehomemadepantryco@gmail.com, Measurement ID `G-47GHNC2VME` in `website/analytics.js`; booking form fires a `generate_lead` event)
+- [x] Google Analytics connected and live (June 2026 — Measurement ID `G-47GHNC2VME` in `website/analytics.js`; booking form fires a `generate_lead` event; GA4 property created by Micah — account unconfirmed, recommended thehomemadepantryco@gmail.com)
 - [x] Host on Netlify (auto-deploys from GitHub master branch)
 - [x] Add real photos (preview party + Laney birthday + Kayla birthday events)
 - [x] Booking form connected to Netlify Forms (notifies thehomemadepantryco@gmail.com on each submission)
