@@ -320,6 +320,7 @@ Made slowly. Shared warmly.
 | `docs/llc-formation-plan.html` | LLC formation plan |
 | `docs/operating-agreement.docx` | LLC operating agreement |
 | `docs/launch-plan.docx` | 8-step launch plan + automation stack + 30-day checklist |
+| `docs/small-business-launch-playbook.md` | Reusable 8-week launch playbook extracted from this project — copy into the next friend-business project |
 | `brand/finalists/` | Final logo SVGs (Curved = chosen, Straight = alternate) |
 | `content/instagram-calendar.html` | 30-day content calendar with captions |
 | `content/instagram-setup.html` | Instagram launch setup playbook |
