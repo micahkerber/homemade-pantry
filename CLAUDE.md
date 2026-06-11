@@ -208,6 +208,7 @@ A complete single-file HTML website has been built (`website/index.html`).
 - [x] Guest confirmation autoresponder via Netlify Function + Resend (sends from `hello@thehomemadepantryco.com` — see Email Infrastructure section below)
 - [x] Domain verified with Resend (DKIM + SPF + DMARC records live in Netlify DNS)
 - [x] Photos compressed for web (June 2026 — 76MB → 11MB, max 1600px, JPEG q80, EXIF/GPS stripped; originals recoverable via `git checkout 99b811c -- website/images`)
+- [x] Favicon + social share preview tags (June 2026 — `website/favicon.png` + `apple-touch-icon.png` rendered from the logo SVG; Open Graph tags on `index.html` and `preview-party.html`; share card is `website/images/og-card.jpg`, a 1200×630 crop of the tulip table photo)
 
 ---
 
@@ -305,7 +306,9 @@ Made slowly. Shared warmly.
 | File | Description |
 |---|---|
 | `website/index.html` | Complete website — all pages, mobile responsive |
-| `website/analytics.js` | Google Analytics 4 loader (no-op until Measurement ID is pasted in) |
+| `website/analytics.js` | Google Analytics 4 loader (live, ID G-47GHNC2VME) |
+| `website/favicon.png` + `apple-touch-icon.png` | Browser-tab / home-screen icons rendered from the logo |
+| `website/images/og-card.jpg` | 1200×630 social share preview card (tulip table photo) |
 | `website/preview-party.html` | Scrolling story memory page from the April 2026 preview party |
 | `website/mockup-pillar2.html` | Working mockup for the Pillar Two (Baking & Pastry) section |
 | `website/images/preview-party-04-11/` | Photos from the April 2026 preview party (descriptive `preview-*` filenames) |
