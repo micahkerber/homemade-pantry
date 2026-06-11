@@ -8,7 +8,7 @@
 //
 // Until a real ID is pasted in, this file does nothing — safe to deploy as-is.
 (function () {
-  var GA_ID = 'G-XXXXXXXXXX'; // ← paste your real Measurement ID here
+  var GA_ID = 'G-47GHNC2VME'; // The Homemade Pantry — GA4 Measurement ID
 
   if (GA_ID === 'G-XXXXXXXXXX') return; // placeholder still in place — skip tracking
 
