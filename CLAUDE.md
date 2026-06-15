@@ -321,6 +321,7 @@ Made slowly. Shared warmly.
 | `docs/operating-agreement.docx` | LLC operating agreement |
 | `docs/launch-plan.docx` | 8-step launch plan + automation stack + 30-day checklist |
 | `docs/small-business-launch-playbook.md` | Reusable 8-week launch playbook extracted from this project — copy into the next friend-business project |
+| `design/homemade-pantry-host-dashboard-prototype.zip` | High-fidelity Host Dashboard design prototype (mock data, React-in-browser). **Parked — revisit later.** See `design/README.md` for the build-vs-buy decision and open questions |
 | `brand/finalists/` | Final logo SVGs (Curved = chosen, Straight = alternate) |
 | `content/instagram-calendar.html` | 30-day content calendar with captions |
 | `content/instagram-setup.html` | Instagram launch setup playbook |
@@ -397,7 +398,11 @@ homemade-pantry/
 │   ├── brand-concept.html
 │   ├── llc-formation-plan.html
 │   ├── operating-agreement.docx
-│   └── launch-plan.docx
+│   ├── launch-plan.docx
+│   └── small-business-launch-playbook.md
+├── design/                         ← Reference designs / prototypes (not deployed)
+│   ├── README.md                   ← What the prototype is + open questions
+│   └── homemade-pantry-host-dashboard-prototype.zip  ← Host Dashboard (parked)
 └── brand/
     ├── finalists/                  ← Final logo SVGs (Curved = chosen)
     ├── concepts/                   ← Archive — cleanup candidates

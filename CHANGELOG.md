@@ -6,6 +6,11 @@
 
 ---
 
+## June 12, 2026 — Reusable launch playbook + Host Dashboard prototype filed
+
+- **Reusable launch playbook added** (`docs/small-business-launch-playbook.md`) — the repeatable 5-phase, ~8-week process distilled from launching this business, ready to copy into the next friend-business project.
+- **Host Dashboard design prototype received and filed** for later. It's a high-fidelity mockup of a private back-of-house admin screen (12 views — bookings, calendar, revenue, prep checklists, and more) with sample data only — no real backend yet. Parked in `design/` with notes on the build-vs-buy decision; we'll revisit when ready.
+
 ## June 10, 2026 — Faster site, smarter form, real analytics
 
 - **Booking form now requires real choices.** The Experience, Number of Guests, and Location dropdowns start on a "Choose…" prompt and must be answered before the request can send — no more accidental default answers in booking requests.
