@@ -8,12 +8,13 @@
 
 ## August 1, 2026 — The Weekly Bread Drop launches (online ordering)
 
-- **Jaime can now sell bread, sweets & jam online.** A new order page (`thehomemadepantryco.com/order.html`) lets people order from a weekly menu — sourdough (classic, jalapeño cheddar, asiago garlic), sourdough muffins, cookies, and jam — with a live running total. Orders open through Tuesday; everything is baked fresh Saturday for pickup in Brookshire or local delivery.
+- **Jaime can now sell bread, sweets & jam online.** A new order page (`thehomemadepantryco.com/order.html`) lets people order from a weekly menu — sourdough (classic, jalapeño cheddar, asiago garlic), sourdough muffins, cookies, and jam — with a live running total. Orders open through Tuesday; everything is baked fresh Friday for pickup in Brookshire or local delivery.
 - **It runs on the same machine as the booking form** — no new services or costs. The order page is a second Netlify form on the existing pipeline: every order emails the bake list to thehomemadepantryco@gmail.com and sends the customer an automatic confirmation with their total and Venmo/Zelle instructions (prepay confirms the order).
 - **The bread feeds the experiences.** Every order and its confirmation email carry a **FRESH10** code — $10 off a sourdough evening — turning bread buyers into experience guests.
 - **Marketing kit created** (`marketing/`): a scan-to-order QR code, a branded Instagram/Facebook launch graphic, and the launch caption + posting strategy.
 - **"Order Bread" link added to the main site** — in the top navigation, the mobile menu, and the footer — so visitors browsing the experiences can find the order page (kept as a plain link, not a second button, so the experiences stay the site's primary call to action).
-- Prices: loaves $12 (specialty $15), muffins $15/half-dozen, cookies $18/dozen, jam $9, Pantry Box bundle $32.
+- Prices (friendly launch pricing): classic loaf $9, specialty loaves $12, sourdough muffins $12/half-dozen, sourdough cookies $15/dozen, jam $8, Pantry Box bundle $26.
+- **Pantry Box lets the customer pick the flavors** (loaf, jam, cookie) from dropdowns that fill themselves from the weekly menu — so changing a flavor never means editing the box.
 - **Still to come before physical sales:** a cottage-food label (Texas law requires ingredients + allergens on every item) and a printed insert card.
 
 ## June 12, 2026 — Reusable launch playbook + Host Dashboard prototype filed

@@ -3,7 +3,7 @@
 //
 // Three tabs:
 //   Orders           — one row per order (columns mirror the order form)
-//   Weekly Bake List — pick a Saturday, see exactly what to bake + the money
+//   Weekly Bake List — pick a Friday, see exactly what to bake + the money
 //   How to Use       — plain-language instructions
 //
 // If the weekly menu changes, edit PRODUCTS below and re-run.
@@ -150,8 +150,8 @@ ws.addConditionalFormatting({
 });
 
 // ── Sample orders (delete these after you see how it works) ──
-// Uses next Saturday as the sample pickup date so the Bake List lights up.
-const SAMPLE_DATE = new Date(2026, 7, 8); // 2026-08-08 (Sat)
+// Uses next Friday as the sample pickup date so the Bake List lights up.
+const SAMPLE_DATE = new Date(2026, 7, 7); // 2026-08-07 (Fri)
 const sample = [
   // [Classic,JalCh,Asiago,S&C muf,Cinn muf,Lemon,Oat,StrawJam,PeachJam,Box]
   { first: 'Sample', last: 'Rivera', phone: '832-555-0101', email: 'rivera@example.com',
@@ -203,7 +203,7 @@ dateInput.font = { bold: true, size: 11, color: { argb: TEAL } };
 dateInput.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: CREAM } };
 dateInput.border = { top:{style:'thin',color:{argb:CLAY}}, left:{style:'thin',color:{argb:CLAY}}, bottom:{style:'thin',color:{argb:CLAY}}, right:{style:'thin',color:{argb:CLAY}} };
 dateInput.alignment = { horizontal: 'center' };
-bl.getCell('A4').value = '(type any Saturday here — the numbers below update)';
+bl.getCell('A4').value = '(type any Friday here — the numbers below update)';
 bl.getCell('A4').font = { italic: true, size: 9, color: { argb: 'FF8A847C' } };
 
 // Bake table header
@@ -269,13 +269,13 @@ const lines = [
   ['The Homemade Pantry — Weekly Bread Drop Order Log', 'title'],
   ['', 'gap'],
   ['What this is', 'h'],
-  ['A running log of every bread-drop order, plus an automatic "what to bake" list for each Saturday.', 'p'],
+  ['A running log of every bread-drop order, plus an automatic "what to bake" list for each Friday.', 'p'],
   ['', 'gap'],
   ['Each week', 'h'],
   ['1. As orders arrive, add a row on the ORDERS tab. Each order emails you the details — copy them in.', 'p'],
-  ['2. Put the Saturday pickup date in the "Pickup Date" column for every order in that drop.', 'p'],
+  ['2. Put the Friday pickup date in the "Pickup Date" column for every order in that drop.', 'p'],
   ['3. When a Venmo/Zelle payment lands, set that order’s "Paid?" to Yes (unpaid rows glow clay-orange).', 'p'],
-  ['4. On the WEEKLY BAKE LIST tab, type that Saturday’s date in the highlighted box.', 'p'],
+  ['4. On the WEEKLY BAKE LIST tab, type that Friday’s date in the highlighted box.', 'p'],
   ['   The tab instantly shows how many of each item to bake, revenue, pickups vs. deliveries, and who still owes.', 'p'],
   ['', 'gap'],
   ['Faster data entry (optional)', 'h'],

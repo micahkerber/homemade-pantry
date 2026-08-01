@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Weekly Bread Drop — Order Fresh Sourdough · The Homemade Pantry</title>
-<meta name="description" content="Order fresh, hand-shaped sourdough, small-batch jam, muffins, and cookies from The Homemade Pantry in Brookshire, TX. Order by Tuesday — fresh every Saturday.">
+<meta name="description" content="Order fresh, hand-shaped sourdough, small-batch jam, muffins, and cookies from The Homemade Pantry in Brookshire, TX. Order by Tuesday — fresh every Friday.">
 
 <!-- Favicon — the wheat-stalk badge in browser tabs and bookmarks -->
 <link rel="icon" type="image/png" href="favicon.png">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.thehomemadepantryco.com/order.html">
 <meta property="og:title" content="The Weekly Bread Drop — The Homemade Pantry">
-<meta property="og:description" content="Fresh sourdough, jam, muffins &amp; cookies — order by Tuesday, ready every Saturday. Made slowly. Shared warmly.">
+<meta property="og:description" content="Fresh sourdough, jam, muffins &amp; cookies — order by Tuesday, ready every Friday. Made slowly. Shared warmly.">
 <meta property="og:image" content="https://www.thehomemadepantryco.com/images/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -112,6 +112,23 @@ a{text-decoration:none;color:inherit;}
   font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
   padding:11px 22px;border-bottom:1px solid var(--linen);
 }
+/* Pantry Box flavor pickers — hidden until a box is added */
+.box-choices{display:none;background:var(--teal-pale);padding:16px 22px;border-top:1px dashed var(--teal-light);}
+.box-choices.show{display:block;}
+.box-choices-label{
+  font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--teal);font-weight:500;margin-bottom:10px;
+}
+.box-choices-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+.box-choices-grid label{
+  display:block;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);
+}
+.box-choices-grid select{
+  width:100%;margin-top:5px;padding:9px 10px;
+  border:1px solid var(--linen);border-radius:2px;background:#fff;
+  font-family:'Jost',sans-serif;font-size:.82rem;color:var(--charcoal);
+}
+@media(max-width:640px){.box-choices-grid{grid-template-columns:1fr;}}
 .item{
   display:flex;align-items:center;gap:16px;
   padding:20px 22px;border-bottom:1px solid var(--linen);
@@ -243,7 +260,7 @@ a{text-decoration:none;color:inherit;}
 <section class="drop-hero">
   <div class="eyebrow">The Homemade Pantry</div>
   <h1>The Weekly Bread Drop</h1>
-  <p class="schedule">Order by <strong>Tuesday</strong> · Fresh every <strong>Saturday</strong></p>
+  <p class="schedule">Order by <strong>Tuesday</strong> · Fresh every <strong>Friday</strong></p>
 </section>
 
 <!-- ── HOW IT WORKS ── -->
@@ -260,7 +277,7 @@ a{text-decoration:none;color:inherit;}
   </div>
   <div class="step">
     <div class="num">3</div>
-    <div class="t">Fresh Saturday</div>
+    <div class="t">Fresh Friday</div>
     <div class="d">Pick up in Brookshire or have it delivered — baked that morning.</div>
   </div>
 </div>
@@ -355,7 +372,7 @@ a{text-decoration:none;color:inherit;}
         </div>
       </div>
 
-      <div class="cat-head">Cookies · Dozen</div>
+      <div class="cat-head">Sourdough Cookies · Dozen</div>
       <div class="item">
         <div class="info">
           <div class="name">Lemon Crinkle</div>
@@ -411,13 +428,24 @@ a{text-decoration:none;color:inherit;}
       <div class="item box">
         <div class="info">
           <div class="name">The Pantry Box &nbsp;·&nbsp; Best Value</div>
-          <div class="desc">1 Classic Loaf + 1 Strawberry Jam + ½ dozen cookies. A perfect gift — note any flavor swaps below.</div>
+          <div class="desc">1 sourdough loaf + 1 jam + ½ dozen sourdough cookies. A perfect gift — pick your flavors below.</div>
           <div class="price" data-price-for="box"></div>
         </div>
         <div class="stepper" data-key="box">
           <button type="button" aria-label="Remove one" data-step="-1">−</button>
           <input type="number" name="qty-box" class="qty" value="0" min="0" max="20" inputmode="numeric">
           <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+
+      <!-- Appears only when a Pantry Box is in the order. Options are filled by JS
+           from the menu above, so they always match this week's flavors. -->
+      <div class="box-choices" id="box-choices">
+        <div class="box-choices-label">Choose your Pantry Box flavors</div>
+        <div class="box-choices-grid">
+          <label>Sourdough Loaf<select name="box-loaf" id="box-loaf"></select></label>
+          <label>Jam<select name="box-jam" id="box-jam"></select></label>
+          <label>Sourdough Cookies<select name="box-cookie" id="box-cookie"></select></label>
         </div>
       </div>
     </div>
@@ -492,7 +520,7 @@ a{text-decoration:none;color:inherit;}
     <div class="method"><span class="label">Venmo</span><span class="val">@Jaime-Kerber-1</span></div>
     <div class="method"><span class="label">Zelle</span><span class="val">micahkerber@gmail.com</span></div>
   </div>
-  <p>Questions? Text us at <strong>832-546-6446</strong>. See you Saturday!</p>
+  <p>Questions? Text us at <strong>832-546-6446</strong>. See you Friday!</p>
 </div>
 
 <!-- ── FUNNEL BAND — turns a bread buyer into an experience guest ── -->
@@ -520,16 +548,16 @@ a{text-decoration:none;color:inherit;}
    numbers whenever her friend feedback lands.)
    ───────────────────────────────────────────────────────────── */
 const PRICES = {
-  'loaf-classic':      12,  // Classic Sourdough
-  'loaf-jalapeno':     15,  // Jalapeño Cheddar
-  'loaf-asiago':       15,  // Asiago Garlic
-  'muffin-strawberry': 15,  // Strawberries & Cream muffins (½ dozen)
-  'muffin-cinnamon':   15,  // Cinnamon Swirl muffins (½ dozen)
-  'cookie-lemon':      18,  // Lemon Crinkle cookies (dozen)
-  'cookie-oatmeal':    18,  // Oatmeal Chocolate Chip cookies (dozen)
-  'jam-strawberry':    9,   // Classic Strawberry jam (8 oz)
-  'jam-peach':         9,   // Peach Jalapeño jam (8 oz)
-  'box':               32   // The Pantry Box (bundle)
+  'loaf-classic':      9,   // Classic Sourdough
+  'loaf-jalapeno':     12,  // Jalapeño Cheddar
+  'loaf-asiago':       12,  // Asiago Garlic
+  'muffin-strawberry': 12,  // Strawberries & Cream muffins (½ dozen)
+  'muffin-cinnamon':   12,  // Cinnamon Swirl muffins (½ dozen)
+  'cookie-lemon':      15,  // Lemon Crinkle cookies (dozen)
+  'cookie-oatmeal':    15,  // Oatmeal Chocolate Chip cookies (dozen)
+  'jam-strawberry':    8,   // Classic Strawberry jam (8 oz)
+  'jam-peach':         8,   // Peach Jalapeño jam (8 oz)
+  'box':               26   // The Pantry Box (bundle)
 };
 const DELIVERY_FEE = 5;      // flat local delivery fee
 const DELIVERY_MIN = 25;     // minimum order subtotal for delivery
@@ -568,6 +596,46 @@ document.querySelectorAll('.stepper').forEach(st=>{
   input.addEventListener('input', recalc);
 });
 
+// ── Pantry Box flavor pickers ──
+// Options are pulled straight from the current menu items, so when the weekly
+// flavors change these dropdowns update automatically — nothing to maintain.
+const boxSelects = { 'box-loaf':'loaf-', 'box-jam':'jam-', 'box-cookie':'cookie-' };
+function populateBoxChoices(){
+  for (const selId in boxSelects){
+    const sel = document.getElementById(selId);
+    const prefix = boxSelects[selId];
+    sel.innerHTML = '';
+    document.querySelectorAll('.stepper').forEach(st=>{
+      const key = st.getAttribute('data-key');
+      if (key && key.indexOf(prefix) === 0){
+        const name = st.closest('.item').querySelector('.name').textContent.trim();
+        const opt = document.createElement('option');
+        opt.value = name; opt.textContent = name;
+        sel.appendChild(opt);
+      }
+    });
+  }
+}
+populateBoxChoices();
+for (const selId in boxSelects){
+  document.getElementById(selId).addEventListener('change', recalc);
+}
+// Summary suffix like " (Classic Sourdough · Strawberry Jam · Lemon Crinkle)"
+function boxFlavorSuffix(){
+  const v = ['box-loaf','box-jam','box-cookie'].map(id=>document.getElementById(id).value).filter(Boolean);
+  return v.length ? ' (' + v.join(' · ') + ')' : '';
+}
+// Show + require the box dropdowns only when a Pantry Box is in the order
+function syncBoxChoices(){
+  const boxQty = parseInt(document.querySelector('.stepper[data-key="box"] .qty').value,10) || 0;
+  document.getElementById('box-choices').classList.toggle('show', boxQty > 0);
+  for (const selId in boxSelects){
+    const s = document.getElementById(selId);
+    s.disabled = boxQty === 0;   // disabled fields aren't submitted
+    s.required = boxQty > 0;
+  }
+}
+
 const fulfillment = document.getElementById('fulfillment');
 const addrRow = document.getElementById('delivery-address-row');
 const minWarn = document.getElementById('min-warn');
@@ -582,9 +650,11 @@ function recalc(){
     const q = parseInt(input.value,10) || 0;
     if (q > 0){
       subtotal += q * PRICES[key];
-      parts.push(q + '× ' + LABELS[key]);
+      parts.push(q + '× ' + LABELS[key] + (key === 'box' ? boxFlavorSuffix() : ''));
     }
   }
+
+  syncBoxChoices(); // show/hide the Pantry Box flavor pickers
 
   const isDelivery = fulfillment.value.indexOf('delivery') !== -1;
   addrRow.style.display = isDelivery ? 'block' : 'none';

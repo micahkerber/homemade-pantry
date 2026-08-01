@@ -158,7 +158,7 @@ async function sendOrderConfirmation(data, guestEmail, apiKey) {
       <p style="font-size:13px;font-weight:bold;color:#2C6E6A;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 12px;">To confirm your order, send ${orderTotal}</p>
       <p style="font-size:15px;margin:0 0 6px;"><strong>Venmo:</strong> ${VENMO}</p>
       <p style="font-size:15px;margin:0;"><strong>Zelle:</strong> ${ZELLE}</p>
-      <p style="font-size:13px;color:#8A847C;margin:12px 0 0;line-height:1.5;">Your order is locked in once payment arrives. Orders close Tuesday night; everything is baked fresh Saturday morning.</p>
+      <p style="font-size:13px;color:#8A847C;margin:12px 0 0;line-height:1.5;">Your order is locked in once payment arrives. Orders close Tuesday night; everything is baked fresh Friday morning.</p>
     </div>
     <p style="font-size:16px;line-height:1.6;margin:0 0 20px;">Questions, changes, or a gift note? Just reply to this email or text us at <strong>832-546-6446</strong>.</p>
     <p style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-style:italic;color:#2C6E6A;margin:28px 0 8px;">Made slowly. Shared warmly.</p>
@@ -185,7 +185,7 @@ TO CONFIRM YOUR ORDER, SEND ${data['order-total'] || 'your total'}:
   Venmo: ${VENMO}
   Zelle: ${ZELLE}
 
-Your order is locked in once payment arrives. Orders close Tuesday night; everything is baked fresh Saturday morning.
+Your order is locked in once payment arrives. Orders close Tuesday night; everything is baked fresh Friday morning.
 
 Questions, changes, or a gift note? Reply to this email or text us at 832-546-6446.
 

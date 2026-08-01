@@ -5,7 +5,7 @@ marketing for the Homemade Pantry experiences (every order carries the **FRESH10
 $10 off an experience).
 
 ## The model
-Weekly "bread drop": customers **order by Tuesday**, Jaime bakes, everything is **fresh Saturday**
+Weekly "bread drop": customers **order by Tuesday**, Jaime bakes, everything is **fresh Friday**
 (pickup in Brookshire or local delivery, $5 / $25 minimum). Payment is **prepay by Venmo
 (@Jaime-Kerber-1) or Zelle (micahkerber@gmail.com)** — the order is confirmed once payment lands.
 
