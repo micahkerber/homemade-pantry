@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6EF; --warm-white:#FDF9F4; --teal:#2C6E6A; --teal-mid:#3D8C87;
+    --teal-light:#A8D4D1; --teal-pale:#E4F4F3; --clay:#B87050; --clay-light:#E8C4A8;
+    --charcoal:#2A2520; --gray:#8A847C; --linen:#EDE5D8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1080px;height:1080px;}
+  body{
+    background:var(--cream);
+    font-family:'Jost',sans-serif;color:var(--charcoal);
+    display:flex;align-items:center;justify-content:center;
+  }
+  /* Invitation-style double frame */
+  .card{
+    width:1080px;height:1080px;background:var(--warm-white);
+    border:2px solid var(--teal);
+    display:flex;flex-direction:column;align-items:center;
+    padding:70px 90px 66px;position:relative;
+  }
+  .card::before{
+    content:"";position:absolute;inset:16px;
+    border:1px solid var(--clay-light);pointer-events:none;
+  }
+
+  /* Top brand lockup */
+  .logo{width:132px;height:132px;margin-bottom:16px;}
+  .brand{
+    font-size:15px;letter-spacing:.5em;text-transform:uppercase;
+    color:var(--teal-mid);font-weight:500;padding-left:.5em;
+  }
+
+  .rule{display:flex;align-items:center;gap:14px;margin:24px 0 22px;}
+  .rule .line{width:70px;height:1px;background:var(--clay);opacity:.55;}
+  .rule .dot{color:var(--clay);font-size:15px;letter-spacing:.4em;}
+
+  .intro{
+    font-size:16px;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--clay);font-weight:500;margin-bottom:20px;padding-left:.42em;
+  }
+  h1{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:104px;line-height:.98;color:var(--teal);text-align:center;
+    letter-spacing:-.5px;
+  }
+  .sub{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
+    font-size:35px;line-height:1.35;color:var(--gray);text-align:center;
+    max-width:640px;margin:26px 0 34px;
+  }
+
+  /* Schedule ribbon */
+  .ribbon{
+    background:var(--teal);color:var(--warm-white);
+    font-size:22px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;
+    padding:16px 40px;border-radius:2px;display:flex;align-items:center;gap:18px;
+  }
+  .ribbon .sep{color:var(--teal-light);}
+  .ribbon b{font-weight:600;letter-spacing:.24em;}
+
+  .menu-line{
+    font-size:18px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--clay);margin-top:26px;font-weight:400;padding-left:.32em;
+  }
+
+  .spacer{flex:1;}
+
+  /* Bottom CTA + QR */
+  .foot{display:flex;align-items:center;gap:26px;}
+  .qr-card{background:#fff;padding:12px;border:1px solid var(--linen);border-radius:6px;}
+  .qr-card img{width:132px;height:132px;display:block;}
+  .cta{text-align:left;}
+  .cta .big{
+    font-family:'Playfair Display',serif;font-size:30px;color:var(--charcoal);
+    line-height:1.15;margin-bottom:8px;
+  }
+  .cta .small{
+    font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-mid);
+  }
+  .cta .url{font-size:17px;color:var(--gray);letter-spacing:.04em;margin-top:5px;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="file:///C:/Users/Micah/Projects/homemade-pantry/.claude/worktrees/sourdough-marketing-plan-ba6059/website/images/logo.svg" alt="">
+    <div class="brand">The Homemade Pantry</div>
+
+    <div class="rule"><span class="line"></span><span class="dot">✦</span><span class="line"></span></div>
+
+    <div class="intro">Now Taking Orders</div>
+    <h1>The Weekly<br>Bread Drop</h1>
+    <div class="sub">Fresh sourdough, small-batch jam &amp; sweets —<br>made slowly, shared warmly.</div>
+
+    <div class="ribbon"><span>Order by <b>Tuesday</b></span><span class="sep">·</span><span>Fresh every <b>Saturday</b></span></div>
+
+    <div class="menu-line">Sourdough &nbsp;·&nbsp; Muffins &nbsp;·&nbsp; Cookies &nbsp;·&nbsp; Jam</div>
+
+    <div class="spacer"></div>
+
+    <div class="foot">
+      <div class="qr-card">
+        <img src="file:///C:/Users/Micah/Projects/homemade-pantry/.claude/worktrees/sourdough-marketing-plan-ba6059/marketing/order-qr.png" alt="Scan to order">
+      </div>
+      <div class="cta">
+        <div class="big">Scan or tap the<br>link in our bio.</div>
+        <div class="small">To place your order</div>
+        <div class="url">thehomemadepantryco.com</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

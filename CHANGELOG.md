@@ -6,6 +6,15 @@
 
 ---
 
+## August 1, 2026 — The Weekly Bread Drop launches (online ordering)
+
+- **Jaime can now sell bread, sweets & jam online.** A new order page (`thehomemadepantryco.com/order.html`) lets people order from a weekly menu — sourdough (classic, jalapeño cheddar, asiago garlic), sourdough muffins, cookies, and jam — with a live running total. Orders open through Tuesday; everything is baked fresh Saturday for pickup in Brookshire or local delivery.
+- **It runs on the same machine as the booking form** — no new services or costs. The order page is a second Netlify form on the existing pipeline: every order emails the bake list to thehomemadepantryco@gmail.com and sends the customer an automatic confirmation with their total and Venmo/Zelle instructions (prepay confirms the order).
+- **The bread feeds the experiences.** Every order and its confirmation email carry a **FRESH10** code — $10 off a sourdough evening — turning bread buyers into experience guests.
+- **Marketing kit created** (`marketing/`): a scan-to-order QR code, a branded Instagram/Facebook launch graphic, and the launch caption + posting strategy.
+- Prices: loaves $12 (specialty $15), muffins $15/half-dozen, cookies $18/dozen, jam $9, Pantry Box bundle $32.
+- **Still to come before physical sales:** a cottage-food label (Texas law requires ingredients + allergens on every item) and a printed insert card.
+
 ## June 12, 2026 — Reusable launch playbook + Host Dashboard prototype filed
 
 - **Reusable launch playbook added** (`docs/small-business-launch-playbook.md`) — the repeatable 5-phase, ~8-week process distilled from launching this business, ready to copy into the next friend-business project.

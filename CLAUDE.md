@@ -307,6 +307,8 @@ Made slowly. Shared warmly.
 |---|---|
 | `website/index.html` | Complete website — all pages, mobile responsive |
 | `website/analytics.js` | Google Analytics 4 loader (live, ID G-47GHNC2VME) |
+| `website/order.html` | The Weekly Bread Drop — online order page (Netlify form `order`, live-total flavored menu, Venmo/Zelle prepay) |
+| `marketing/` | Bread Drop marketing kit — scan-to-order QR, branded launch graphic + source/renderer, and `README.md` status tracker |
 | `website/favicon.png` + `apple-touch-icon.png` | Browser-tab / home-screen icons rendered from the logo |
 | `website/images/og-card.jpg` | 1200×630 social share preview card (tulip table photo) |
 | `website/preview-party.html` | Scrolling story memory page from the April 2026 preview party |

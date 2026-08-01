@@ -1,0 +1,3 @@
+# The headless-browser renderer is a build tool, not a site asset — don't commit it.
+node_modules/
+package-lock.json

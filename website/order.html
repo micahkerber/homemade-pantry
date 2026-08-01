@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Weekly Bread Drop — Order Fresh Sourdough · The Homemade Pantry</title>
+<meta name="description" content="Order fresh, hand-shaped sourdough, small-batch jam, muffins, and cookies from The Homemade Pantry in Brookshire, TX. Order by Tuesday — fresh every Saturday.">
+
+<!-- Favicon — the wheat-stalk badge in browser tabs and bookmarks -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Social share preview (Open Graph) — the card shown when this link is shared -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.thehomemadepantryco.com/order.html">
+<meta property="og:title" content="The Weekly Bread Drop — The Homemade Pantry">
+<meta property="og:description" content="Fresh sourdough, jam, muffins &amp; cookies — order by Tuesday, ready every Saturday. Made slowly. Shared warmly.">
+<meta property="og:image" content="https://www.thehomemadepantryco.com/images/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="analytics.js"></script>
+<style>
+/* ── BRAND TOKENS (copied from index.html so this page matches the site) ── */
+:root {
+  --cream:       #FAF6EF;
+  --warm-white:  #FDF9F4;
+  --teal:        #2C6E6A;
+  --teal-mid:    #3D8C87;
+  --teal-light:  #A8D4D1;
+  --teal-pale:   #E4F4F3;
+  --clay:        #B87050;
+  --clay-light:  #E8C4A8;
+  --charcoal:    #2A2520;
+  --gray:        #8A847C;
+  --linen:       #EDE5D8;
+  --sage:        #7A9E7E;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:18px;scroll-behavior:smooth;}
+body{background:var(--cream);font-family:'Jost',sans-serif;color:var(--charcoal);overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+
+/* ── HEADER ── */
+.site-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 6vw;background:var(--warm-white);
+  border-bottom:1px solid var(--linen);position:sticky;top:0;z-index:50;
+}
+.site-head .brand{display:flex;align-items:center;gap:12px;}
+.site-head .brand img{width:44px;height:44px;}
+.site-head .brand-name{
+  font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.05;
+}
+.site-head .brand-name em{font-style:italic;font-weight:400;color:var(--teal);}
+.site-head .back-link{
+  font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);
+}
+
+/* ── HERO STRIP ── */
+.drop-hero{
+  background:var(--teal);color:var(--warm-white);
+  text-align:center;padding:52px 6vw 46px;
+}
+.drop-hero .eyebrow{
+  font-size:.6rem;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--teal-light);margin-bottom:16px;
+}
+.drop-hero h1{
+  font-family:'Playfair Display',serif;font-weight:400;
+  font-size:clamp(2rem,6vw,3.2rem);line-height:1.08;margin-bottom:14px;
+}
+.drop-hero .schedule{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.4rem;color:var(--clay-light);
+}
+.drop-hero .schedule strong{color:var(--warm-white);font-weight:600;font-style:normal;}
+
+/* ── HOW IT WORKS ── */
+.how{
+  max-width:860px;margin:0 auto;padding:40px 6vw 8px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;
+}
+.how .step .num{
+  font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--clay);margin-bottom:6px;
+}
+.how .step .t{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+.how .step .d{font-size:.82rem;color:var(--gray);line-height:1.5;}
+
+/* ── LAYOUT ── */
+.wrap{max-width:860px;margin:0 auto;padding:32px 6vw 60px;}
+.section-eyebrow{
+  font-size:.58rem;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--teal-mid);margin-bottom:10px;display:block;text-align:center;
+}
+.wrap h2{
+  font-family:'Playfair Display',serif;font-weight:400;
+  font-size:1.9rem;text-align:center;margin-bottom:6px;
+}
+.wrap .sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.05rem;color:var(--gray);text-align:center;margin-bottom:32px;
+}
+
+/* ── MENU / ORDER ROWS ── */
+.menu{background:white;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.07);overflow:hidden;}
+.cat-head{
+  background:var(--teal-pale);color:var(--teal);font-weight:500;
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  padding:11px 22px;border-bottom:1px solid var(--linen);
+}
+.item{
+  display:flex;align-items:center;gap:16px;
+  padding:20px 22px;border-bottom:1px solid var(--linen);
+}
+.item:last-child{border-bottom:none;}
+.item.box{background:var(--teal-pale);}
+.item .info{flex:1;}
+.item .info .name{
+  font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:3px;
+}
+.item .info .desc{font-size:.78rem;color:var(--gray);line-height:1.45;}
+.item .info .price{
+  font-size:.82rem;color:var(--teal);font-weight:500;margin-top:5px;letter-spacing:.02em;
+}
+/* Quantity stepper */
+.stepper{display:flex;align-items:center;gap:0;flex-shrink:0;}
+.stepper button{
+  width:34px;height:34px;border:1px solid var(--linen);background:var(--cream);
+  font-size:1.1rem;color:var(--teal);cursor:pointer;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:background .15s;
+}
+.stepper button:hover{background:var(--teal-pale);}
+.stepper button:first-child{border-radius:3px 0 0 3px;}
+.stepper button:last-child{border-radius:0 3px 3px 0;}
+.stepper input{
+  width:46px;height:34px;text-align:center;border:1px solid var(--linen);border-left:none;border-right:none;
+  font-family:'Jost',sans-serif;font-size:.9rem;color:var(--charcoal);background:white;
+  -moz-appearance:textfield;
+}
+.stepper input::-webkit-outer-spin-button,
+.stepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+
+/* ── FULFILLMENT + CONTACT FORM ── */
+.form-block{margin-top:36px;background:white;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.07);padding:36px 30px;}
+.form-row{margin-bottom:18px;}
+.form-row label{
+  display:block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gray);margin-bottom:6px;
+}
+.form-row input,.form-row select,.form-row textarea{
+  width:100%;padding:12px 14px;border:1px solid var(--linen);border-radius:2px;
+  font-family:'Jost',sans-serif;font-size:.85rem;color:var(--charcoal);
+  background:var(--cream);outline:none;transition:border-color .2s;
+}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--teal);}
+.form-row textarea{resize:vertical;min-height:70px;}
+.form-row select:invalid{color:var(--gray);}
+.form-row-half{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.optin{display:flex;align-items:flex-start;gap:10px;margin:6px 0 4px;}
+.optin input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:var(--teal);}
+.optin label{font-size:.8rem;color:var(--gray);letter-spacing:0;text-transform:none;line-height:1.4;}
+#delivery-address-row{display:none;}
+.warn{
+  display:none;background:#FBEEE6;border:1px solid var(--clay-light);color:var(--clay);
+  font-size:.78rem;padding:10px 14px;border-radius:3px;margin-top:-6px;margin-bottom:14px;
+}
+
+/* ── ORDER SUMMARY BAR ── */
+.summary{
+  position:sticky;bottom:0;z-index:40;background:var(--charcoal);color:var(--warm-white);
+  padding:16px 6vw;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  box-shadow:0 -8px 30px rgba(0,0,0,.18);
+}
+.summary .tally{font-size:.82rem;color:var(--teal-light);}
+.summary .tally strong{color:var(--warm-white);font-size:1.15rem;font-weight:600;font-family:'Playfair Display',serif;}
+.summary .pay-note{font-size:.7rem;color:var(--gray);margin-top:2px;}
+.form-submit{
+  padding:15px 26px;background:var(--clay);color:#fff;border:none;border-radius:2px;
+  font-family:'Jost',sans-serif;font-weight:500;font-size:.7rem;letter-spacing:.18em;
+  text-transform:uppercase;cursor:pointer;transition:background .2s,transform .2s;white-space:nowrap;
+}
+.form-submit:hover{background:#a5623f;transform:translateY(-2px);}
+.form-submit:disabled{opacity:.7;cursor:default;transform:none;}
+
+/* ── SUCCESS PANEL (shown after submit — prepay instructions) ── */
+#success{display:none;text-align:center;padding:20px 6vw 60px;max-width:600px;margin:0 auto;}
+#success .check{font-size:2.4rem;margin-bottom:10px;}
+#success h2{font-family:'Playfair Display',serif;font-weight:400;font-size:2rem;margin-bottom:12px;}
+#success p{font-size:.92rem;color:var(--gray);line-height:1.6;margin-bottom:16px;}
+.pay-card{
+  background:var(--teal-pale);border:1px solid var(--teal-light);border-radius:8px;
+  padding:26px 24px;margin:20px 0;text-align:left;
+}
+.pay-card .amt{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--teal);text-align:center;margin-bottom:16px;}
+.pay-card .method{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--teal-light);font-size:.9rem;}
+.pay-card .method:last-child{border-bottom:none;}
+.pay-card .method .label{color:var(--gray);}
+.pay-card .method .val{font-weight:600;color:var(--charcoal);}
+
+/* ── FUNNEL BAND ── */
+.funnel{background:var(--teal-pale);text-align:center;padding:48px 6vw;border-top:1px solid var(--linen);}
+.funnel .eyebrow{font-size:.58rem;letter-spacing:.42em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:12px;}
+.funnel h3{font-family:'Playfair Display',serif;font-weight:400;font-size:1.7rem;margin-bottom:10px;}
+.funnel p{font-size:.9rem;color:var(--gray);max-width:520px;margin:0 auto 22px;line-height:1.6;}
+.funnel .code{
+  display:inline-block;background:white;border:1px dashed var(--clay);color:var(--clay);
+  font-weight:600;letter-spacing:.1em;padding:6px 16px;border-radius:3px;margin-bottom:22px;
+}
+.funnel .btn{
+  display:inline-block;background:var(--teal);color:#fff;padding:14px 30px;border-radius:2px;
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+}
+.funnel .btn:hover{background:var(--teal-mid);}
+
+/* ── FOOTER ── */
+.site-foot{background:var(--charcoal);color:var(--teal-light);text-align:center;padding:34px 6vw;font-size:.75rem;line-height:1.8;}
+.site-foot a{color:var(--teal-light);}
+
+@media(max-width:640px){
+  .how{grid-template-columns:1fr;gap:18px;}
+  .form-row-half{grid-template-columns:1fr;}
+  .summary{flex-direction:column;align-items:stretch;text-align:center;}
+  .summary .form-submit{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-head">
+  <a class="brand" href="index.html">
+    <img src="images/logo.svg" alt="The Homemade Pantry">
+    <span class="brand-name"><em>The</em> Homemade<br>Pantry</span>
+  </a>
+  <a class="back-link" href="index.html">← The Experiences</a>
+</header>
+
+<!-- ── HERO ── -->
+<section class="drop-hero">
+  <div class="eyebrow">The Homemade Pantry</div>
+  <h1>The Weekly Bread Drop</h1>
+  <p class="schedule">Order by <strong>Tuesday</strong> · Fresh every <strong>Saturday</strong></p>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<div class="how">
+  <div class="step">
+    <div class="num">1</div>
+    <div class="t">Order</div>
+    <div class="d">Choose what you'd like below and send your order by Tuesday night.</div>
+  </div>
+  <div class="step">
+    <div class="num">2</div>
+    <div class="t">Pay to confirm</div>
+    <div class="d">We'll email you a total. Send it by Venmo or Zelle to lock in your order.</div>
+  </div>
+  <div class="step">
+    <div class="num">3</div>
+    <div class="t">Fresh Saturday</div>
+    <div class="d">Pick up in Brookshire or have it delivered — baked that morning.</div>
+  </div>
+</div>
+
+<!-- ── ORDER FORM ── -->
+<!--
+  This is a Netlify Form named "order". Netlify auto-detects it on deploy and:
+    1. Emails a copy of every order to thehomemadepantryco@gmail.com (the bake list)
+    2. Triggers netlify/functions/submission-created.js, which emails the CUSTOMER
+       a confirmation with their total + Venmo/Zelle payment instructions.
+  Same plumbing as the booking form — this is a second form on the same pipeline.
+-->
+<form name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitOrder(event)">
+  <input type="hidden" name="form-name" value="order">
+  <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+  <!-- JS fills these two hidden fields on submit so both emails show a clean summary + total -->
+  <input type="hidden" name="order-summary" id="order-summary">
+  <input type="hidden" name="order-total" id="order-total">
+
+  <div class="wrap">
+    <span class="section-eyebrow">This Week's Menu</span>
+    <h2>What would you like?</h2>
+    <p class="sub">Everything is made by hand and baked fresh the morning of your pickup.</p>
+
+    <div class="menu">
+      <!-- Each row: data-key ties the price + math to the PRICES object in the script below.
+           To change this week's flavors, just edit the name/desc lines. To add a flavor,
+           copy an .item row, give it a new unique data-key + name="qty-<key>", and add that
+           key to the PRICES and LABELS objects in the script. -->
+
+      <div class="cat-head">Sourdough Loaves</div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Classic Sourdough</div>
+          <div class="desc">Naturally leavened, hand-shaped, crackly crust. The original.</div>
+          <div class="price" data-price-for="loaf-classic"></div>
+        </div>
+        <div class="stepper" data-key="loaf-classic">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-loaf-classic" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Jalapeño Cheddar</div>
+          <div class="desc">Savory, cheesy crumb with a gentle jalapeño kick.</div>
+          <div class="price" data-price-for="loaf-jalapeno"></div>
+        </div>
+        <div class="stepper" data-key="loaf-jalapeno">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-loaf-jalapeno" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Asiago Garlic</div>
+          <div class="desc">Roasted garlic and sharp asiago folded through the crumb.</div>
+          <div class="price" data-price-for="loaf-asiago"></div>
+        </div>
+        <div class="stepper" data-key="loaf-asiago">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-loaf-asiago" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+
+      <div class="cat-head">Sourdough Muffins · Half Dozen</div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Strawberries &amp; Cream</div>
+          <div class="desc">Six tender sourdough muffins, sweet cream and fresh strawberry.</div>
+          <div class="price" data-price-for="muffin-strawberry"></div>
+        </div>
+        <div class="stepper" data-key="muffin-strawberry">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-muffin-strawberry" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Cinnamon Swirl</div>
+          <div class="desc">Six sourdough muffins ribboned with cinnamon sugar.</div>
+          <div class="price" data-price-for="muffin-cinnamon"></div>
+        </div>
+        <div class="stepper" data-key="muffin-cinnamon">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-muffin-cinnamon" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+
+      <div class="cat-head">Cookies · Dozen</div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Lemon Crinkle</div>
+          <div class="desc">A dozen soft, bright lemon cookies dusted in powdered sugar.</div>
+          <div class="price" data-price-for="cookie-lemon"></div>
+        </div>
+        <div class="stepper" data-key="cookie-lemon">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-cookie-lemon" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Oatmeal Chocolate Chip</div>
+          <div class="desc">A dozen chewy oatmeal cookies loaded with chocolate.</div>
+          <div class="price" data-price-for="cookie-oatmeal"></div>
+        </div>
+        <div class="stepper" data-key="cookie-oatmeal">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-cookie-oatmeal" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+
+      <div class="cat-head">Small-Batch Jam · 8 oz</div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Classic Strawberry</div>
+          <div class="desc">Small-batch, cooked down slow. Bright and jammy.</div>
+          <div class="price" data-price-for="jam-strawberry"></div>
+        </div>
+        <div class="stepper" data-key="jam-strawberry">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-jam-strawberry" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+      <div class="item">
+        <div class="info">
+          <div class="name">Peach Jalapeño</div>
+          <div class="desc">Sweet peach with a warm jalapeño finish. A cheeseboard favorite.</div>
+          <div class="price" data-price-for="jam-peach"></div>
+        </div>
+        <div class="stepper" data-key="jam-peach">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-jam-peach" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+
+      <div class="cat-head">Bundle</div>
+      <div class="item box">
+        <div class="info">
+          <div class="name">The Pantry Box &nbsp;·&nbsp; Best Value</div>
+          <div class="desc">1 Classic Loaf + 1 Strawberry Jam + ½ dozen cookies. A perfect gift — note any flavor swaps below.</div>
+          <div class="price" data-price-for="box"></div>
+        </div>
+        <div class="stepper" data-key="box">
+          <button type="button" aria-label="Remove one" data-step="-1">−</button>
+          <input type="number" name="qty-box" class="qty" value="0" min="0" max="20" inputmode="numeric">
+          <button type="button" aria-label="Add one" data-step="1">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FULFILLMENT + CONTACT -->
+    <div class="form-block">
+      <div class="form-row-half">
+        <div class="form-row">
+          <label>First Name</label>
+          <input type="text" name="first-name" placeholder="Jaime" required>
+        </div>
+        <div class="form-row">
+          <label>Last Name</label>
+          <input type="text" name="last-name" placeholder="Kerber" required>
+        </div>
+      </div>
+      <div class="form-row-half">
+        <div class="form-row">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-row">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="(832) 000-0000" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Pickup or Delivery?</label>
+        <select name="fulfillment" id="fulfillment" required>
+          <option value="" disabled selected>Choose one…</option>
+          <option value="Pickup — Brookshire (free)">Pickup in Brookshire — free</option>
+          <option value="Local delivery (+$5)">Local delivery — +$5 (within ~15 mi, $25 min order)</option>
+        </select>
+      </div>
+
+      <div class="form-row" id="delivery-address-row">
+        <label>Delivery Address</label>
+        <input type="text" name="delivery-address" placeholder="Street, City, ZIP">
+      </div>
+      <div class="warn" id="min-warn">Delivery orders have a $25 minimum. Add a little more, or choose pickup.</div>
+
+      <div class="form-row">
+        <label>Anything else we should know?</label>
+        <textarea name="notes" placeholder="Allergies, a note, a gift message…"></textarea>
+      </div>
+
+      <div class="optin">
+        <input type="checkbox" name="email-optin" id="optin" value="Yes — keep me posted" checked>
+        <label for="optin">Keep me posted on future weekly drops and open experience dates.</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY SUMMARY BAR -->
+  <div class="summary">
+    <div>
+      <div class="tally"><span id="tally-text">Your order</span> &nbsp;·&nbsp; <strong id="tally-total">$0</strong></div>
+      <div class="pay-note">No charge here — we'll email your total to pay by Venmo or Zelle.</div>
+    </div>
+    <button type="submit" class="form-submit" id="submit-btn">Send My Order →</button>
+  </div>
+</form>
+
+<!-- SUCCESS PANEL (revealed after submit) -->
+<div id="success">
+  <div class="check">🍞</div>
+  <h2>Order received — thank you!</h2>
+  <p>Here's how to lock it in: send your total by <strong>Venmo</strong> or <strong>Zelle</strong> below. Your order is confirmed once payment arrives. A confirmation email is on its way, too.</p>
+  <div class="pay-card">
+    <div class="amt" id="success-total">$0</div>
+    <div class="method"><span class="label">Venmo</span><span class="val">@Jaime-Kerber-1</span></div>
+    <div class="method"><span class="label">Zelle</span><span class="val">micahkerber@gmail.com</span></div>
+  </div>
+  <p>Questions? Text us at <strong>832-546-6446</strong>. See you Saturday!</p>
+</div>
+
+<!-- ── FUNNEL BAND — turns a bread buyer into an experience guest ── -->
+<section class="funnel">
+  <div class="eyebrow">More than bread</div>
+  <h3>Loved it? Come make your own.</h3>
+  <p>This bread starts in our kitchen — but it could start in yours. Gather up to 6 friends for an unhurried evening of sourdough, butter, and jam from scratch.</p>
+  <div class="code">FRESH10 — $10 off your first experience</div><br>
+  <a class="btn" href="index.html#evening">Book an Evening →</a>
+</section>
+
+<footer class="site-foot">
+  The Homemade Pantry · Brookshire, TX<br>
+  <a href="https://www.instagram.com/thehomemadepantryco2026/" target="_blank" rel="noopener">@thehomemadepantryco2026</a> ·
+  <a href="index.html">thehomemadepantryco.com</a><br>
+  <span style="font-size:.68rem;opacity:.7;">Made in a home kitchen under the Texas Cottage Food Law.</span>
+</footer>
+
+<script>
+/* ─────────────────────────────────────────────────────────────
+   PRICES — single source of truth.
+   To change a price, edit ONE number here. The menu labels AND the
+   running total both read from this object, so they can never disagree.
+   (These are the "launch-lower" starter prices — swap in Jaime's final
+   numbers whenever her friend feedback lands.)
+   ───────────────────────────────────────────────────────────── */
+const PRICES = {
+  'loaf-classic':      12,  // Classic Sourdough
+  'loaf-jalapeno':     15,  // Jalapeño Cheddar
+  'loaf-asiago':       15,  // Asiago Garlic
+  'muffin-strawberry': 15,  // Strawberries & Cream muffins (½ dozen)
+  'muffin-cinnamon':   15,  // Cinnamon Swirl muffins (½ dozen)
+  'cookie-lemon':      18,  // Lemon Crinkle cookies (dozen)
+  'cookie-oatmeal':    18,  // Oatmeal Chocolate Chip cookies (dozen)
+  'jam-strawberry':    9,   // Classic Strawberry jam (8 oz)
+  'jam-peach':         9,   // Peach Jalapeño jam (8 oz)
+  'box':               32   // The Pantry Box (bundle)
+};
+const DELIVERY_FEE = 5;      // flat local delivery fee
+const DELIVERY_MIN = 25;     // minimum order subtotal for delivery
+// Short names for the order summary line in the emails
+const LABELS = {
+  'loaf-classic':'Classic Loaf',
+  'loaf-jalapeno':'Jalapeño Cheddar Loaf',
+  'loaf-asiago':'Asiago Garlic Loaf',
+  'muffin-strawberry':'Strawberries & Cream Muffins',
+  'muffin-cinnamon':'Cinnamon Swirl Muffins',
+  'cookie-lemon':'Lemon Crinkle Cookies',
+  'cookie-oatmeal':'Oatmeal Choc-Chip Cookies',
+  'jam-strawberry':'Strawberry Jam',
+  'jam-peach':'Peach Jalapeño Jam',
+  'box':'Pantry Box'
+};
+
+// Print each item's price into its menu row from the PRICES object
+document.querySelectorAll('[data-price-for]').forEach(el=>{
+  const key = el.getAttribute('data-price-for');
+  el.textContent = '$' + PRICES[key];
+});
+
+// Stepper buttons (+ / −) adjust the number input next to them
+document.querySelectorAll('.stepper').forEach(st=>{
+  const input = st.querySelector('.qty');
+  st.querySelectorAll('button').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const step = parseInt(b.getAttribute('data-step'),10);
+      let v = parseInt(input.value,10) || 0;
+      v = Math.max(0, Math.min(20, v + step));
+      input.value = v;
+      recalc();
+    });
+  });
+  input.addEventListener('input', recalc);
+});
+
+const fulfillment = document.getElementById('fulfillment');
+const addrRow = document.getElementById('delivery-address-row');
+const minWarn = document.getElementById('min-warn');
+fulfillment.addEventListener('change', recalc);
+
+// Recalculate the running total and update the summary bar
+function recalc(){
+  let subtotal = 0;
+  const parts = [];
+  for (const key in PRICES){
+    const input = document.querySelector('.stepper[data-key="'+key+'"] .qty');
+    const q = parseInt(input.value,10) || 0;
+    if (q > 0){
+      subtotal += q * PRICES[key];
+      parts.push(q + '× ' + LABELS[key]);
+    }
+  }
+
+  const isDelivery = fulfillment.value.indexOf('delivery') !== -1;
+  addrRow.style.display = isDelivery ? 'block' : 'none';
+  document.querySelector('[name="delivery-address"]').required = isDelivery;
+
+  let total = subtotal;
+  if (isDelivery && subtotal > 0) total += DELIVERY_FEE;
+
+  // Warn (don't hard-block) if a delivery order is under the minimum
+  minWarn.style.display = (isDelivery && subtotal > 0 && subtotal < DELIVERY_MIN) ? 'block' : 'none';
+
+  // Update the sticky bar
+  document.getElementById('tally-text').textContent =
+    parts.length ? parts.join(', ') : 'Your order';
+  document.getElementById('tally-total').textContent = '$' + total;
+
+  // Stash the summary + total in hidden fields (both emails read these)
+  const summaryText = parts.length ? parts.join(', ') : 'No items selected';
+  const summaryWithFee = (isDelivery && subtotal > 0)
+    ? summaryText + '  |  + $' + DELIVERY_FEE + ' delivery'
+    : summaryText;
+  document.getElementById('order-summary').value = summaryWithFee;
+  document.getElementById('order-total').value = '$' + total;
+  return {parts, subtotal, total, isDelivery};
+}
+recalc(); // initialize on load
+
+// Submit handler — same fetch pattern as the booking form, plus prepay success panel
+function submitOrder(e){
+  e.preventDefault();
+  const state = recalc();
+  const form = e.target;
+  const btn = document.getElementById('submit-btn');
+
+  // Guard: don't send an empty order
+  if (state.subtotal <= 0){
+    btn.textContent = 'Add an item first';
+    setTimeout(()=>{ btn.textContent = 'Send My Order →'; }, 1800);
+    return;
+  }
+  // Guard: delivery must meet the minimum
+  if (state.isDelivery && state.subtotal < DELIVERY_MIN){
+    document.getElementById('min-warn').style.display = 'block';
+    return;
+  }
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  fetch('/', {
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:new URLSearchParams(new FormData(form)).toString()
+  })
+  .then(()=>{
+    // Record the order as a conversion in Google Analytics (no-op until GA fires)
+    if (window.gtag) gtag('event', 'bread_order', {
+      value: state.total, currency: 'USD', items: state.parts.join(', ')
+    });
+    // Swap the form out for the prepay success panel
+    form.style.display = 'none';
+    document.querySelector('.summary').style.display = 'none';
+    document.getElementById('success-total').textContent = '$' + state.total;
+    document.getElementById('success').style.display = 'block';
+    window.scrollTo({top:0, behavior:'smooth'});
+  })
+  .catch(()=>{
+    btn.textContent = 'Something went wrong — text us at 832-546-6446';
+    btn.style.background = 'var(--clay)';
+    btn.disabled = false;
+  });
+}
+</script>
+</body>
+</html>
