@@ -21,6 +21,8 @@ which emails the customer their total + payment instructions via Resend.
 | `launch-graphic.png` | 2160×2160 branded Instagram/Facebook launch graphic |
 | `launch-graphic.html` | Editable source for the graphic |
 | `render-graphic.js` | Renders the HTML to PNG (`node marketing/render-graphic.js` after `npm install`) |
+| `bake-log.xlsx` | Weekly order/bake-log spreadsheet for Jaime — upload to Google Drive → opens as a Google Sheet |
+| `build-bake-log.js` | Regenerates bake-log.xlsx (`node marketing/build-bake-log.js`); edit `PRODUCTS` if the menu changes |
 
 ## Status — what's done / what's left
 **Done**
@@ -34,7 +36,7 @@ which emails the customer their total + payment instructions via Resend.
 - [ ] Cottage-food label — Texas law requires business name + address, ingredients (largest→smallest),
       allergens, and the "made in a home kitchen…" line on every item. *(Waiting on ingredient lists — needed by Friday.)*
 - [ ] FRESH10 insert card (the "come make your own" funnel piece for each order)
-- [ ] Google Sheet order/bake log
+- [x] Google Sheet order/bake log (`bake-log.xlsx` — upload to Drive)
 - [ ] Instagram Stories (9:16) version of the launch graphic *(optional)*
 
 **Jaime's to-do**
