@@ -162,7 +162,7 @@ async function sendOrderConfirmation(data, guestEmail, apiKey) {
     </div>
     <p style="font-size:16px;line-height:1.6;margin:0 0 20px;">Questions, changes, or a gift note? Just reply to this email or text us at <strong>832-546-6446</strong>.</p>
     <p style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-style:italic;color:#2C6E6A;margin:28px 0 8px;">Made slowly. Shared warmly.</p>
-    <p style="font-size:16px;margin:0;">— Jaime<br><span style="color:#8A847C;">The Homemade Pantry</span></p>
+    <p style="font-size:16px;margin:0;">— Jaime &amp; Brittany<br><span style="color:#8A847C;">The Homemade Pantry</span></p>
     <div style="border-top:1px solid #EDE5D8;margin:28px 0 0;padding-top:20px;text-align:center;">
       <p style="font-size:14px;color:#2A2520;margin:0 0 6px;">Loved your bread? Come make your own.</p>
       <p style="font-size:13px;color:#8A847C;margin:0 0 10px;">Use code <strong style="color:#B87050;">FRESH10</strong> for $10 off an evening with us.</p>
@@ -190,7 +190,7 @@ Your order is locked in once payment arrives. Orders close Tuesday night; everyt
 Questions, changes, or a gift note? Reply to this email or text us at 832-546-6446.
 
 Made slowly. Shared warmly.
-— Jaime
+— Jaime & Brittany
 The Homemade Pantry
 
 Loved your bread? Come make your own — use code FRESH10 for $10 off an evening.
