@@ -23,6 +23,7 @@ which emails the customer their total + payment instructions via Resend.
 | `render-graphic.js` | Renders the HTML to PNG (`node marketing/render-graphic.js` after `npm install`) |
 | `bake-log.xlsx` | Weekly order/bake-log spreadsheet for Jaime — upload to Google Drive → opens as a Google Sheet |
 | `build-bake-log.js` | Regenerates bake-log.xlsx (`node marketing/build-bake-log.js`); edit `PRODUCTS` if the menu changes |
+| `print-flyer.pdf` / `.png` | Print-ready US Letter flyer — QR is the hero, for posting/handing out (source: `print-flyer.html`, renderer: `render-flyer.js`) |
 
 ## Status — what's done / what's left
 **Done**
